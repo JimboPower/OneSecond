@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     var score = 0
     var record = 0
 
-
+///
+    
     @IBOutlet weak var labelRecord: UILabel!
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!

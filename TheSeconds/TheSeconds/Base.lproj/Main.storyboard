@@ -98,23 +98,5 @@
             </objects>
             <point key="canvasLocation" x="221.59999999999999" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="9b3-ZO-zpr">
-            <objects>
-                <viewController id="sxm-jF-14d" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FCp-Ul-osy"/>
-                        <viewControllerLayoutGuide type="bottom" id="NS1-YS-v2E"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Pi6-2u-FRN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EwD-Zq-LRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="946" y="134"/>
-        </scene>
     </scenes>
 </document>
