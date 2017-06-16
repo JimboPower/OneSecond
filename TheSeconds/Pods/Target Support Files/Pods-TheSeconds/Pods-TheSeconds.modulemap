@@ -1,0 +1,6 @@
+framework module Pods_TheSeconds {
+  umbrella header "Pods-TheSeconds-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Hue
+import SAConfettiView
 
 class ViewController: UIViewController {
 
@@ -18,10 +20,7 @@ class ViewController: UIViewController {
     var stopWatchString = ""
     var score = 0
     var record = 0
-    
-
-
-///
+    var confettiView: SAConfettiView!
     
     @IBOutlet weak var labelRecord: UILabel!
     @IBOutlet weak var labelScore: UILabel!
@@ -31,20 +30,27 @@ class ViewController: UIViewController {
         buttonTapped()
     }
     
+    func updateLabelColors() {
+        /*
+        guard let isLight = self.view.backgroundColor?.isLight() else { return }
+        let lightColor = UIColor.white
+        let darkColor = UIColor.black
+        if isLight {
+            labelTimer.textColor = darkColor
+            labelScore.textColor = darkColor
+            labelRecord.textColor = darkColor
+            startStopButton.tintColor = darkColor
+        } else {
+            labelTimer.textColor = lightColor
+            labelScore.textColor = lightColor
+            labelRecord.textColor = lightColor
+            startStopButton.tintColor = lightColor
+        }
+        */
+    }
     
     func updateStopwatch() {
-        // Ogni singolo millisecondo devi controllare il colore. CONTRASTO
-        
-        // se view.backgroundColor è chiara >>>>>>>>>>> label nere
-        // se view.backgroundColor è scuro >>>>>>>>>>>>> label bianco
-        
-        if view.backgroundColor.isDarkColor {
-            // label bianche
-        } else {
-            // label nere
-        }
-        
-        
+        self.updateLabelColors()
         milliseconds += 1
         if milliseconds == 100 {
             seconds += 1
@@ -67,12 +73,6 @@ class ViewController: UIViewController {
             isTimerRunning = !isTimerRunning
             timer = Timer.scheduledTimer(timeInterval: 0.0055, target: self, selector: #selector(updateStopwatch) , userInfo: nil, repeats: true)
             startStopButton.setTitle("Stop", for: .normal)
-            UIView.animate(withDuration: 1, animations: {() -> Void in
-                self.view.backgroundColor = UIColor.white
-            })
-            UIView.animate(withDuration: 1, animations: {() -> Void in
-                self.view.backgroundColor = UIColor.black
-            })
             if seconds >= 1 {
                 timer.invalidate()
                 UIView.animate(withDuration: 1, animations: {() -> Void in
@@ -90,6 +90,7 @@ class ViewController: UIViewController {
                 if score > record {
                     record = score
                     labelRecord.text = "Record: \(record)"
+                    
                 }
                 milliseconds = 0
                 seconds = 0
@@ -100,11 +101,12 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.confettiView = SAConfettiView(frame: self.view.bounds)
+        self.view.addSubview(confettiView)
+        confettiView.type = .confetti
+        confettiView.startConfetti()
     }
 
 }

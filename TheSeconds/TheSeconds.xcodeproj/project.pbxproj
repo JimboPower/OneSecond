@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CD854A7F662A8814F2B8606 /* Pods_TheSeconds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */; };
 		C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F61EF28C48001DD5A2 /* AppDelegate.swift */; };
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FC1EF28C49001DD5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88058FA1EF28C49001DD5A2 /* Main.storyboard */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
 		C88059011EF28C49001DD5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88058FF1EF28C49001DD5A2 /* LaunchScreen.storyboard */; };
+		EB0B30311EF43D6E00C8DEDE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B30301EF43D6E00C8DEDE /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00F85900F9CF4CA4C531D7BF /* Pods-TheSeconds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSeconds.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheSeconds/Pods-TheSeconds.release.xcconfig"; sourceTree = "<group>"; };
+		6E257AD1041A2CB7F9F428C6 /* Pods-TheSeconds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSeconds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheSeconds/Pods-TheSeconds.debug.xcconfig"; sourceTree = "<group>"; };
+		7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheSeconds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88058F31EF28C48001DD5A2 /* TheSeconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSeconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88058F61EF28C48001DD5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88058F81EF28C48001DD5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		C88058FD1EF28C49001DD5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C88059001EF28C49001DD5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C88059021EF28C49001DD5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB0B30301EF43D6E00C8DEDE /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD854A7F662A8814F2B8606 /* Pods_TheSeconds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4565151CA9C263F4B985DCF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C88058EA1EF28C47001DD5A2 = {
 			isa = PBXGroup;
 			children = (
 				C88058F51EF28C48001DD5A2 /* TheSeconds */,
 				C88058F41EF28C48001DD5A2 /* Products */,
+				E9CC8928A59E885EB3CFFC1E /* Pods */,
+				4565151CA9C263F4B985DCF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				C88058F61EF28C48001DD5A2 /* AppDelegate.swift */,
+				EB0B302F1EF43D5E00C8DEDE /* Extensions */,
 				C88058F81EF28C48001DD5A2 /* ViewController.swift */,
 				C88058FA1EF28C49001DD5A2 /* Main.storyboard */,
 				C88058FD1EF28C49001DD5A2 /* Assets.xcassets */,
@@ -64,6 +82,23 @@
 			path = TheSeconds;
 			sourceTree = "<group>";
 		};
+		E9CC8928A59E885EB3CFFC1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E257AD1041A2CB7F9F428C6 /* Pods-TheSeconds.debug.xcconfig */,
+				00F85900F9CF4CA4C531D7BF /* Pods-TheSeconds.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB0B302F1EF43D5E00C8DEDE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB0B30301EF43D6E00C8DEDE /* UIColorExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C88059051EF28C49001DD5A2 /* Build configuration list for PBXNativeTarget "TheSeconds" */;
 			buildPhases = (
+				DCAEB5B7FDF0CD7FDDD92D8E /* [CP] Check Pods Manifest.lock */,
 				C88058EF1EF28C48001DD5A2 /* Sources */,
 				C88058F01EF28C48001DD5A2 /* Frameworks */,
 				C88058F11EF28C48001DD5A2 /* Resources */,
+				F713293ADCD7A0B8D25181DD /* [CP] Embed Pods Frameworks */,
+				EBB5482C720531E448EF743E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +170,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DCAEB5B7FDF0CD7FDDD92D8E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBB5482C720531E448EF743E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheSeconds/Pods-TheSeconds-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F713293ADCD7A0B8D25181DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheSeconds/Pods-TheSeconds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C88058EF1EF28C48001DD5A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +225,7 @@
 			files = (
 				C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */,
 				C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */,
+				EB0B30311EF43D6E00C8DEDE /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +346,7 @@
 		};
 		C88059061EF28C49001DD5A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E257AD1041A2CB7F9F428C6 /* Pods-TheSeconds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WC2NUT8MA5;
@@ -273,6 +361,7 @@
 		};
 		C88059071EF28C49001DD5A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00F85900F9CF4CA4C531D7BF /* Pods-TheSeconds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WC2NUT8MA5;
