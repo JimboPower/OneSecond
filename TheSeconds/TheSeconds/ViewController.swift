@@ -56,7 +56,6 @@ class ViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 0.0055, target: self, selector: #selector(updateStopwatch) , userInfo: nil, repeats: true)
             startStopButton.setTitle("Stop", for: .normal)
             confettiView.stopConfetti()
-            ///
             labelScore.text = "Score: \(score)"
             labelRecord.text = "Record: \(record)"
         }else{
@@ -70,6 +69,10 @@ class ViewController: UIViewController {
                 if score > record {
                     record = score
                     confettiView.startConfetti()
+                }else if score >= 1{
+                    UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
+                        self.view.backgroundColor = UIColor.red
+                    }, completion: nil)
                 }
                 milliseconds = 0
                 seconds = 0
