@@ -10,16 +10,16 @@ import UIKit
 import SAConfettiView
 
 class ViewController: UIViewController {
-
     var minutes = 0
     var seconds = 0
     var milliseconds = 0
     var score = 0
-    var record = 0
+    var highscore = 0
     var timer = Timer()
     var isTimerRunning = true
     var stopWatchString = ""
     var confettiView: SAConfettiView!
+    let HighscoreDefault = UserDefaults.standard
     let customGreen = UIColor(red: 41/255, green: 248/255, blue: 150/255, alpha: 1)
     let customLightBlue = UIColor(red: 0, green: 176/255, blue: 255/255, alpha: 1)
     let customPink = UIColor(red: 240/255, green: 98/255, blue: 146/255, alpha: 1)
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
             startStopButton.setTitle("Stop", for: .normal)
             confettiView.stopConfetti()
             labelScore.text = "Score: \(score)"
-            labelRecord.text = "Record: \(record)"
+            labelRecord.text = "Highscore: \(highscore)"
         }else{
             isTimerRunning = !isTimerRunning
             timer.invalidate()
@@ -66,9 +66,10 @@ class ViewController: UIViewController {
                 score += 1
                 labelScore.text = "Score: \(score)"
             }else{
-                if score > record {
-                    record = score
+                if score > highscore {
+                    highscore = score
                     confettiView.startConfetti()
+                    HighscoreDefault.set(highscore, forKey: "highscore")
                 }else if score >= 1{
                     UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
                         self.view.backgroundColor = UIColor.red
@@ -115,6 +116,10 @@ class ViewController: UIViewController {
         setupConfetti()
         setupBackgroundColor()
         self.labelTimer.adjustsFontSizeToFitWidth = true
+        if let highscore = HighscoreDefault.value(forKey: "highscore") as? Int {
+            self.highscore = highscore
+            labelRecord.text = "Highscore: \(highscore)"
+        }
 
     }
 
