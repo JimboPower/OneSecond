@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ButtonStopImage.png",
+      "filename" : "share-black-solid-social-symbol.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ButtonStopImage-1.png",
+      "filename" : "share-black-solid-social-symbol-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ButtonStopImage-2.png",
+      "filename" : "share-black-solid-social-symbol-2.png",
       "scale" : "3x"
     }
   ],

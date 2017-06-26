@@ -23,14 +23,21 @@ class ViewController: UIViewController {
     let customGreen = UIColor(red: 41/255, green: 248/255, blue: 150/255, alpha: 1)
     let customLightBlue = UIColor(red: 0, green: 176/255, blue: 255/255, alpha: 1)
     let customPink = UIColor(red: 240/255, green: 98/255, blue: 146/255, alpha: 1)
-    
+    var image: UIImage = UIImage(named:"ImageShare")!
     @IBOutlet weak var labelRecord: UILabel!
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var buttonShare: UIButton!
     
     @IBAction func startStopTapped(_ sender: Any) {
         buttonTapped()
+    }
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        let activityVC = UIActivityViewController(activityItems: [self.image, "Hi Man dowload this app! My highscore is \(highscore)!"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
     }
     
     func updateStopwatch() {
@@ -53,6 +60,8 @@ class ViewController: UIViewController {
     func buttonTapped() {
         if isTimerRunning {
             isTimerRunning = !isTimerRunning
+            buttonShare.isUserInteractionEnabled = true
+            buttonShare.alpha = 0
             timer = Timer.scheduledTimer(timeInterval: 0.0055, target: self, selector: #selector(updateStopwatch) , userInfo: nil, repeats: true)
             startStopButton.setTitle("Stop", for: .normal)
             confettiView.stopConfetti()
@@ -67,6 +76,8 @@ class ViewController: UIViewController {
                 labelScore.text = "Score: \(score)"
             }else{
                 if score > highscore {
+                    buttonShare.isUserInteractionEnabled = true
+                    buttonShare.alpha = 1
                     highscore = score
                     confettiView.startConfetti()
                     HighscoreDefault.set(highscore, forKey: "highscore")
@@ -110,6 +121,8 @@ class ViewController: UIViewController {
         confettiView.isUserInteractionEnabled = false
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.confettiView = SAConfettiView(frame: self.view.bounds)
@@ -120,9 +133,9 @@ class ViewController: UIViewController {
             self.highscore = highscore
             labelRecord.text = "Highscore: \(highscore)"
         }
-
+        buttonShare.isUserInteractionEnabled = true
+        buttonShare.alpha = 0
     }
-
 }
 
 extension ViewController {

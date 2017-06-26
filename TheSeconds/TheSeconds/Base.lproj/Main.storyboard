@@ -21,20 +21,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="-7" translatesAutoresizingMaskIntoConstraints="NO" id="Owu-sz-L7d">
-                                <rect key="frame" x="20" y="30" width="334" height="38.5"/>
+                                <rect key="frame" x="46.5" y="30" width="281" height="36"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Rvq-m2-10g">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="38.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="Rvq-m2-10g">
+                                        <rect key="frame" x="0.0" y="0.0" width="281" height="36"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVj-U3-sC8">
-                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="38.5"/>
-                                                <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="153" height="36"/>
+                                                <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONv-aS-BnR">
-                                                <rect key="frame" x="170.5" y="0.0" width="163.5" height="38.5"/>
-                                                <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="32"/>
+                                                <rect key="frame" x="128" y="0.0" width="153" height="36"/>
+                                                <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -74,20 +74,30 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOz-SJ-Akf">
+                                <rect key="frame" x="155" y="459" width="64" height="64"/>
+                                <state key="normal" image="share-black-solid-social-symbol"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Up-9Q-PBo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.97967010736465454" blue="0.57475894689559937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vOz-SJ-Akf" secondAttribute="bottom" constant="144" id="35B-hV-5Zo"/>
                             <constraint firstItem="8bk-38-FtQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6dg-hm-1eq"/>
                             <constraint firstItem="Rvq-m2-10g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="7d1-Pi-1FV"/>
                             <constraint firstItem="09z-lm-7sM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CUb-HL-pnJ"/>
                             <constraint firstItem="Rvq-m2-10g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gg3-Wl-SgB"/>
                             <constraint firstItem="09z-lm-7sM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HEv-nn-s0j"/>
+                            <constraint firstItem="vOz-SJ-Akf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T2L-SK-ZWz"/>
                             <constraint firstItem="Owu-sz-L7d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hyy-cQ-fjb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8bk-38-FtQ" secondAttribute="bottom" constant="8" id="uP7-cW-1zx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonShare" destination="vOz-SJ-Akf" id="6gN-bV-9rq"/>
                         <outlet property="labelRecord" destination="ONv-aS-BnR" id="yHV-rf-WxU"/>
                         <outlet property="labelScore" destination="XVj-U3-sC8" id="2vd-7r-Oys"/>
                         <outlet property="labelTimer" destination="09z-lm-7sM" id="dWd-iI-fkm"/>
@@ -99,4 +109,7 @@
             <point key="canvasLocation" x="221.59999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="share-black-solid-social-symbol" width="64" height="64"/>
+    </resources>
 </document>
