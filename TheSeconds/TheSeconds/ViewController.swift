@@ -10,6 +10,7 @@ import UIKit
 import SAConfettiView
 
 class ViewController: UIViewController {
+    @IBOutlet weak var giftImage: UIImageView!
     var minutes = 0
     var seconds = 0
     var milliseconds = 0
@@ -28,7 +29,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
-    @IBOutlet weak var buttonShare: UIButton!
     
     @IBAction func startStopTapped(_ sender: Any) {
         buttonTapped()
@@ -60,8 +60,6 @@ class ViewController: UIViewController {
     func buttonTapped() {
         if isTimerRunning {
             isTimerRunning = !isTimerRunning
-            buttonShare.isUserInteractionEnabled = true
-            buttonShare.alpha = 0
             timer = Timer.scheduledTimer(timeInterval: 0.0055, target: self, selector: #selector(updateStopwatch) , userInfo: nil, repeats: true)
             startStopButton.setTitle("Stop", for: .normal)
             confettiView.stopConfetti()
@@ -76,8 +74,7 @@ class ViewController: UIViewController {
                 labelScore.text = "Score: \(score)"
             }else{
                 if score > highscore {
-                    buttonShare.isUserInteractionEnabled = true
-                    buttonShare.alpha = 1
+
                     highscore = score
                     confettiView.startConfetti()
                     HighscoreDefault.set(highscore, forKey: "highscore")
@@ -121,8 +118,6 @@ class ViewController: UIViewController {
         confettiView.isUserInteractionEnabled = false
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.confettiView = SAConfettiView(frame: self.view.bounds)
@@ -133,8 +128,6 @@ class ViewController: UIViewController {
             self.highscore = highscore
             labelRecord.text = "Highscore: \(highscore)"
         }
-        buttonShare.isUserInteractionEnabled = true
-        buttonShare.alpha = 0
     }
 }
 

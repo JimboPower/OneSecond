@@ -12,8 +12,9 @@
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FC1EF28C49001DD5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88058FA1EF28C49001DD5A2 /* Main.storyboard */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
-		C88059011EF28C49001DD5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88058FF1EF28C49001DD5A2 /* LaunchScreen.storyboard */; };
 		EB0B30311EF43D6E00C8DEDE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B30301EF43D6E00C8DEDE /* UIColorExtensions.swift */; };
+		EB1D44B41F1E379A00BE8772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1D44B21F1E379A00BE8772 /* LaunchScreen.storyboard */; };
+		EBFA95B31F0D76E6005F1385 /* Swift-Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFA95B21F0D76E6005F1385 /* Swift-Gif.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +26,10 @@
 		C88058F81EF28C48001DD5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C88058FB1EF28C49001DD5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C88058FD1EF28C49001DD5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C88059001EF28C49001DD5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C88059021EF28C49001DD5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB0B30301EF43D6E00C8DEDE /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		EB1D44B31F1E379A00BE8772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBFA95B21F0D76E6005F1385 /* Swift-Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift-Gif.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,8 @@
 				C88058F81EF28C48001DD5A2 /* ViewController.swift */,
 				C88058FA1EF28C49001DD5A2 /* Main.storyboard */,
 				C88058FD1EF28C49001DD5A2 /* Assets.xcassets */,
-				C88058FF1EF28C49001DD5A2 /* LaunchScreen.storyboard */,
+				EB1D44B21F1E379A00BE8772 /* LaunchScreen.storyboard */,
+				EBFA95B21F0D76E6005F1385 /* Swift-Gif.swift */,
 				C88059021EF28C49001DD5A2 /* Info.plist */,
 			);
 			path = TheSeconds;
@@ -134,7 +137,7 @@
 				TargetAttributes = {
 					C88058F21EF28C48001DD5A2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = WC2NUT8MA5;
+						DevelopmentTeam = 6X45XMEWKE;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -162,7 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C88059011EF28C49001DD5A2 /* LaunchScreen.storyboard in Resources */,
+				EB1D44B41F1E379A00BE8772 /* LaunchScreen.storyboard in Resources */,
 				C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */,
 				C88058FC1EF28C49001DD5A2 /* Main.storyboard in Resources */,
 			);
@@ -225,6 +228,7 @@
 			files = (
 				C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */,
 				C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */,
+				EBFA95B31F0D76E6005F1385 /* Swift-Gif.swift in Sources */,
 				EB0B30311EF43D6E00C8DEDE /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,10 +244,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		C88058FF1EF28C49001DD5A2 /* LaunchScreen.storyboard */ = {
+		EB1D44B21F1E379A00BE8772 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C88059001EF28C49001DD5A2 /* Base */,
+				EB1D44B31F1E379A00BE8772 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -349,11 +353,11 @@
 			baseConfigurationReference = 6E257AD1041A2CB7F9F428C6 /* Pods-TheSeconds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WC2NUT8MA5;
+				DEVELOPMENT_TEAM = 6X45XMEWKE;
 				INFOPLIST_FILE = TheSeconds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.edoardodecal.TheSeconds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edoardodecal.onesecond;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -364,11 +368,11 @@
 			baseConfigurationReference = 00F85900F9CF4CA4C531D7BF /* Pods-TheSeconds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WC2NUT8MA5;
+				DEVELOPMENT_TEAM = 6X45XMEWKE;
 				INFOPLIST_FILE = TheSeconds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.edoardodecal.TheSeconds;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edoardodecal.onesecond;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

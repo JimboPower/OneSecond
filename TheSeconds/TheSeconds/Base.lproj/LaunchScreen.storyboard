@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,18 +21,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EdoSpace Inc. App work in progress" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceE-xc-fuP">
-                                <rect key="frame" x="49" y="287" width="276" height="92"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Edoardo Francesco Amedeo de Cal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbS-R8-Rtx">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.97967010740000005" blue="0.57475894689999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ceE-xc-fuP" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="NVh-2b-ZBu"/>
-                            <constraint firstItem="ceE-xc-fuP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="sdn-QL-rlr"/>
-                            <constraint firstItem="ceE-xc-fuP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zgI-hP-b9F"/>
+                            <constraint firstItem="DbS-R8-Rtx" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="8Oa-xZ-qxe"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="DbS-R8-Rtx" secondAttribute="bottom" id="MQT-i5-mlR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DbS-R8-Rtx" secondAttribute="trailing" id="tY9-GF-mJe"/>
+                            <constraint firstItem="DbS-R8-Rtx" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="tmG-Br-ebV"/>
                         </constraints>
                     </view>
                 </viewController>
