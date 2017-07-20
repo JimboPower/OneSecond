@@ -10,13 +10,12 @@ import UIKit
 import SAConfettiView
 
 class ViewController: UIViewController {
-    @IBOutlet weak var giftImage: UIImageView!
     var minutes = 0
     var seconds = 0
+    var lifeHeart = 3
     var milliseconds = 0
     var score = 0
     var highscore = 0
-    var timer = Timer()
     var isTimerRunning = true
     var stopWatchString = ""
     var confettiView: SAConfettiView!
@@ -29,9 +28,56 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var stackHeartView: UIStackView!
+    
+    @IBOutlet weak var heart: UIImageView!
+    @IBOutlet weak var heart3: UIImageView!
+    @IBOutlet weak var heart2: UIImageView!
     
     @IBAction func startStopTapped(_ sender: Any) {
         buttonTapped()
+    }
+    
+///////segmented////////
+
+   
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBAction func indexChanged(_ sender: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            stackHeartView.alpha = 0
+        case 1:
+            stackHeartView.alpha = 1
+            zenGame()
+        default:
+            break; 
+        }
+    }
+    
+    
+////////////////////////
+    
+    func zenGame() {
+        
+        if lifeHeart == 2  {
+            heart.alpha = 0
+        }else if lifeHeart == 1{
+            heart2.alpha = 0
+
+        }else if lifeHeart == 0 {
+            heart3.alpha = 0
+        }else if lifeHeart == 3 {
+            print("niente")
+        }else{
+
+            lifeHeart = 3
+            heart3.alpha = 1
+            heart2.alpha = 1
+            heart.alpha = 1
+        }
+        
     }
     
     @IBAction func shareButtonTapped(_ sender: Any) {
@@ -40,41 +86,28 @@ class ViewController: UIViewController {
         self.present(activityVC, animated: true, completion: nil)
     }
     
-    func updateStopwatch() {
-        milliseconds += 1
-        if milliseconds == 100 {
-            seconds += 1
-            milliseconds = 0
-        }
-        if seconds == 60 {
-            minutes += 1
-            seconds = 0
-        }
-        let millisecondsString = milliseconds > 9 ?"\(milliseconds)" : "0\(milliseconds)"
-        let secondsString = seconds > 9 ?"\(seconds)" : "0\(seconds)"
-        let minutesString = minutes > 9 ?"\(minutes)" : "0\(minutes)"
-        stopWatchString = "\(minutesString):\(secondsString).\(millisecondsString)"
-        labelTimer.text = stopWatchString
-    }
     
     func buttonTapped() {
         if isTimerRunning {
+            print("\(seconds)")
+
             isTimerRunning = !isTimerRunning
-            timer = Timer.scheduledTimer(timeInterval: 0.0055, target: self, selector: #selector(updateStopwatch) , userInfo: nil, repeats: true)
+            startDisplayLink()
             startStopButton.setTitle("Stop", for: .normal)
             confettiView.stopConfetti()
             labelScore.text = "Score: \(score)"
             labelRecord.text = "Highscore: \(highscore)"
         }else{
             isTimerRunning = !isTimerRunning
-            timer.invalidate()
+            stopDisplayLink()
             startStopButton.setTitle("Start", for: .normal)
-            if milliseconds == 0 && seconds >= 1 {
+            if seconds > 1 {
                 score += 1
+                print("Ciaoen")
+
                 labelScore.text = "Score: \(score)"
             }else{
                 if score > highscore {
-
                     highscore = score
                     confettiView.startConfetti()
                     HighscoreDefault.set(highscore, forKey: "highscore")
@@ -83,11 +116,8 @@ class ViewController: UIViewController {
                         self.view.backgroundColor = UIColor.red
                     }, completion: nil)
                 }
-                milliseconds = 0
-                seconds = 0
-                minutes = 0
-                score = 0
-                
+                self.lifeHeart -= 1
+                zenGame()
             }
         }
     }
@@ -128,8 +158,43 @@ class ViewController: UIViewController {
             self.highscore = highscore
             labelRecord.text = "Highscore: \(highscore)"
         }
+        stackHeartView.alpha = 0
     }
+    
+    var startTime: CFTimeInterval!
+    weak var displayLink: CADisplayLink?
+    
+    func startDisplayLink() {
+        self.displayLink?.invalidate()  // stop prior display link, if any
+        startTime = CACurrentMediaTime()
+        let displayLink = CADisplayLink(target: self, selector: #selector(handleDisplayLink(_:)))
+        displayLink.add(to: .current, forMode: .commonModes)
+        self.displayLink = displayLink
+    }
+    
+    func handleDisplayLink(_ displayLink: CADisplayLink) {
+        let elapsed = CACurrentMediaTime() - startTime
+        let minutes = Int(elapsed / 60)
+        let seconds = elapsed - CFTimeInterval(minutes) * 60
+        let string = String(format: "%02d:%05.2f", minutes, seconds)
+        labelTimer.text = string
+        
+        if isTimerRunning == !isTimerRunning {
+            print("\(seconds)")
+            
+        }
+
+        
+    }
+    
+    func stopDisplayLink() {
+        displayLink?.invalidate()
+    }
+    
+    
 }
+
+
 
 extension ViewController {
     
