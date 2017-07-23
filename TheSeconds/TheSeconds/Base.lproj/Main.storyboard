@@ -20,92 +20,94 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="sc2-cx-BDp">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="paI-we-gux">
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="F70-pW-5xm">
-                                        <rect key="frame" x="23.5" y="0.0" width="328" height="44.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="vwu-gf-VtJ">
+                                        <rect key="frame" x="35" y="0.0" width="305" height="170"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONv-aS-BnR">
-                                                <rect key="frame" x="0.0" y="0.0" width="153" height="44.5"/>
-                                                <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="50"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVj-U3-sC8">
-                                                <rect key="frame" x="175" y="0.0" width="153" height="44.5"/>
-                                                <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="30"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="50"/>
-                                                </variation>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="75s-ld-x5k">
-                                        <rect key="frame" x="60" y="134.5" width="255" height="468.5"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gO9-1d-kAp">
-                                                <rect key="frame" x="45" y="0.0" width="165" height="50"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mVC-U3-XRs">
+                                                <rect key="frame" x="0.0" y="0.0" width="305" height="36"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="Xej-16-78g">
-                                                        <rect key="frame" x="0.0" y="5.5" width="45" height="39"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="l0P-KH-8mZ">
-                                                        <rect key="frame" x="60" y="5.5" width="45" height="39"/>
-                                                    </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="t02-uL-cav">
-                                                        <rect key="frame" x="120" y="5.5" width="45" height="39"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="113" translatesAutoresizingMaskIntoConstraints="NO" id="AWW-k7-Pfs">
-                                                <rect key="frame" x="0.0" y="120" width="255" height="348.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09z-lm-7sM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="255" height="85"/>
-                                                        <gestureRecognizers/>
-                                                        <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="71"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highscore: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONv-aS-BnR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="153" height="36"/>
+                                                        <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="50"/>
+                                                        </variation>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVj-U3-sC8">
+                                                        <rect key="frame" x="152" y="0.0" width="153" height="36"/>
+                                                        <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="30"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="120"/>
+                                                            <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="50"/>
                                                         </variation>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bk-38-FtQ">
-                                                        <rect key="frame" x="90" y="198" width="75" height="150.5"/>
-                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="38"/>
-                                                        <state key="normal" title="Start">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="65"/>
-                                                        </variation>
-                                                        <connections>
-                                                            <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mpi-F1-6rA"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gO9-1d-kAp">
+                                                <rect key="frame" x="37.5" y="100" width="230" height="70"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="Xej-16-78g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="70"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="l0P-KH-8mZ">
+                                                        <rect key="frame" x="79.5" y="0.0" width="71" height="70"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="t02-uL-cav">
+                                                        <rect key="frame" x="158.5" y="0.0" width="71.5" height="70"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="6jL-61-Urb"/>
+                                                    <constraint firstAttribute="width" constant="230" id="oya-ID-3XP"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09z-lm-7sM">
+                                        <rect key="frame" x="60" y="247" width="255" height="59"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="71"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="120"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bk-38-FtQ">
+                                        <rect key="frame" x="150" y="383" width="75" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="S2W-lo-tMi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="38"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="65"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="startStopTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mpi-F1-6rA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.97967010736465454" blue="0.57475894689559937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="sc2-cx-BDp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UNy-9h-Y9W"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sc2-cx-BDp" secondAttribute="bottom" id="ai9-my-A6H"/>
-                            <constraint firstItem="sc2-cx-BDp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fem-7p-URV"/>
-                            <constraint firstAttribute="trailing" secondItem="sc2-cx-BDp" secondAttribute="trailing" id="llE-6i-5L0"/>
+                            <constraint firstItem="paI-we-gux" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2w6-4Q-Vbk"/>
+                            <constraint firstItem="paI-we-gux" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="7ZL-MQ-bCd"/>
+                            <constraint firstAttribute="trailing" secondItem="paI-we-gux" secondAttribute="trailing" id="99H-eO-8Rm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="paI-we-gux" secondAttribute="bottom" id="U09-zn-0zJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5aw-7n-67n">
@@ -137,21 +139,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3921" y="-375"/>
+            <point key="canvasLocation" x="3920.8000000000002" y="-375.56221889055473"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nl5-eX-bWe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LKq-5c-fjb" sceneMemberID="viewController">
                     <toolbarItems/>
-<<<<<<< HEAD
                     <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" id="X3n-Mg-RVa">
-=======
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="X3n-Mg-RVa">
->>>>>>> parent of 7fb2824... Bugs fixed
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.45121049880000003" green="0.95160979030000004" blue="0.58054214719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -164,10 +162,6 @@
         </scene>
     </scenes>
     <resources>
-<<<<<<< HEAD
         <image name="Heart" width="619" height="535"/>
-=======
-        <image name="heart" width="45" height="39"/>
->>>>>>> parent of 7fb2824... Bugs fixed
     </resources>
 </document>
