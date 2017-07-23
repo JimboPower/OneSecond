@@ -146,7 +146,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LKq-5c-fjb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" misplaced="YES" id="X3n-Mg-RVa">
+                    <navigationBar key="navigationBar" alpha="0.0" contentMode="scaleToFill" id="X3n-Mg-RVa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -162,6 +162,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Heart" width="309" height="267"/>
+        <image name="Heart" width="619" height="535"/>
     </resources>
 </document>

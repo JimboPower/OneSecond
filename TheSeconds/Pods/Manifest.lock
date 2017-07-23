@@ -1,10 +1,12 @@
 PODS:
   - Hue (2.0.1)
   - SAConfettiView (0.1.8)
+  - SwiftyTimer (2.0.0)
 
 DEPENDENCIES:
   - Hue
   - SAConfettiView (from `https://github.com/tibikolozsi/SAConfettiView.git`, branch `master`)
+  - SwiftyTimer
 
 EXTERNAL SOURCES:
   SAConfettiView:
@@ -19,7 +21,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
   SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
+  SwiftyTimer: 2efd74b060d69ad4f1496baf5bbedbe132125fcf
 
-PODFILE CHECKSUM: 7d502c7af858a68557ec8cf7a37620d0899ca241
+PODFILE CHECKSUM: 7e069c98d143a9e7bfb80d3fdc6503ad6c37a359
 
 COCOAPODS: 1.2.1

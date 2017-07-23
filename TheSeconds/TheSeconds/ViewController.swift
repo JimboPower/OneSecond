@@ -8,6 +8,7 @@
 
 import UIKit
 import SAConfettiView
+import SwiftyTimer
 
 class ViewController: UIViewController {
     var minutes = 0
@@ -15,7 +16,6 @@ class ViewController: UIViewController {
     var lifeHeart = 4
     var milliseconds = 0
     var score = 0
-    var onesecond = Int(elapsedTime.truncatingRemainder(dividingBy: 60))
     var highscore = 0
     var highscoreZen = 0
     var timer = Timer()
@@ -63,6 +63,7 @@ class ViewController: UIViewController {
             zenGame()
             labelRecord.text = "Highscore: \(highscoreZen)"
             reset()
+            resetHeart()
         default:
             break; 
         }
@@ -79,7 +80,9 @@ class ViewController: UIViewController {
         labelScore.text = "Score: \(score)"
         labelTimer.text = "00:00.00"
         print(stopWatchString)
-        resetHeart()
+        if isZen == true {
+                resetHeart()
+        }
     }
     
     func zenGame() {
@@ -103,6 +106,7 @@ class ViewController: UIViewController {
 
     func updateStopwatch() {
         milliseconds += 1
+        print(milliseconds)
         if milliseconds == 100 {
             milliseconds = 0
             seconds += 1
@@ -123,7 +127,8 @@ class ViewController: UIViewController {
         ////timer goes/////
         if isTimerRunning {
             isTimerRunning = !isTimerRunning
-            timer = Timer.scheduledTimer(timeInterval: Double(onesecond), target: self, selector: #selector(updateStopwatch), userInfo: nil, repeats: true)
+
+            timer = Timer.scheduledTimer(timeInterval: 1.ms, target: self, selector: #selector(updateStopwatch), userInfo: nil, repeats: true)
             startStopButton.setTitle("Stop", for: .normal)
             confettiView.stopConfetti()
             labelScore.text = "Score: \(score)"
@@ -213,6 +218,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
