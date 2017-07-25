@@ -6,5 +6,6 @@ target 'TheSeconds' do
   use_frameworks!
   pod 'Hue'
   pod 'SwiftyTimer'
+  pod 'SquishButton'
   pod 'SAConfettiView', :git => 'https://github.com/tibikolozsi/SAConfettiView.git', :branch =>‘master’
 end

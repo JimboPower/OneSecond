@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SquishButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyTimer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>750E874A0AB48BCF1EF2BB52B2C66C25</key>
+		<key>1C15D0A096C04B95DA365776B7353813</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7D1D0976FAE866C2FFFE7AEB6067F580</key>
+		<key>69CBCA65590A915D658E701C7D8C31F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F7198B0B88454324C4A0F379306707D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E238D618B003F146121BC3EC6772E187</key>
+		<key>F1B90F7338514805E3B6949B7B439791</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E593205F70572027AED777048241F517</key>
+		<key>F3A42E373A803C046656F53CC653775A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,110 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		004F455FFEA3BB27DA74A8CD778E02C5 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = F1B3283C449D502E6A108E8E03C13C83 /* star.png */; };
-		008660C1CF93AB85597270BF2529453D /* SAConfettiView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE4D21C177C9054353821B3AF5A24ED5 /* SAConfettiView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03D5B34A1908CC933C2FBAF60EBCE5E5 /* SquishButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44DCF15A6F7A1693B35349721B79C4D /* SquishButton.swift */; };
 		0F2E8310657F6A3EBEBB5DB0CEEE7C38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
-		20070C9501DA782A1D5EDCB4F75AEDE2 /* Hue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8563FCD0C8F4924955CB5A17C8F58C1 /* Hue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		312D7A1708B3DDA9FDA9E4BEE0E5F11F /* SwiftyTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 461FE65B4C91988039A1452645BCDF47 /* SwiftyTimer-dummy.m */; };
-		44CABCEDDFA58557F9A6DFF926260FF7 /* Pods-TheSeconds-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF32935E8275DFEBBAF218B23DDDDC /* Pods-TheSeconds-dummy.m */; };
-		6462904246DB1CF1499564D9C096DD17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
-		70CBCB67007D356F14B8EC15118BA9E3 /* Hue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 513BA0ECF47E470D80796364DEF9730C /* Hue-dummy.m */; };
+		15FE50D56E15FE9E158968A3EF386DCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		19919271EA4039DE5F00144A942AC9CA /* SquishButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D190A3DD74886B60C095BF4522C8614 /* SquishButton-dummy.m */; };
+		20070C9501DA782A1D5EDCB4F75AEDE2 /* Hue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0D949934DD25FAB7228D9A623DC18D3 /* Hue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		383C161166C6F4AC2283171F4E188C95 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */; };
+		4BE3F1B11E0D203E2E4CC06285D3DFA0 /* Pods-TheSeconds-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF32935E8275DFEBBAF218B23DDDDC /* Pods-TheSeconds-dummy.m */; };
+		52141AE8B123FCF8BD49CFEDE5E6D659 /* SwiftyTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450977B2E1657C473EF87ABDC1EC979 /* SwiftyTimer-dummy.m */; };
+		617548DE16C3831C7FBACDA7FA9EFE0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		6D026A14A82D57D97BF1DDDDA0525DEF /* Pods-TheSeconds-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1685C64B91FF230DD706D46B608A9A80 /* Pods-TheSeconds-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70CBCB67007D356F14B8EC15118BA9E3 /* Hue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4536E1659DF02E926D576B6551FAE3F8 /* Hue-dummy.m */; };
 		7654819548331A59AAB96E83F6E9353E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
-		7854ECF445BACA6FB1E8F0762F9389C7 /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = D671AB2E72CB7235074B9FFF257D1F42 /* diamond.png */; };
-		83790D4473D3F8965A7705C0EE1ADFC6 /* UIColor+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52CBE324720E9A245031C0134B280E /* UIColor+Hue.swift */; };
-		9462EDAC63FA56CEC86637F4C7E31867 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D68BEA2CB09911D3868E83943F3C2 /* SwiftyTimer.swift */; };
-		950E4138A6A936E9008CC17179AE2480 /* SwiftyTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 590238AC334F61FEA036DDA1FDC38A23 /* SwiftyTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9EEA3BE37B9B4FE5AD134FEDC45B3D1C /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBCD1B541C83B275DF428519087920B /* SAConfettiView.swift */; };
-		B5BD88B4BFB0C67FEBAEB9759CD40DCF /* Pods-TheSeconds-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1685C64B91FF230DD706D46B608A9A80 /* Pods-TheSeconds-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CF40AF8AEB69479C67082FEB20EA94B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
-		D1CED65B1145F558BDCD1AA46302802C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */; };
-		DA0F9C4DEE3BEE43D102760C9A7678CA /* SAConfettiView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7071E348E9A52A4749409995C7CDF826 /* SAConfettiView.bundle */; };
-		DC8FAF4526BB59F483373F8A2A1C8D26 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
-		E178864614FD0C85B2CE4F4DA5C8AB08 /* SAConfettiView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2138DEF397B6FADB94991E2B85A613A4 /* SAConfettiView-dummy.m */; };
-		E5E10F9B5E223B6192C741D9CDB0CD25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
-		E70134E0E40A20A4C5CCBB56B2909DC9 /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 67F0C3B5BE46667905F200080E84EC31 /* triangle.png */; };
-		F1FAF630B1BC268A41D1116422AB41A4 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = F6FF10F79C1973E8EBCDB9047655C0D9 /* confetti.png */; };
-		F85030977A6D1BAC697812B41A5905C7 /* UIImage+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6819D692814AFC6536526BF74DECEB /* UIImage+Hue.swift */; };
+		803212D5336D1BD863716358376DD4D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		83790D4473D3F8965A7705C0EE1ADFC6 /* UIColor+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3748823ABEA5190C23E4AD6D26C7AE1 /* UIColor+Hue.swift */; };
+		93A47EC14C0843ADD77ADF86729C3FAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */; };
+		95A1EC6194C79386AFEAF15CB320CB19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3917A50EB224EEDBC66971700D698782 /* UIKit.framework */; };
+		9AE9B532545141819CEC8B254833B6DF /* triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2306386BF5B14B52977BD252D59ED6C0 /* triangle.png */; };
+		9DC16BCC6C106D05EA76B0453A16DF70 /* SquishButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1635688CD2C876F958562CDEE63E92A8 /* SquishButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A61E6F57B692FA4F8C811E6FD3F6CB14 /* SAConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3DE035BB702CE968BB19382FCBEBE2 /* SAConfettiView.swift */; };
+		AFAABFD593CBA454913E84FF5EF38ABF /* diamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 692CE61278B512CB4152F0F73FA4731E /* diamond.png */; };
+		B20DAB3B6022609D419131D41AC6F930 /* SwiftyTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79CB3330B707C0977D3085243121753F /* SwiftyTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDD0DDFD2D85BF4556CD8FE9AC7E246C /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = DA477874AAD4AC036B9760673517481F /* confetti.png */; };
+		C09FF6FFBDB76DEF7340D2817647398B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C16D79CC7300AA9125965EBDE17A44 /* star.png */; };
+		C670E9BFEF45BA5867FED4129EC5996F /* SAConfettiView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C740928C6B51ECC74482FEBC8C67AFD7 /* SAConfettiView.bundle */; };
+		C736097D3FC6457857FF3147DEA6A34A /* SAConfettiView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 214082F63124B8957654B296FEC5584A /* SAConfettiView-dummy.m */; };
+		C8FC26C24025376EF28959465977144D /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE3258A7572B53A024BED018D98673F /* SwiftyTimer.swift */; };
+		E54053615A3271C59B096F8D95A464C0 /* SAConfettiView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B5A6012F79324FF75B49C36B74411903 /* SAConfettiView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F85030977A6D1BAC697812B41A5905C7 /* UIImage+Hue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32714569F4BD419E9F4FB07EC9E2987 /* UIImage+Hue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BEF655D6DE2710166A0B8DEC4FFCC34B /* PBXContainerItemProxy */ = {
+		059D26A7F39CFF7664D6EAB8A830E453 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 750E874A0AB48BCF1EF2BB52B2C66C25;
-			remoteInfo = SwiftyTimer;
+			remoteGlobalIDString = F1B90F7338514805E3B6949B7B439791;
+			remoteInfo = SquishButton;
 		};
-		BF884B6A8D5383AF1E5DABE614C94C8E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E593205F70572027AED777048241F517;
-			remoteInfo = "SAConfettiView-SAConfettiView";
-		};
-		EA5E80F37F11C16C1ABD3BF199F1F9F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7D1D0976FAE866C2FFFE7AEB6067F580;
-			remoteInfo = SAConfettiView;
-		};
-		EC7E6EDD1B545A69F58675757252DBFD /* PBXContainerItemProxy */ = {
+		B4AE0FE0121DF303A6ECCFEFAAD9C5F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B2542602E50EDF091ADB18B4688DF34F;
 			remoteInfo = Hue;
 		};
+		C50CC6725E6FE030BD647A2B06F87720 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69CBCA65590A915D658E701C7D8C31F2;
+			remoteInfo = SAConfettiView;
+		};
+		D36FC585A6A39E05C7DBA4349991CB10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3A42E373A803C046656F53CC653775A;
+			remoteInfo = SwiftyTimer;
+		};
+		D9BE1190A9AA59A8D7AEF9586900206C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F7198B0B88454324C4A0F379306707D;
+			remoteInfo = "SAConfettiView-SAConfettiView";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		037A0EC9B20583E65F2270828444219E /* ResourceBundle-SAConfettiView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SAConfettiView-Info.plist"; sourceTree = "<group>"; };
-		151D68BEA2CB09911D3868E83943F3C2 /* SwiftyTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTimer.swift; path = Sources/SwiftyTimer.swift; sourceTree = "<group>"; };
+		0013A0E13A15FF4AB86BC156294C79C9 /* SquishButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SquishButton.xcconfig; sourceTree = "<group>"; };
+		06DC9CD8A8F92C13F46CF0999BC011FA /* ResourceBundle-SAConfettiView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SAConfettiView-Info.plist"; sourceTree = "<group>"; };
+		0F3DE035BB702CE968BB19382FCBEBE2 /* SAConfettiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SAConfettiView.swift; path = Pod/Classes/SAConfettiView.swift; sourceTree = "<group>"; };
+		1635688CD2C876F958562CDEE63E92A8 /* SquishButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SquishButton-umbrella.h"; sourceTree = "<group>"; };
 		1685C64B91FF230DD706D46B608A9A80 /* Pods-TheSeconds-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TheSeconds-umbrella.h"; sourceTree = "<group>"; };
+		17452D2F5B10CE997AC798CE3C39E634 /* Hue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hue.xcconfig; sourceTree = "<group>"; };
+		1C46A7D77DAAA12A95CAE8B6267D31EE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20BA9022BC9B0D655A2D22A5703C9C6C /* Pods-TheSeconds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheSeconds.release.xcconfig"; sourceTree = "<group>"; };
-		2138DEF397B6FADB94991E2B85A613A4 /* SAConfettiView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAConfettiView-dummy.m"; sourceTree = "<group>"; };
+		214082F63124B8957654B296FEC5584A /* SAConfettiView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SAConfettiView-dummy.m"; sourceTree = "<group>"; };
+		2306386BF5B14B52977BD252D59ED6C0 /* triangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = triangle.png; path = Pod/Assets/triangle.png; sourceTree = "<group>"; };
 		2F9AF9CC0778C9F913EF3533448B871A /* Pods-TheSeconds.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TheSeconds.modulemap"; sourceTree = "<group>"; };
 		33083C616C9CA8AF16FA7C690BC673C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		35DD10493584342CEA52364625CDEABA /* SwiftyTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-prefix.pch"; sourceTree = "<group>"; };
-		3883E91E9A29AE614ECEEC26DEEEB5B5 /* SAConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SAConfettiView.framework; path = SAConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38E1D2556A50376F68FFB89CA979C4C7 /* SAConfettiView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SAConfettiView.modulemap; sourceTree = "<group>"; };
+		35F955528DA7BC002D8C451ED6A2F913 /* Pods_TheSeconds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TheSeconds.framework; path = "Pods-TheSeconds.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E0F10E1690C6BB40C9B741EACFD1E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3917A50EB224EEDBC66971700D698782 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3D190A3DD74886B60C095BF4522C8614 /* SquishButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SquishButton-dummy.m"; sourceTree = "<group>"; };
+		404844E42768F0B9E630C86433848338 /* SAConfettiView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-prefix.pch"; sourceTree = "<group>"; };
+		4536E1659DF02E926D576B6551FAE3F8 /* Hue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Hue-dummy.m"; sourceTree = "<group>"; };
 		45E8F02AFD46536B489792293ED579D0 /* Pods-TheSeconds-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheSeconds-frameworks.sh"; sourceTree = "<group>"; };
-		461FE65B4C91988039A1452645BCDF47 /* SwiftyTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTimer-dummy.m"; sourceTree = "<group>"; };
-		513BA0ECF47E470D80796364DEF9730C /* Hue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Hue-dummy.m"; sourceTree = "<group>"; };
-		51AB148A5A873F0FC1839455F5518824 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		590238AC334F61FEA036DDA1FDC38A23 /* SwiftyTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-umbrella.h"; sourceTree = "<group>"; };
-		630F30862B91C492016D995AB58FAF3A /* Hue.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Hue.modulemap; sourceTree = "<group>"; };
-		67F0C3B5BE46667905F200080E84EC31 /* triangle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = triangle.png; path = Pod/Assets/triangle.png; sourceTree = "<group>"; };
-		6989331AE324DAFBC559E8600D513485 /* Hue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hue-prefix.pch"; sourceTree = "<group>"; };
-		6A547DD9BE82BE1944AD7F381B38B02A /* Pods_TheSeconds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TheSeconds.framework; path = "Pods-TheSeconds.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7071E348E9A52A4749409995C7CDF826 /* SAConfettiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SAConfettiView.bundle; path = SAConfettiView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A8F27319E04052FBA841025E4614DAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8654E8C4A7D0F7B48C606D3CC78463 /* Hue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hue-prefix.pch"; sourceTree = "<group>"; };
+		50D646044C5C9CD895AC50F16D01958C /* SAConfettiView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SAConfettiView.modulemap; sourceTree = "<group>"; };
+		5A1B9170181A1D9CA5CA2BC84282E9A0 /* SquishButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SquishButton.modulemap; sourceTree = "<group>"; };
+		5FE3258A7572B53A024BED018D98673F /* SwiftyTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTimer.swift; path = Sources/SwiftyTimer.swift; sourceTree = "<group>"; };
+		64507A8D02F398A4EC9E227EE5E39B39 /* Hue.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Hue.modulemap; sourceTree = "<group>"; };
+		692CE61278B512CB4152F0F73FA4731E /* diamond.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = diamond.png; path = Pod/Assets/diamond.png; sourceTree = "<group>"; };
+		7157A8557C1B44BF90A2960C32285392 /* SwiftyTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTimer.xcconfig; sourceTree = "<group>"; };
+		79CB3330B707C0977D3085243121753F /* SwiftyTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-umbrella.h"; sourceTree = "<group>"; };
+		8450977B2E1657C473EF87ABDC1EC979 /* SwiftyTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTimer-dummy.m"; sourceTree = "<group>"; };
+		87CE24004C98CA96AB2C9265B4F426A1 /* SAConfettiView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SAConfettiView.framework; path = SAConfettiView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F78B0D9C5C1833F7F83C4067FF374FB /* SwiftyTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FBF32935E8275DFEBBAF218B23DDDDC /* Pods-TheSeconds-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TheSeconds-dummy.m"; sourceTree = "<group>"; };
+		AA569F2A28775950AEFDAF28994DAB9B /* SquishButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SquishButton.framework; path = SquishButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC538F04E53E22057648F5E1986271E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B13CB255AC4630A4A8D897AE135DB7D9 /* Pods-TheSeconds-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TheSeconds-resources.sh"; sourceTree = "<group>"; };
+		B2B77BB1DD9E9EDCF9253C3C22FA795E /* SquishButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SquishButton-prefix.pch"; sourceTree = "<group>"; };
+		B4E28B891C39C881EF3047E209F34E06 /* SwiftyTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyTimer.modulemap; sourceTree = "<group>"; };
+		B5A6012F79324FF75B49C36B74411903 /* SAConfettiView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-umbrella.h"; sourceTree = "<group>"; };
 		BB40336138719BBB97729F3247477483 /* Pods-TheSeconds-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TheSeconds-acknowledgements.plist"; sourceTree = "<group>"; };
-		BCBCD1B541C83B275DF428519087920B /* SAConfettiView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SAConfettiView.swift; path = Pod/Classes/SAConfettiView.swift; sourceTree = "<group>"; };
-		BD6819D692814AFC6536526BF74DECEB /* UIImage+Hue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Hue.swift"; path = "Source/iOS/UIImage+Hue.swift"; sourceTree = "<group>"; };
-		BE4D21C177C9054353821B3AF5A24ED5 /* SAConfettiView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-umbrella.h"; sourceTree = "<group>"; };
-		C0276AA791AD5062EDAB4D0D9E00A745 /* SAConfettiView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SAConfettiView-prefix.pch"; sourceTree = "<group>"; };
 		C170AFCBFB8F843ACBDA2AC4A865404B /* Pods-TheSeconds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheSeconds.debug.xcconfig"; sourceTree = "<group>"; };
-		C41032ACD6DFB9FC4999B39A11D2AE37 /* SwiftyTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTimer.xcconfig; sourceTree = "<group>"; };
-		C8754A0A2BEBF25E1B3F2C9B69119ECC /* SwiftyTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyTimer.modulemap; sourceTree = "<group>"; };
+		C32714569F4BD419E9F4FB07EC9E2987 /* UIImage+Hue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Hue.swift"; path = "Source/iOS/UIImage+Hue.swift"; sourceTree = "<group>"; };
+		C35A9AEE1E380D7F229946158902F440 /* SAConfettiView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAConfettiView.xcconfig; sourceTree = "<group>"; };
+		C3748823ABEA5190C23E4AD6D26C7AE1 /* UIColor+Hue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Hue.swift"; path = "Source/iOS/UIColor+Hue.swift"; sourceTree = "<group>"; };
+		C740928C6B51ECC74482FEBC8C67AFD7 /* SAConfettiView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SAConfettiView.bundle; path = SAConfettiView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AC763DCFF6852E0400744BFE565DBF /* Pods-TheSeconds-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TheSeconds-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CA05B7B68766B365592FAAF6D33B35EA /* SwiftyTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyTimer.framework; path = SwiftyTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D671AB2E72CB7235074B9FFF257D1F42 /* diamond.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = diamond.png; path = Pod/Assets/diamond.png; sourceTree = "<group>"; };
-		D8A23D2A698096C095B6D582FDFD5BCC /* SAConfettiView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SAConfettiView.xcconfig; sourceTree = "<group>"; };
-		EF52CBE324720E9A245031C0134B280E /* UIColor+Hue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Hue.swift"; path = "Source/iOS/UIColor+Hue.swift"; sourceTree = "<group>"; };
-		F1B3283C449D502E6A108E8E03C13C83 /* star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = star.png; path = Pod/Assets/star.png; sourceTree = "<group>"; };
-		F2FBA99B3423D38B4173B3D413000592 /* Hue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hue.xcconfig; sourceTree = "<group>"; };
-		F59BE85BB42FB082B09AA346E47B9EC3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6FF10F79C1973E8EBCDB9047655C0D9 /* confetti.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = confetti.png; path = Pod/Assets/confetti.png; sourceTree = "<group>"; };
-		F8563FCD0C8F4924955CB5A17C8F58C1 /* Hue-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hue-umbrella.h"; sourceTree = "<group>"; };
+		CF14260F69B09522F877DDF4AF7FDE25 /* Hue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hue.framework; path = Hue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1C16D79CC7300AA9125965EBDE17A44 /* star.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = star.png; path = Pod/Assets/star.png; sourceTree = "<group>"; };
+		D44DCF15A6F7A1693B35349721B79C4D /* SquishButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SquishButton.swift; path = SquishButton/Classes/SquishButton.swift; sourceTree = "<group>"; };
+		DA477874AAD4AC036B9760673517481F /* confetti.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = confetti.png; path = Pod/Assets/confetti.png; sourceTree = "<group>"; };
+		F0365AB7D1FE2515D706025C0C6B043D /* SwiftyTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyTimer.framework; path = SwiftyTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0D949934DD25FAB7228D9A623DC18D3 /* Hue-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Hue-umbrella.h"; sourceTree = "<group>"; };
+		F585AF367ACF0B03696191078B15FBC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F966B0E3A62F515F111C0A5C8E10090D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB7751D4D791D1183FB66D3CCA52CD8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		FC84701584205DE04B7AD0707DE02D36 /* Hue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hue.framework; path = Hue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,51 +142,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0D14B7FE48DA169FB476FE6ADF476E7A /* Frameworks */ = {
+		1897E05EC4A00985AA73C14FC600D558 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6462904246DB1CF1499564D9C096DD17 /* Foundation.framework in Frameworks */,
+				15FE50D56E15FE9E158968A3EF386DCB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33565B6C4E60604E12B748A27EA46052 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5E10F9B5E223B6192C741D9CDB0CD25 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C961910CA8157D3480001285215E78C5 /* Frameworks */ = {
+		2FC1DC967FA648217E0F0F9982FD3181 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E48361859D29EE9B79644D6A8615F582 /* Frameworks */ = {
+		8B56CA604EE033F56D45CC42CC9E9427 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF40AF8AEB69479C67082FEB20EA94B6 /* Foundation.framework in Frameworks */,
-				D1CED65B1145F558BDCD1AA46302802C /* QuartzCore.framework in Frameworks */,
-				DC8FAF4526BB59F483373F8A2A1C8D26 /* UIKit.framework in Frameworks */,
+				93A47EC14C0843ADD77ADF86729C3FAD /* Foundation.framework in Frameworks */,
+				383C161166C6F4AC2283171F4E188C95 /* QuartzCore.framework in Frameworks */,
+				95A1EC6194C79386AFEAF15CB320CB19 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABC02856AACF86F92A8F66C9EE4AD88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				617548DE16C3831C7FBACDA7FA9EFE0F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE00C0E8D6B8A04564420CD7570495C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				803212D5336D1BD863716358376DD4D7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03EF786079E45344D3A736D1B5A7BE8A /* Resources */ = {
+		0530D361D9570B43E54B9ADA8A0EA765 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F6FF10F79C1973E8EBCDB9047655C0D9 /* confetti.png */,
-				D671AB2E72CB7235074B9FFF257D1F42 /* diamond.png */,
-				F1B3283C449D502E6A108E8E03C13C83 /* star.png */,
-				67F0C3B5BE46667905F200080E84EC31 /* triangle.png */,
+				64507A8D02F398A4EC9E227EE5E39B39 /* Hue.modulemap */,
+				17452D2F5B10CE997AC798CE3C39E634 /* Hue.xcconfig */,
+				4536E1659DF02E926D576B6551FAE3F8 /* Hue-dummy.m */,
+				4A8654E8C4A7D0F7B48C606D3CC78463 /* Hue-prefix.pch */,
+				F0D949934DD25FAB7228D9A623DC18D3 /* Hue-umbrella.h */,
+				F966B0E3A62F515F111C0A5C8E10090D /* Info.plist */,
 			);
-			name = Resources;
+			name = "Support Files";
+			path = "../Target Support Files/Hue";
+			sourceTree = "<group>";
+		};
+		05D0A2E76C011E2D6CF702423E7204D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C46A7D77DAAA12A95CAE8B6267D31EE /* Info.plist */,
+				06DC9CD8A8F92C13F46CF0999BC011FA /* ResourceBundle-SAConfettiView-Info.plist */,
+				50D646044C5C9CD895AC50F16D01958C /* SAConfettiView.modulemap */,
+				C35A9AEE1E380D7F229946158902F440 /* SAConfettiView.xcconfig */,
+				214082F63124B8957654B296FEC5584A /* SAConfettiView-dummy.m */,
+				404844E42768F0B9E630C86433848338 /* SAConfettiView-prefix.pch */,
+				B5A6012F79324FF75B49C36B74411903 /* SAConfettiView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SAConfettiView";
 			sourceTree = "<group>";
 		};
 		0629EBA502EB1456679B1E20A536E3F9 /* Pods-TheSeconds */ = {
@@ -188,14 +233,15 @@
 			path = "Target Support Files/Pods-TheSeconds";
 			sourceTree = "<group>";
 		};
-		0CAC83C74902A5697E5C7B93CC744A0B /* SwiftyTimer */ = {
+		11804B9D75AEACDA3AF96D30952256DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				151D68BEA2CB09911D3868E83943F3C2 /* SwiftyTimer.swift */,
-				723A6B39EE70EB632F52F3812062C6FF /* Support Files */,
+				63A14381CFA8F4D2A87318719C0C0B35 /* Hue */,
+				A507AFAFB98770180CCEE85621A2E734 /* SAConfettiView */,
+				CE2A501067D525A3E58FA0A557963403 /* SquishButton */,
+				7E00A389BBF6F5CCBBECA375298F159F /* SwiftyTimer */,
 			);
-			name = SwiftyTimer;
-			path = SwiftyTimer;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
@@ -206,53 +252,43 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2C1C08E9DE66FCDCBB6AD122BD63F9C7 /* Pods */ = {
+		166F86614A81D299206E18A28831244B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				38A81612CD1DC2418CB14F15412ACBBD /* Hue */,
-				9F097203B7F9FB4E996DCDA5AB7F561C /* SAConfettiView */,
-				0CAC83C74902A5697E5C7B93CC744A0B /* SwiftyTimer */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		2DDC895EFFAB02550C803FC0B943AF10 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				630F30862B91C492016D995AB58FAF3A /* Hue.modulemap */,
-				F2FBA99B3423D38B4173B3D413000592 /* Hue.xcconfig */,
-				513BA0ECF47E470D80796364DEF9730C /* Hue-dummy.m */,
-				6989331AE324DAFBC559E8600D513485 /* Hue-prefix.pch */,
-				F8563FCD0C8F4924955CB5A17C8F58C1 /* Hue-umbrella.h */,
-				7A8F27319E04052FBA841025E4614DAB /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Hue";
-			sourceTree = "<group>";
-		};
-		38A81612CD1DC2418CB14F15412ACBBD /* Hue */ = {
-			isa = PBXGroup;
-			children = (
-				EF52CBE324720E9A245031C0134B280E /* UIColor+Hue.swift */,
-				BD6819D692814AFC6536526BF74DECEB /* UIImage+Hue.swift */,
-				2DDC895EFFAB02550C803FC0B943AF10 /* Support Files */,
-			);
-			name = Hue;
-			path = Hue;
-			sourceTree = "<group>";
-		};
-		723A6B39EE70EB632F52F3812062C6FF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F59BE85BB42FB082B09AA346E47B9EC3 /* Info.plist */,
-				C8754A0A2BEBF25E1B3F2C9B69119ECC /* SwiftyTimer.modulemap */,
-				C41032ACD6DFB9FC4999B39A11D2AE37 /* SwiftyTimer.xcconfig */,
-				461FE65B4C91988039A1452645BCDF47 /* SwiftyTimer-dummy.m */,
-				35DD10493584342CEA52364625CDEABA /* SwiftyTimer-prefix.pch */,
-				590238AC334F61FEA036DDA1FDC38A23 /* SwiftyTimer-umbrella.h */,
+				38E0F10E1690C6BB40C9B741EACFD1E4 /* Info.plist */,
+				B4E28B891C39C881EF3047E209F34E06 /* SwiftyTimer.modulemap */,
+				7157A8557C1B44BF90A2960C32285392 /* SwiftyTimer.xcconfig */,
+				8450977B2E1657C473EF87ABDC1EC979 /* SwiftyTimer-dummy.m */,
+				8F78B0D9C5C1833F7F83C4067FF374FB /* SwiftyTimer-prefix.pch */,
+				79CB3330B707C0977D3085243121753F /* SwiftyTimer-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftyTimer";
+			sourceTree = "<group>";
+		};
+		55B53CA11A7EB151F5B080C85E09732B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F585AF367ACF0B03696191078B15FBC0 /* Info.plist */,
+				5A1B9170181A1D9CA5CA2BC84282E9A0 /* SquishButton.modulemap */,
+				0013A0E13A15FF4AB86BC156294C79C9 /* SquishButton.xcconfig */,
+				3D190A3DD74886B60C095BF4522C8614 /* SquishButton-dummy.m */,
+				B2B77BB1DD9E9EDCF9253C3C22FA795E /* SquishButton-prefix.pch */,
+				1635688CD2C876F958562CDEE63E92A8 /* SquishButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SquishButton";
+			sourceTree = "<group>";
+		};
+		63A14381CFA8F4D2A87318719C0C0B35 /* Hue */ = {
+			isa = PBXGroup;
+			children = (
+				C3748823ABEA5190C23E4AD6D26C7AE1 /* UIColor+Hue.swift */,
+				C32714569F4BD419E9F4FB07EC9E2987 /* UIImage+Hue.swift */,
+				0530D361D9570B43E54B9ADA8A0EA765 /* Support Files */,
+			);
+			name = Hue;
+			path = Hue;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -260,25 +296,20 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				2C1C08E9DE66FCDCBB6AD122BD63F9C7 /* Pods */,
-				90BE84BD7D4BE8F2D0D9AB0735A8FFF1 /* Products */,
+				11804B9D75AEACDA3AF96D30952256DB /* Pods */,
+				E6BA91CC5927754B9EEF3119FC389A9E /* Products */,
 				847C811CE602BA26D0E0EFB1963D5A46 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		837A99BD488D599A7F9975A5C980ED47 /* Support Files */ = {
+		7E00A389BBF6F5CCBBECA375298F159F /* SwiftyTimer */ = {
 			isa = PBXGroup;
 			children = (
-				51AB148A5A873F0FC1839455F5518824 /* Info.plist */,
-				037A0EC9B20583E65F2270828444219E /* ResourceBundle-SAConfettiView-Info.plist */,
-				38E1D2556A50376F68FFB89CA979C4C7 /* SAConfettiView.modulemap */,
-				D8A23D2A698096C095B6D582FDFD5BCC /* SAConfettiView.xcconfig */,
-				2138DEF397B6FADB94991E2B85A613A4 /* SAConfettiView-dummy.m */,
-				C0276AA791AD5062EDAB4D0D9E00A745 /* SAConfettiView-prefix.pch */,
-				BE4D21C177C9054353821B3AF5A24ED5 /* SAConfettiView-umbrella.h */,
+				5FE3258A7572B53A024BED018D98673F /* SwiftyTimer.swift */,
+				166F86614A81D299206E18A28831244B /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SAConfettiView";
+			name = SwiftyTimer;
+			path = SwiftyTimer;
 			sourceTree = "<group>";
 		};
 		847C811CE602BA26D0E0EFB1963D5A46 /* Targets Support Files */ = {
@@ -287,18 +318,6 @@
 				0629EBA502EB1456679B1E20A536E3F9 /* Pods-TheSeconds */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		90BE84BD7D4BE8F2D0D9AB0735A8FFF1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FC84701584205DE04B7AD0707DE02D36 /* Hue.framework */,
-				6A547DD9BE82BE1944AD7F381B38B02A /* Pods_TheSeconds.framework */,
-				7071E348E9A52A4749409995C7CDF826 /* SAConfettiView.bundle */,
-				3883E91E9A29AE614ECEEC26DEEEB5B5 /* SAConfettiView.framework */,
-				CA05B7B68766B365592FAAF6D33B35EA /* SwiftyTimer.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		93A319F2C1969B7AA0B17444A3F8BA22 /* iOS */ = {
@@ -311,41 +330,83 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		9F097203B7F9FB4E996DCDA5AB7F561C /* SAConfettiView */ = {
+		946343528A98E0E2C8E80F3D91D49615 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BCBCD1B541C83B275DF428519087920B /* SAConfettiView.swift */,
-				03EF786079E45344D3A736D1B5A7BE8A /* Resources */,
-				837A99BD488D599A7F9975A5C980ED47 /* Support Files */,
+				DA477874AAD4AC036B9760673517481F /* confetti.png */,
+				692CE61278B512CB4152F0F73FA4731E /* diamond.png */,
+				D1C16D79CC7300AA9125965EBDE17A44 /* star.png */,
+				2306386BF5B14B52977BD252D59ED6C0 /* triangle.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A507AFAFB98770180CCEE85621A2E734 /* SAConfettiView */ = {
+			isa = PBXGroup;
+			children = (
+				0F3DE035BB702CE968BB19382FCBEBE2 /* SAConfettiView.swift */,
+				946343528A98E0E2C8E80F3D91D49615 /* Resources */,
+				05D0A2E76C011E2D6CF702423E7204D5 /* Support Files */,
 			);
 			name = SAConfettiView;
 			path = SAConfettiView;
 			sourceTree = "<group>";
 		};
+		CE2A501067D525A3E58FA0A557963403 /* SquishButton */ = {
+			isa = PBXGroup;
+			children = (
+				D44DCF15A6F7A1693B35349721B79C4D /* SquishButton.swift */,
+				55B53CA11A7EB151F5B080C85E09732B /* Support Files */,
+			);
+			name = SquishButton;
+			path = SquishButton;
+			sourceTree = "<group>";
+		};
+		E6BA91CC5927754B9EEF3119FC389A9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF14260F69B09522F877DDF4AF7FDE25 /* Hue.framework */,
+				35F955528DA7BC002D8C451ED6A2F913 /* Pods_TheSeconds.framework */,
+				C740928C6B51ECC74482FEBC8C67AFD7 /* SAConfettiView.bundle */,
+				87CE24004C98CA96AB2C9265B4F426A1 /* SAConfettiView.framework */,
+				AA569F2A28775950AEFDAF28994DAB9B /* SquishButton.framework */,
+				F0365AB7D1FE2515D706025C0C6B043D /* SwiftyTimer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		039441CD4BE144BA98823156F6675ECC /* Headers */ = {
+		2360E48B0B929E5B77BFB0263A794E83 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				008660C1CF93AB85597270BF2529453D /* SAConfettiView-umbrella.h in Headers */,
+				B20DAB3B6022609D419131D41AC6F930 /* SwiftyTimer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0FB4D1A6A08034FECE49CD30D3D1C879 /* Headers */ = {
+		82135EF139B08D82A3CBBD69DFED47F1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5BD88B4BFB0C67FEBAEB9759CD40DCF /* Pods-TheSeconds-umbrella.h in Headers */,
+				6D026A14A82D57D97BF1DDDDA0525DEF /* Pods-TheSeconds-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5FADF9F5EC778638A2453845894EEDE4 /* Headers */ = {
+		91E638E7931664F20A625747E5241131 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950E4138A6A936E9008CC17179AE2480 /* SwiftyTimer-umbrella.h in Headers */,
+				9DC16BCC6C106D05EA76B0453A16DF70 /* SquishButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		992A7E65EB84E5FD26D4875A45561934 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E54053615A3271C59B096F8D95A464C0 /* SAConfettiView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,41 +421,62 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		750E874A0AB48BCF1EF2BB52B2C66C25 /* SwiftyTimer */ = {
+		1C15D0A096C04B95DA365776B7353813 /* Pods-TheSeconds */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBDF9140F2DB8A9E976AEB25549A2E7C /* Build configuration list for PBXNativeTarget "SwiftyTimer" */;
+			buildConfigurationList = A7D681105EAAEDD8DD6A4893A1F10B83 /* Build configuration list for PBXNativeTarget "Pods-TheSeconds" */;
 			buildPhases = (
-				7F97026E59E4561346B342F24F7309C3 /* Sources */,
-				0D14B7FE48DA169FB476FE6ADF476E7A /* Frameworks */,
-				5FADF9F5EC778638A2453845894EEDE4 /* Headers */,
+				52FF1DC1DEEECA3F3BBC1034C7B33C90 /* Sources */,
+				AABC02856AACF86F92A8F66C9EE4AD88 /* Frameworks */,
+				82135EF139B08D82A3CBBD69DFED47F1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				172A693CBF1ADF4608D315D27429E339 /* PBXTargetDependency */,
+				9FF4DB3B835C4F8C7FE1163371254F81 /* PBXTargetDependency */,
+				3716F680D474BAFAB3BBDBF2D13E08A4 /* PBXTargetDependency */,
+				A6CBE5A990C8FDE236D7B6339605C02C /* PBXTargetDependency */,
 			);
-			name = SwiftyTimer;
-			productName = SwiftyTimer;
-			productReference = CA05B7B68766B365592FAAF6D33B35EA /* SwiftyTimer.framework */;
+			name = "Pods-TheSeconds";
+			productName = "Pods-TheSeconds";
+			productReference = 35F955528DA7BC002D8C451ED6A2F913 /* Pods_TheSeconds.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7D1D0976FAE866C2FFFE7AEB6067F580 /* SAConfettiView */ = {
+		69CBCA65590A915D658E701C7D8C31F2 /* SAConfettiView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAA7DEC21F51B12CA14C4FD35071F5F7 /* Build configuration list for PBXNativeTarget "SAConfettiView" */;
+			buildConfigurationList = E865AAAEB894C79D046CFC7E508D44ED /* Build configuration list for PBXNativeTarget "SAConfettiView" */;
 			buildPhases = (
-				D92902EC98F198CBBA93E154BE23246E /* Sources */,
-				E48361859D29EE9B79644D6A8615F582 /* Frameworks */,
-				BE24F7D4F2783F468F5A5371B93A587C /* Resources */,
-				039441CD4BE144BA98823156F6675ECC /* Headers */,
+				FA02B626D92055E6EBA9E50D442E9CE7 /* Sources */,
+				8B56CA604EE033F56D45CC42CC9E9427 /* Frameworks */,
+				F4AD5222BCFF0156F54BABFA2506337A /* Resources */,
+				992A7E65EB84E5FD26D4875A45561934 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1AE2A469756708BA1798C17D0D62A4FD /* PBXTargetDependency */,
+				254B603DA07E73BEC96028A69B5DABFE /* PBXTargetDependency */,
 			);
 			name = SAConfettiView;
 			productName = SAConfettiView;
-			productReference = 3883E91E9A29AE614ECEEC26DEEEB5B5 /* SAConfettiView.framework */;
+			productReference = 87CE24004C98CA96AB2C9265B4F426A1 /* SAConfettiView.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		8F7198B0B88454324C4A0F379306707D /* SAConfettiView-SAConfettiView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9683DC4B06BC6D1289213C70C33EC403 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */;
+			buildPhases = (
+				7FC8DE827FD536CCEDC0AE67408280F2 /* Sources */,
+				2FC1DC967FA648217E0F0F9982FD3181 /* Frameworks */,
+				D27DF46957D6B2A6C6C7176F7DA780F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SAConfettiView-SAConfettiView";
+			productName = "SAConfettiView-SAConfettiView";
+			productReference = C740928C6B51ECC74482FEBC8C67AFD7 /* SAConfettiView.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		B2542602E50EDF091ADB18B4688DF34F /* Hue */ = {
 			isa = PBXNativeTarget;
@@ -410,45 +492,42 @@
 			);
 			name = Hue;
 			productName = Hue;
-			productReference = FC84701584205DE04B7AD0707DE02D36 /* Hue.framework */;
+			productReference = CF14260F69B09522F877DDF4AF7FDE25 /* Hue.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E238D618B003F146121BC3EC6772E187 /* Pods-TheSeconds */ = {
+		F1B90F7338514805E3B6949B7B439791 /* SquishButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 64B239BC1A6E758FD7FA83E8C5F2B6F9 /* Build configuration list for PBXNativeTarget "Pods-TheSeconds" */;
+			buildConfigurationList = 6AB3B25AB013F64BF706F84BA022701E /* Build configuration list for PBXNativeTarget "SquishButton" */;
 			buildPhases = (
-				65A73660EFF8A3B53716DE899D1FB540 /* Sources */,
-				33565B6C4E60604E12B748A27EA46052 /* Frameworks */,
-				0FB4D1A6A08034FECE49CD30D3D1C879 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0846F82804331352E8848EEEFEE9279E /* PBXTargetDependency */,
-				FB4BCCFB56BE43D86BEA7AFD2E5C1A3B /* PBXTargetDependency */,
-				ACA85047433E07F2461552B29001C3F2 /* PBXTargetDependency */,
-			);
-			name = "Pods-TheSeconds";
-			productName = "Pods-TheSeconds";
-			productReference = 6A547DD9BE82BE1944AD7F381B38B02A /* Pods_TheSeconds.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E593205F70572027AED777048241F517 /* SAConfettiView-SAConfettiView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 70F1EB1FB4404F4BEBAE52900D42743E /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */;
-			buildPhases = (
-				11117C117B1FBCE6737119BCD1E6C6C3 /* Sources */,
-				C961910CA8157D3480001285215E78C5 /* Frameworks */,
-				1D80AFF8F7A5D9413C1C83E7CA7DF610 /* Resources */,
+				59D16C6B50BF2A1F1A32B5FFDB1ECE8D /* Sources */,
+				1897E05EC4A00985AA73C14FC600D558 /* Frameworks */,
+				91E638E7931664F20A625747E5241131 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "SAConfettiView-SAConfettiView";
-			productName = "SAConfettiView-SAConfettiView";
-			productReference = 7071E348E9A52A4749409995C7CDF826 /* SAConfettiView.bundle */;
-			productType = "com.apple.product-type.bundle";
+			name = SquishButton;
+			productName = SquishButton;
+			productReference = AA569F2A28775950AEFDAF28994DAB9B /* SquishButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3A42E373A803C046656F53CC653775A /* SwiftyTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA9991B22BEDB92E33E0E63FE31651F9 /* Build configuration list for PBXNativeTarget "SwiftyTimer" */;
+			buildPhases = (
+				A7D6DDF74A03B2DBF64418BEBBC3F26E /* Sources */,
+				CE00C0E8D6B8A04564420CD7570495C3 /* Frameworks */,
+				2360E48B0B929E5B77BFB0263A794E83 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyTimer;
+			productName = SwiftyTimer;
+			productReference = F0365AB7D1FE2515D706025C0C6B043D /* SwiftyTimer.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -467,46 +546,48 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 90BE84BD7D4BE8F2D0D9AB0735A8FFF1 /* Products */;
+			productRefGroup = E6BA91CC5927754B9EEF3119FC389A9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B2542602E50EDF091ADB18B4688DF34F /* Hue */,
-				E238D618B003F146121BC3EC6772E187 /* Pods-TheSeconds */,
-				7D1D0976FAE866C2FFFE7AEB6067F580 /* SAConfettiView */,
-				E593205F70572027AED777048241F517 /* SAConfettiView-SAConfettiView */,
-				750E874A0AB48BCF1EF2BB52B2C66C25 /* SwiftyTimer */,
+				1C15D0A096C04B95DA365776B7353813 /* Pods-TheSeconds */,
+				69CBCA65590A915D658E701C7D8C31F2 /* SAConfettiView */,
+				8F7198B0B88454324C4A0F379306707D /* SAConfettiView-SAConfettiView */,
+				F1B90F7338514805E3B6949B7B439791 /* SquishButton */,
+				F3A42E373A803C046656F53CC653775A /* SwiftyTimer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1D80AFF8F7A5D9413C1C83E7CA7DF610 /* Resources */ = {
+		D27DF46957D6B2A6C6C7176F7DA780F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1FAF630B1BC268A41D1116422AB41A4 /* confetti.png in Resources */,
-				7854ECF445BACA6FB1E8F0762F9389C7 /* diamond.png in Resources */,
-				004F455FFEA3BB27DA74A8CD778E02C5 /* star.png in Resources */,
-				E70134E0E40A20A4C5CCBB56B2909DC9 /* triangle.png in Resources */,
+				BDD0DDFD2D85BF4556CD8FE9AC7E246C /* confetti.png in Resources */,
+				AFAABFD593CBA454913E84FF5EF38ABF /* diamond.png in Resources */,
+				C09FF6FFBDB76DEF7340D2817647398B /* star.png in Resources */,
+				9AE9B532545141819CEC8B254833B6DF /* triangle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE24F7D4F2783F468F5A5371B93A587C /* Resources */ = {
+		F4AD5222BCFF0156F54BABFA2506337A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA0F9C4DEE3BEE43D102760C9A7678CA /* SAConfettiView.bundle in Resources */,
+				C670E9BFEF45BA5867FED4129EC5996F /* SAConfettiView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		11117C117B1FBCE6737119BCD1E6C6C3 /* Sources */ = {
+		52FF1DC1DEEECA3F3BBC1034C7B33C90 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE3F1B11E0D203E2E4CC06285D3DFA0 /* Pods-TheSeconds-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,82 +601,79 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65A73660EFF8A3B53716DE899D1FB540 /* Sources */ = {
+		59D16C6B50BF2A1F1A32B5FFDB1ECE8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44CABCEDDFA58557F9A6DFF926260FF7 /* Pods-TheSeconds-dummy.m in Sources */,
+				19919271EA4039DE5F00144A942AC9CA /* SquishButton-dummy.m in Sources */,
+				03D5B34A1908CC933C2FBAF60EBCE5E5 /* SquishButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F97026E59E4561346B342F24F7309C3 /* Sources */ = {
+		7FC8DE827FD536CCEDC0AE67408280F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				312D7A1708B3DDA9FDA9E4BEE0E5F11F /* SwiftyTimer-dummy.m in Sources */,
-				9462EDAC63FA56CEC86637F4C7E31867 /* SwiftyTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D92902EC98F198CBBA93E154BE23246E /* Sources */ = {
+		A7D6DDF74A03B2DBF64418BEBBC3F26E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E178864614FD0C85B2CE4F4DA5C8AB08 /* SAConfettiView-dummy.m in Sources */,
-				9EEA3BE37B9B4FE5AD134FEDC45B3D1C /* SAConfettiView.swift in Sources */,
+				52141AE8B123FCF8BD49CFEDE5E6D659 /* SwiftyTimer-dummy.m in Sources */,
+				C8FC26C24025376EF28959465977144D /* SwiftyTimer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA02B626D92055E6EBA9E50D442E9CE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C736097D3FC6457857FF3147DEA6A34A /* SAConfettiView-dummy.m in Sources */,
+				A61E6F57B692FA4F8C811E6FD3F6CB14 /* SAConfettiView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0846F82804331352E8848EEEFEE9279E /* PBXTargetDependency */ = {
+		172A693CBF1ADF4608D315D27429E339 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Hue;
 			target = B2542602E50EDF091ADB18B4688DF34F /* Hue */;
-			targetProxy = EC7E6EDD1B545A69F58675757252DBFD /* PBXContainerItemProxy */;
+			targetProxy = B4AE0FE0121DF303A6ECCFEFAAD9C5F3 /* PBXContainerItemProxy */;
 		};
-		1AE2A469756708BA1798C17D0D62A4FD /* PBXTargetDependency */ = {
+		254B603DA07E73BEC96028A69B5DABFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SAConfettiView-SAConfettiView";
-			target = E593205F70572027AED777048241F517 /* SAConfettiView-SAConfettiView */;
-			targetProxy = BF884B6A8D5383AF1E5DABE614C94C8E /* PBXContainerItemProxy */;
+			target = 8F7198B0B88454324C4A0F379306707D /* SAConfettiView-SAConfettiView */;
+			targetProxy = D9BE1190A9AA59A8D7AEF9586900206C /* PBXContainerItemProxy */;
 		};
-		ACA85047433E07F2461552B29001C3F2 /* PBXTargetDependency */ = {
+		3716F680D474BAFAB3BBDBF2D13E08A4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftyTimer;
-			target = 750E874A0AB48BCF1EF2BB52B2C66C25 /* SwiftyTimer */;
-			targetProxy = BEF655D6DE2710166A0B8DEC4FFCC34B /* PBXContainerItemProxy */;
+			name = SquishButton;
+			target = F1B90F7338514805E3B6949B7B439791 /* SquishButton */;
+			targetProxy = 059D26A7F39CFF7664D6EAB8A830E453 /* PBXContainerItemProxy */;
 		};
-		FB4BCCFB56BE43D86BEA7AFD2E5C1A3B /* PBXTargetDependency */ = {
+		9FF4DB3B835C4F8C7FE1163371254F81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SAConfettiView;
-			target = 7D1D0976FAE866C2FFFE7AEB6067F580 /* SAConfettiView */;
-			targetProxy = EA5E80F37F11C16C1ABD3BF199F1F9F1 /* PBXContainerItemProxy */;
+			target = 69CBCA65590A915D658E701C7D8C31F2 /* SAConfettiView */;
+			targetProxy = C50CC6725E6FE030BD647A2B06F87720 /* PBXContainerItemProxy */;
+		};
+		A6CBE5A990C8FDE236D7B6339605C02C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyTimer;
+			target = F3A42E373A803C046656F53CC653775A /* SwiftyTimer */;
+			targetProxy = D36FC585A6A39E05C7DBA4349991CB10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03D8B31A9E5B36B4C80F84C2504DBEA7 /* Release */ = {
+		00C59DC2BFA161ED3C03D6CE24386825 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8A23D2A698096C095B6D582FDFD5BCC /* SAConfettiView.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = SAConfettiView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		4C21721897AB4CAE87C09262FC645527 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20BA9022BC9B0D655A2D22A5703C9C6C /* Pods-TheSeconds.release.xcconfig */;
+			baseConfigurationReference = 0013A0E13A15FF4AB86BC156294C79C9 /* SquishButton.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -609,18 +687,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TheSeconds/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SquishButton/SquishButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SquishButton/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TheSeconds/Pods-TheSeconds.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SquishButton/SquishButton.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TheSeconds;
+				PRODUCT_NAME = SquishButton;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -628,6 +702,126 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		157E09777708033FE8D9147051FCD9B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0013A0E13A15FF4AB86BC156294C79C9 /* SquishButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SquishButton/SquishButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SquishButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SquishButton/SquishButton.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SquishButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1697E597BCB11764A5A5F070193EC196 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7157A8557C1B44BF90A2960C32285392 /* SwiftyTimer.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		417FFB12B06F4C6D31E3FB7F2D0CEECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C35A9AEE1E380D7F229946158902F440 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		43270A039C6538DDEDFF4A7E640AB5D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C35A9AEE1E380D7F229946158902F440 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -679,9 +873,26 @@
 			};
 			name = Debug;
 		};
+		5C53D689418D04869CEBCE937514EB5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C35A9AEE1E380D7F229946158902F440 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SAConfettiView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		7950E9E58FA16B90997872DCA02B3402 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2FBA99B3423D38B4173B3D413000592 /* Hue.xcconfig */;
+			baseConfigurationReference = 17452D2F5B10CE997AC798CE3C39E634 /* Hue.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -714,9 +925,47 @@
 			};
 			name = Debug;
 		};
-		AC72B32372591D58E9A0F9BC5BE0C726 /* Debug */ = {
+		8746F54335AC18D8AB443472605E7023 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C170AFCBFB8F843ACBDA2AC4A865404B /* Pods-TheSeconds.debug.xcconfig */;
+			baseConfigurationReference = 20BA9022BC9B0D655A2D22A5703C9C6C /* Pods-TheSeconds.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TheSeconds/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TheSeconds/Pods-TheSeconds.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TheSeconds;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9473B5BDF27D19DFBA482D6D396A2AB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7157A8557C1B44BF90A2960C32285392 /* SwiftyTimer.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -730,18 +979,49 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TheSeconds/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TheSeconds/Pods-TheSeconds.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TheSeconds;
+				PRODUCT_NAME = SwiftyTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A28432D8A264BA893743FBFCE80DE305 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C35A9AEE1E380D7F229946158902F440 /* SAConfettiView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SAConfettiView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -797,9 +1077,9 @@
 			};
 			name = Release;
 		};
-		DB0F4F9BB7ACB7DE84B3E0B20D2D4922 /* Debug */ = {
+		BF416C54AAF3E194544BE841D6E92858 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8A23D2A698096C095B6D582FDFD5BCC /* SAConfettiView.xcconfig */;
+			baseConfigurationReference = C170AFCBFB8F843ACBDA2AC4A865404B /* Pods-TheSeconds.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -813,134 +1093,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TheSeconds/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TheSeconds/Pods-TheSeconds.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SAConfettiView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E9CCD9AD4904ECF282CE5717B5E76A30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C41032ACD6DFB9FC4999B39A11D2AE37 /* SwiftyTimer.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyTimer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		EF9D5557CFC6940FC18EF7B49EC534A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8A23D2A698096C095B6D582FDFD5BCC /* SAConfettiView.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SAConfettiView";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/SAConfettiView/ResourceBundle-SAConfettiView-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = SAConfettiView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		F22555BD521A738CCDAD60A6CAD38F41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8A23D2A698096C095B6D582FDFD5BCC /* SAConfettiView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SAConfettiView/SAConfettiView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SAConfettiView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SAConfettiView/SAConfettiView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SAConfettiView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F60C58347F37784C86963ECF9E7A603C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C41032ACD6DFB9FC4999B39A11D2AE37 /* SwiftyTimer.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyTimer;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TheSeconds;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -954,7 +1118,7 @@
 		};
 		FF386D1D72CF1DC45336A4967EB58FAA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2FBA99B3423D38B4173B3D413000592 /* Hue.xcconfig */;
+			baseConfigurationReference = 17452D2F5B10CE997AC798CE3C39E634 /* Hue.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -998,29 +1162,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64B239BC1A6E758FD7FA83E8C5F2B6F9 /* Build configuration list for PBXNativeTarget "Pods-TheSeconds" */ = {
+		6AB3B25AB013F64BF706F84BA022701E /* Build configuration list for PBXNativeTarget "SquishButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC72B32372591D58E9A0F9BC5BE0C726 /* Debug */,
-				4C21721897AB4CAE87C09262FC645527 /* Release */,
+				157E09777708033FE8D9147051FCD9B8 /* Debug */,
+				00C59DC2BFA161ED3C03D6CE24386825 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		70F1EB1FB4404F4BEBAE52900D42743E /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */ = {
+		9683DC4B06BC6D1289213C70C33EC403 /* Build configuration list for PBXNativeTarget "SAConfettiView-SAConfettiView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF9D5557CFC6940FC18EF7B49EC534A5 /* Debug */,
-				03D8B31A9E5B36B4C80F84C2504DBEA7 /* Release */,
+				5C53D689418D04869CEBCE937514EB5B /* Debug */,
+				43270A039C6538DDEDFF4A7E640AB5D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAA7DEC21F51B12CA14C4FD35071F5F7 /* Build configuration list for PBXNativeTarget "SAConfettiView" */ = {
+		A7D681105EAAEDD8DD6A4893A1F10B83 /* Build configuration list for PBXNativeTarget "Pods-TheSeconds" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB0F4F9BB7ACB7DE84B3E0B20D2D4922 /* Debug */,
-				F22555BD521A738CCDAD60A6CAD38F41 /* Release */,
+				BF416C54AAF3E194544BE841D6E92858 /* Debug */,
+				8746F54335AC18D8AB443472605E7023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1034,11 +1198,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBDF9140F2DB8A9E976AEB25549A2E7C /* Build configuration list for PBXNativeTarget "SwiftyTimer" */ = {
+		E865AAAEB894C79D046CFC7E508D44ED /* Build configuration list for PBXNativeTarget "SAConfettiView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F60C58347F37784C86963ECF9E7A603C /* Debug */,
-				E9CCD9AD4904ECF282CE5717B5E76A30 /* Release */,
+				A28432D8A264BA893743FBFCE80DE305 /* Debug */,
+				417FFB12B06F4C6D31E3FB7F2D0CEECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA9991B22BEDB92E33E0E63FE31651F9 /* Build configuration list for PBXNativeTarget "SwiftyTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9473B5BDF27D19DFBA482D6D396A2AB6 /* Debug */,
+				1697E597BCB11764A5A5F070193EC196 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

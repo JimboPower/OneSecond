@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A5B519191D70E47CD79E78FC09EF287A91FE0D2D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A5B519191D70E47CD79E78FC09EF287A91FE0D2D" : 9223372036854775807,
+    "9295A462694B197E8C8173017F3A6ADC55000029" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AAAE6665-39BC-4C38-AA88-2D2984CE6F29",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A5B519191D70E47CD79E78FC09EF287A91FE0D2D" : "OneSecond\/",
+    "9295A462694B197E8C8173017F3A6ADC55000029" : "Timer_Problem_Repo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TheSeconds",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TheSeconds\/TheSeconds.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JimboPower\/Timer_Problem.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9295A462694B197E8C8173017F3A6ADC55000029"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JimboPower\/OneSecond.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5B519191D70E47CD79E78FC09EF287A91FE0D2D"
+    }
+  ]
+}

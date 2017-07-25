@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '69CBCA65590A915D658E701C7D8C31F2'
-               BlueprintName = 'SAConfettiView'
+               BlueprintIdentifier = 'F1B90F7338514805E3B6949B7B439791'
+               BlueprintName = 'SquishButton'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SAConfettiView.framework'>
+               BuildableName = 'SquishButton.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
