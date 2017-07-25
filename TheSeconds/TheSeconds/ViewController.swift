@@ -36,11 +36,12 @@ class ViewController: UIViewController {
     }
     
     func ruotate() {
-        
-        UIView.animate(withDuration: 10, delay: 0, options: [.repeat], animations: { () -> Void in
-            self.imageWood.transform = self.imageWood.transform.rotated(by: CGFloat(M_PI_2))
-        }, completion: { finished in
-        })
+        let rotationAnimation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotationAnimation.toValue = NSNumber(value: M_PI * 2.5)
+        rotationAnimation.duration = 1;
+        rotationAnimation.isCumulative = true;
+        rotationAnimation.repeatCount = .infinity;
+        self.imageWood?.layer.add(rotationAnimation, forKey: "rotationAnimation")
     }
     
     func buttonTapped() {
@@ -56,7 +57,7 @@ class ViewController: UIViewController {
         }else{
             isTimerRunning = !isTimerRunning
             timer.invalidate()
-            imageWood.layer.removeAllAnimations()
+            self.imageWood?.layer.removeAnimation(forKey: "rotationAnimation")
             startStopButton.setTitle("Start", for: .normal)
             if seconds == 1 && milliseconds == 0 {
                 score += 1
@@ -64,8 +65,9 @@ class ViewController: UIViewController {
             }else{
                 if score > highscore {
                     highscore = score
-                    confettiView.startConfetti()
                     HighscoreDefault.set(highscore, forKey: "highscore")
+                    score = 0
+                    confettiView.startConfetti()
                 }else if score >= 1{
                     UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.allowUserInteraction, animations: {
                         self.view.backgroundColor = UIColor.red
@@ -118,7 +120,7 @@ class ViewController: UIViewController {
     
     func setupConfetti() {
         self.view.addSubview(confettiView)
-        confettiView.type = .confetti
+        confettiView.type = .image(UIImage(named: "ConfettiLeaf")!)
         confettiView.isUserInteractionEnabled = false
     }
     
