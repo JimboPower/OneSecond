@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         score = 0
         milliseconds = 0
         labelScore.text = "Score: \(score)"
-        labelTimer.text = "00:00.00"
+        labelTimer.text = "0.00"
     }
     
     func updateStopwatch() {
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         }
 
         let millisecondsString = milliseconds > 9 ?"\(milliseconds)" : "0\(milliseconds)"
-        let secondsString = seconds > 9 ?"\(seconds)" : "0\(seconds)"
+        let secondsString = seconds > 9 ?"\(seconds)" : "\(seconds)"
         stopWatchString = "\(secondsString).\(millisecondsString)"
         labelTimer.text = stopWatchString
     }
@@ -108,6 +108,7 @@ class ViewController: UIViewController {
         setupConfetti()
         setupButtonAndLabel()
         setupLabels()
+        setupHighscores()
     }
     
     func setupButtonAndLabel() {

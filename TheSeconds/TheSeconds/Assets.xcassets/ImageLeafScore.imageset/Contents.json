@@ -5,17 +5,17 @@
   },
   "images" : [
     {
-      "filename" : "LeafScore~universal@1x.png",
+      "filename" : "ImageLeafScore~universal@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "LeafScore~universal@2x.png",
+      "filename" : "ImageLeafScore~universal@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "LeafScore~universal@3x.png",
+      "filename" : "ImageLeafScore~universal@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
