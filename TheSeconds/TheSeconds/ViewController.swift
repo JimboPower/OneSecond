@@ -15,12 +15,18 @@ class ViewController: UIViewController {
     var seconds = 0
     var milliseconds = 0
     var score = 0
+    var suffix = 0
     var best = 0
-    var isTimerRunning = true
-    var stopWatchString = ""
+    var isTimerRunning = false
+    var isTimerRunningIce = false
     var confettiView: SAConfettiView!
     let bestDefault = UserDefaults.standard
+    var speed = 5
+    var timeIntervalIce = Timer()
+    var durationRuotate = 0.9
+    let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
     @IBOutlet weak var labelRecord: UILabel!
+    @IBOutlet weak var imageIce: UIImageView!
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
@@ -31,52 +37,100 @@ class ViewController: UIViewController {
         buttonTapped()
     }
     
+    @IBOutlet weak var buttonViewIce: UIButton!
+    
+    @IBAction func buttonIceTapped(_ sender: Any) {
+        print("True va, False no")
+        if isTimerRunning == true {
+            imageIce.isHidden = false
+            isTimerRunningIce = true
+            timer.invalidate()
+            timer = Timer(timeInterval: 0.1, repeats: true, block: { (_) in
+                self.incrementMiliseconds()
+            })
+            RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
+            buttonViewIce.isUserInteractionEnabled = false
+            self.stopAnimationForView(self.imageWood)
+            self.durationRuotate = 4
+            self.ruotate()
+            if isTimerRunning == true {
+                timeIntervalIce = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(intervalTime) , userInfo: nil, repeats: true)
+            }
+        }else{
+            normalRun()
+        }
+    }
+    
+    
+    func intervalTime() {
+        if self.isTimerRunningIce == true {
+            self.durationRuotate = 0.9
+            self.isTimerRunningIce = false
+            self.buttonTapped()
+            self.normalRun()
+        }else{
+            normalRun()
+        }
+    }
+    
     func buttonTapped() {
         if isTimerRunning {
-            isTimerRunning = !isTimerRunning
-            confettiView.stopConfetti()
-            timer = Timer.scheduledTimer(timeInterval: 5.ms, target: self, selector: #selector(updateStopwatch), userInfo: nil, repeats: true)
+            isTimerRunning = false
+            isTimerRunningIce = false
+            self.stopAnimationForView(self.imageWood)
+            self.durationRuotate = 0.9
+            self.ruotate()
+            buttonViewIce.isUserInteractionEnabled = false
+            startStopButton.setTitle("Start", for: .normal)
+            self.stopAnimationForView(self.imageWood)
+            timer.invalidate()
+        } else {
+            isTimerRunningIce = false
+            isTimerRunning = true
+            imageIce.isHidden = true
+            milliseconds = 0
             startStopButton.setTitle("Stop", for: .normal)
             ruotate()
-            labelUpdate()
-        }else{
-            isTimerRunning = !isTimerRunning
-            timer.invalidate()
-            startStopButton.setTitle("Start", for: .normal)
-            stopAnimationForView(imageWood)
-            if seconds == 1 && milliseconds == 0 {
-                score += 1
-                labelUpdate()
-            }else{
-                if score > best {
-                    best = score
-                    bestDefault.set(best, forKey: "best")
-                    score = 0
-                    confettiView.startConfetti()
-                }
-                score = 0
-                seconds = 0
-                milliseconds = 0
-            }
+            buttonViewIce.isUserInteractionEnabled = true
+            timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
+                self.incrementMiliseconds()
+            })
+            RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
         }
+    }
+    
+    
+    func normalRun() {
+        isTimerRunning = true
+        imageIce.isHidden = true
+        milliseconds = 0
+        startStopButton.setTitle("Stop", for: .normal)
+        ruotate()
+        buttonViewIce.isUserInteractionEnabled = true
+        timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
+            self.incrementMiliseconds()
+        })
+        RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
+    }
+    
+    func display(miliseconds: Int) {
+        seconds = miliseconds / 100
+        suffix = miliseconds - (seconds * 100)
+        if suffix < 10 {
+            labelTimer.text = String(seconds) + ".0" + String(suffix)
+        } else {
+            labelTimer.text = String(seconds) + "." + String(suffix)
+        }
+    }
+    
+    func incrementMiliseconds() {
+        milliseconds += 1
+        display(miliseconds: milliseconds)
     }
     
     func labelUpdate() {
         labelScore.text = "Score: \(score)"
         labelRecord.text = "Best: \(best)"
-    }
-    
-    func updateStopwatch() {
-        milliseconds += 1
-        print(milliseconds)
-        if milliseconds == 100 {
-            milliseconds = 0
-            seconds += 1
-        }
-        let millisecondsString = milliseconds > 9 ?"\(milliseconds)" : "0\(milliseconds)"
-        let secondsString = seconds > 9 ?"\(seconds)" : "\(seconds)"
-        stopWatchString = "\(secondsString).\(millisecondsString)"
-        labelTimer.text = stopWatchString
     }
     
     func setupButtonAndLabel() {
@@ -95,14 +149,13 @@ class ViewController: UIViewController {
     }
     
     func setupLabels() {
-        labelScore.transform = CGAffineTransform(rotationAngle: -120)
-        labelRecord.transform = CGAffineTransform(rotationAngle: 145)
+        labelScore.transform = CGAffineTransform(rotationAngle: 270)
+        labelRecord.transform = CGAffineTransform(rotationAngle: -50)
     }
     
     func ruotate() {
-        let rotationAnimation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotationAnimation.toValue = NSNumber(value: .pi * 2.0)
-        rotationAnimation.duration = 0.5;
+        rotationAnimation.toValue = NSNumber(value: .pi * 3.5)
+        rotationAnimation.duration = Double(durationRuotate);
         rotationAnimation.isCumulative = true;
         rotationAnimation.repeatCount = .infinity;
         self.imageWood?.layer.add(rotationAnimation, forKey: "rotationAnimation")
@@ -124,8 +177,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConfetti()
-        setupButtonAndLabel()
+        imageIce.isHidden = true
         setupLabels()
         setupbests()
+        buttonViewIce.isUserInteractionEnabled = false
     }
 }
