@@ -26,23 +26,30 @@ class ViewController: UIViewController {
     var durationRuotate = 0.9
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
     @IBOutlet weak var labelRecord: UILabel!
-    @IBOutlet weak var imageIce: UIImageView!
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var leafScore: UIImageView!
     @IBOutlet weak var imageWood: UIImageView!
     @IBOutlet weak var leafBest: UIImageView!
+    
+    var containerViewController: ContainerController?
+    
     @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
     }
     
     @IBOutlet weak var buttonViewIce: UIButton!
     
+    internal func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
+        containerViewController?.overlayEffectImageView.isHidden = isHidden
+    }
+    
     @IBAction func buttonIceTapped(_ sender: Any) {
         print("True va, False no")
         if isTimerRunning == true {
-            imageIce.isHidden = false
+            
+            shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
             isTimerRunningIce = true
             timer.invalidate()
             timer = Timer(timeInterval: 0.1, repeats: true, block: { (_) in
@@ -59,6 +66,7 @@ class ViewController: UIViewController {
             normalRun()
         }
     }
+    
     
     
     func intervalTime() {
@@ -85,7 +93,7 @@ class ViewController: UIViewController {
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
             isTimerRunning = true
-            imageIce.isHidden = true
+            shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
             milliseconds = 0
             startStopButton.setTitle("Stop", for: .normal)
             ruotate()
@@ -101,7 +109,7 @@ class ViewController: UIViewController {
     func normalRun() {
         isTimerRunning = true
         timeIntervalIce.invalidate()
-        imageIce.isHidden = true
+        shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
         milliseconds = 0
         startStopButton.setTitle("Stop", for: .normal)
         ruotate()
@@ -176,9 +184,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConfetti()
-        imageIce.isHidden = true
+        shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
         setupLabels()
         setupbests()
         buttonViewIce.isUserInteractionEnabled = false
+        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
+
 }

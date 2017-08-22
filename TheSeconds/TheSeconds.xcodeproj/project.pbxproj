@@ -11,10 +11,15 @@
 		C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F61EF28C48001DD5A2 /* AppDelegate.swift */; };
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
+		EB07A2481F486DC100467A1E /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07A2471F486DC100467A1E /* ContainerController.swift */; };
+		EB07A24A1F48765700467A1E /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07A2491F48765700467A1E /* ShopController.swift */; };
+		EB07A24D1F4876CD00467A1E /* PowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07A24C1F4876CD00467A1E /* PowerUp.swift */; };
+		EB07A24F1F48782B00467A1E /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07A24E1F48782B00467A1E /* ShopTableViewCell.swift */; };
+		EB07A2531F48801300467A1E /* ShopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB07A2521F48801300467A1E /* ShopTableViewCell.xib */; };
+		EB07A2551F4882F500467A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB07A2541F4882F500467A1E /* Main.storyboard */; };
 		EB0B30311EF43D6E00C8DEDE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B30301EF43D6E00C8DEDE /* UIColorExtensions.swift */; };
 		EB1D44B41F1E379A00BE8772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1D44B21F1E379A00BE8772 /* LaunchScreen.storyboard */; };
 		EB5405571F261C03004E01AE /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB5405561F261BF0004E01AE /* Trattatello.ttf */; };
-		EBF210231F250D5A00F5D850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF210221F250D5A00F5D850 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +31,15 @@
 		C88058F81EF28C48001DD5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C88058FD1EF28C49001DD5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C88059021EF28C49001DD5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB07A2471F486DC100467A1E /* ContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
+		EB07A2491F48765700467A1E /* ShopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
+		EB07A24C1F4876CD00467A1E /* PowerUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerUp.swift; sourceTree = "<group>"; };
+		EB07A24E1F48782B00467A1E /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
+		EB07A2521F48801300467A1E /* ShopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopTableViewCell.xib; sourceTree = "<group>"; };
+		EB07A2541F4882F500467A1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EB0B30301EF43D6E00C8DEDE /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		EB1D44B31F1E379A00BE8772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB5405561F261BF0004E01AE /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Trattatello.ttf; path = ../../../Trattatello.ttf; sourceTree = "<group>"; };
-		EBF210221F250D5A00F5D850 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +83,14 @@
 		C88058F51EF28C48001DD5A2 /* TheSeconds */ = {
 			isa = PBXGroup;
 			children = (
+				EB07A24B1F4876BD00467A1E /* Model */,
 				C88058F61EF28C48001DD5A2 /* AppDelegate.swift */,
 				EB0B302F1EF43D5E00C8DEDE /* Extensions */,
 				C88058FD1EF28C49001DD5A2 /* Assets.xcassets */,
-				C88058F81EF28C48001DD5A2 /* ViewController.swift */,
-				EBF210221F250D5A00F5D850 /* Main.storyboard */,
+				EB07A2471F486DC100467A1E /* ContainerController.swift */,
+				EB07A2511F48783300467A1E /* Main Game */,
+				EB07A2501F48782E00467A1E /* Shop */,
+				EB07A2541F4882F500467A1E /* Main.storyboard */,
 				EB1D44B21F1E379A00BE8772 /* LaunchScreen.storyboard */,
 				C88059021EF28C49001DD5A2 /* Info.plist */,
 			);
@@ -91,6 +104,32 @@
 				00F85900F9CF4CA4C531D7BF /* Pods-TheSeconds.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB07A24B1F4876BD00467A1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB07A24C1F4876CD00467A1E /* PowerUp.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EB07A2501F48782E00467A1E /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				EB07A2491F48765700467A1E /* ShopController.swift */,
+				EB07A2521F48801300467A1E /* ShopTableViewCell.xib */,
+				EB07A24E1F48782B00467A1E /* ShopTableViewCell.swift */,
+			);
+			name = Shop;
+			sourceTree = "<group>";
+		};
+		EB07A2511F48783300467A1E /* Main Game */ = {
+			isa = PBXGroup;
+			children = (
+				C88058F81EF28C48001DD5A2 /* ViewController.swift */,
+			);
+			name = "Main Game";
 			sourceTree = "<group>";
 		};
 		EB0B302F1EF43D5E00C8DEDE /* Extensions */ = {
@@ -167,7 +206,8 @@
 			files = (
 				EB1D44B41F1E379A00BE8772 /* LaunchScreen.storyboard in Resources */,
 				C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */,
-				EBF210231F250D5A00F5D850 /* Main.storyboard in Resources */,
+				EB07A2551F4882F500467A1E /* Main.storyboard in Resources */,
+				EB07A2531F48801300467A1E /* ShopTableViewCell.xib in Resources */,
 				EB5405571F261C03004E01AE /* Trattatello.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +270,10 @@
 				C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */,
 				C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */,
 				EB0B30311EF43D6E00C8DEDE /* UIColorExtensions.swift in Sources */,
+				EB07A2481F486DC100467A1E /* ContainerController.swift in Sources */,
+				EB07A24D1F4876CD00467A1E /* PowerUp.swift in Sources */,
+				EB07A24F1F48782B00467A1E /* ShopTableViewCell.swift in Sources */,
+				EB07A24A1F48765700467A1E /* ShopController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
