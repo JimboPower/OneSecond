@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F1B90F7338514805E3B6949B7B439791'
+               BlueprintIdentifier = 'A3B139D4F3D95AE7B52A31D724D6BD55'
                BlueprintName = 'SquishButton'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SquishButton.framework'>

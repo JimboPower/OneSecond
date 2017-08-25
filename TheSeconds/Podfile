@@ -7,5 +7,6 @@ target 'TheSeconds' do
   pod 'Hue'
   pod 'SwiftyTimer'
   pod 'SquishButton'
+  pod 'Firebase/Core'
   pod 'SAConfettiView', :git => 'https://github.com/tibikolozsi/SAConfettiView.git', :branch =>‘master’
 end

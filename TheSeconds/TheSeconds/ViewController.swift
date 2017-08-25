@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var confettiView: SAConfettiView!
     let bestDefault = UserDefaults.standard
     var speed = 5
+    var containerViewController: ContainerController?
     var timeIntervalIce = Timer()
     var durationRuotate = 0.9
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
@@ -32,23 +33,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var leafScore: UIImageView!
     @IBOutlet weak var imageWood: UIImageView!
     @IBOutlet weak var leafBest: UIImageView!
-    
-    var containerViewController: ContainerController?
-    
     @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
     }
-    
     @IBOutlet weak var buttonViewIce: UIButton!
-    
     internal func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
         containerViewController?.overlayEffectImageView.isHidden = isHidden
     }
-    
     @IBAction func buttonIceTapped(_ sender: Any) {
-        print("True va, False no")
         if isTimerRunning == true {
-            
             shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
             isTimerRunningIce = true
             timer.invalidate()
@@ -58,16 +51,14 @@ class ViewController: UIViewController {
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
             buttonViewIce.isUserInteractionEnabled = false
             self.stopAnimationForView(self.imageWood)
-            self.durationRuotate = 4
+            self.durationRuotate = 3
             self.ruotate()
             if isTimerRunning == true {
-                timeIntervalIce = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(intervalTime) , userInfo: nil, repeats: true)}
+                timeIntervalIce = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(intervalTime) , userInfo: nil, repeats: true)}
         }else{
             normalRun()
         }
     }
-    
-    
     
     func intervalTime() {
             durationRuotate = 0.9
@@ -88,13 +79,29 @@ class ViewController: UIViewController {
             buttonViewIce.isUserInteractionEnabled = false
             startStopButton.setTitle("Start", for: .normal)
             self.stopAnimationForView(self.imageWood)
+            print(best)
+            if seconds >= 1 && suffix == 0{
+                score += 1
+                labelUpdate()
+            }else{
+                print("You lose")
+                labelUpdate()
+                if best < score {
+                    best = score
+                    print("ciao")
+                    labelUpdate()
+                    bestDefault.set(score, forKey: "best")
+                }
+                score = 0
+                labelUpdate()
+                milliseconds = 0
+            }
             timer.invalidate()
         } else {
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
             isTimerRunning = true
             shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
-            milliseconds = 0
             startStopButton.setTitle("Stop", for: .normal)
             ruotate()
             buttonViewIce.isUserInteractionEnabled = true
@@ -104,7 +111,6 @@ class ViewController: UIViewController {
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
         }
     }
-    
     
     func normalRun() {
         isTimerRunning = true
@@ -168,13 +174,6 @@ class ViewController: UIViewController {
         self.imageWood?.layer.add(rotationAnimation, forKey: "rotationAnimation")
     }
     
-    func setupbests() {
-        if let best = bestDefault.value(forKey: "best") as? Int {
-            self.best = best
-            labelRecord.text = "Best: \(best)"
-        }
-    }
-    
     func stopAnimationForView(_ myView: UIView) {
         let transform = myView.layer.presentation()?.transform
         myView.layer.transform = transform!
@@ -184,17 +183,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConfetti()
+        setupLabels()
+        best = bestDefault.integer(forKey: "best")
         shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
         setupLabels()
-        setupbests()
+        labelUpdate()
         buttonViewIce.isUserInteractionEnabled = false
-        
+        print(best)
     }
+    
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
     }
-
 }
