@@ -8,10 +8,10 @@
 
 import UIKit
 import SAConfettiView
-import SwiftyTimer
 
 class ViewController: UIViewController {
     var timer = Timer()
+    var timeIntervalIce = Timer()
     var seconds = 0
     var milliseconds = 0
     var score = 0
@@ -21,11 +21,14 @@ class ViewController: UIViewController {
     var isTimerRunningIce = false
     var confettiView: SAConfettiView!
     let bestDefault = UserDefaults.standard
-    var speed = 5
     var containerViewController: ContainerController?
-    var timeIntervalIce = Timer()
     var durationRuotate = 0.9
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+    @IBAction func buttonShop(_ sender: Any) {
+        timer.invalidate()
+        isTimerRunning = !isTimerRunning
+
+    }
     @IBOutlet weak var labelRecord: UILabel!
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!
@@ -33,11 +36,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var leafScore: UIImageView!
     @IBOutlet weak var imageWood: UIImageView!
     @IBOutlet weak var leafBest: UIImageView!
+    
     @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
     }
     @IBOutlet weak var buttonViewIce: UIButton!
-    internal func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
+    
+    func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
         containerViewController?.overlayEffectImageView.isHidden = isHidden
     }
     @IBAction func buttonIceTapped(_ sender: Any) {
@@ -97,7 +102,7 @@ class ViewController: UIViewController {
                 milliseconds = 0
             }
             timer.invalidate()
-        } else {
+        }else{
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
             isTimerRunning = true

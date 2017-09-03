@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ShopController: UIViewController {
 
     var powerUps = [PowerUp]()
-    
+
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-
-        let icePowerUp = PowerUp(title: "Ice Freeze", text: "Serve a rallentare il tempo.", cost: 40)
-        powerUps.append(icePowerUp)
+        observePowerUps()
+    }
+    
+    internal func observePowerUps() {
+        APIService.observePowerUps { (powerUp) in
+            self.powerUps.append(powerUp)
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -27,6 +34,7 @@ extension ShopController {
     internal func setupTableView() {
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: ShopTableViewCell.identifier, bundle: .main), forCellReuseIdentifier: ShopTableViewCell.identifier)
+        tableView.separatorColor = .clear
     }
 }
 
@@ -48,8 +56,22 @@ extension ShopController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ShopTableViewCell.identifier, for: indexPath) as! ShopTableViewCell
         let powerUp = powerUps[indexPath.row]
-        
         cell.titleLabel.text = powerUp.title
+        
+        if let cost = powerUp.cost {
+            cell.labelPrize.text = String(describing: cost)
+        }
+        
+        if let text = powerUp.text {
+            cell.labelDescription.text = text
+        }
+        
+        if let imageUrl = powerUp.imageUrl {
+            let url = URL(string: imageUrl)
+            cell.leftImageView.kf.setImage(with: url)
+        } else {
+            cell.leftImageView.image = nil
+        }
         return cell
     }
 }

@@ -80,13 +80,13 @@
                                 <rect key="frame" x="38" y="150" width="300" height="367"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YsG-N0-2UY">
-                                <rect key="frame" x="0.0" y="-10" width="375" height="650"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="630"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dYG-9p-2Nd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="251.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="252"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-1a-fpR">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="251.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="252"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageLeafScore" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-pb-M57">
                                                         <rect key="frame" x="19" y="-30" width="145" height="200"/>
@@ -108,13 +108,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwl-4y-223">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="251.5"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="252"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageGoToShop" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-p5-1gs">
-                                                        <rect key="frame" x="-12" y="-252" width="150" height="754.5"/>
+                                                        <rect key="frame" x="-12" y="-252.5" width="150" height="756"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78l-gz-jMP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="251.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="252"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="24"/>
                                                         <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="38" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="29" maxY="0.0"/>
@@ -123,6 +123,7 @@
                                                             <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="60"/>
                                                         </variation>
                                                         <connections>
+                                                            <action selector="buttonShop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="noM-xC-qnT"/>
                                                             <segue destination="WEL-TE-vdI" kind="show" id="vIJ-hZ-Fbu"/>
                                                         </connections>
                                                     </button>
@@ -139,7 +140,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wos-Qf-sdX">
-                                                <rect key="frame" x="250" y="0.0" width="125" height="251.5"/>
+                                                <rect key="frame" x="250" y="0.0" width="125" height="252"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageLeafBest" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-cX-Khs">
                                                         <rect key="frame" x="-39" y="-30" width="145" height="200"/>
@@ -163,7 +164,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-hW-p0O">
-                                        <rect key="frame" x="115" y="251.5" width="145.5" height="184.5"/>
+                                        <rect key="frame" x="115" y="252" width="145.5" height="144"/>
                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="85"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -172,7 +173,7 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-8L-fZo">
-                                        <rect key="frame" x="148" y="436" width="79" height="114"/>
+                                        <rect key="frame" x="148" y="396" width="79" height="134"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <state key="normal" backgroundImage="ImageIce">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -182,7 +183,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrH-6H-K0X">
-                                        <rect key="frame" x="56" y="550" width="263" height="100"/>
+                                        <rect key="frame" x="56" y="530" width="263" height="100"/>
                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
                                         <state key="normal" title="Start" backgroundImage="start-button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,8 +268,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageSignShop" translatesAutoresizingMaskIntoConstraints="NO" id="j0Y-Eb-nsl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jn9-yl-z43">
-                                <rect key="frame" x="0.0" y="233" width="375" height="434"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jn9-yl-z43">
+                                <rect key="frame" x="10" y="233" width="355" height="434"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="WEL-TE-vdI" id="eXM-J3-vOH"/>
@@ -288,7 +289,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jn9-yl-z43" secondAttribute="trailing" id="21k-f5-iQn"/>
+                            <constraint firstAttribute="trailing" secondItem="jn9-yl-z43" secondAttribute="trailing" constant="10" id="21k-f5-iQn"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="centerY" secondItem="jRA-Zn-df1" secondAttribute="centerY" id="C19-Fm-JMz"/>
                             <constraint firstAttribute="trailing" secondItem="j0Y-Eb-nsl" secondAttribute="trailing" id="L54-3R-goA"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" multiplier="0.34" id="LH4-85-N2Q"/>
@@ -299,7 +300,7 @@
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="top" secondItem="jRA-Zn-df1" secondAttribute="top" id="j0n-qM-qVp"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="width" secondItem="jRA-Zn-df1" secondAttribute="width" id="jwO-E6-BvQ"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" id="p97-7v-OLT"/>
-                            <constraint firstItem="jn9-yl-z43" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" id="yD4-oq-fIv"/>
+                            <constraint firstItem="jn9-yl-z43" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" constant="10" id="yD4-oq-fIv"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" multiplier="1.5" id="yIL-3Y-HEH"/>
                         </constraints>
                     </view>
@@ -324,6 +325,6 @@
         <image name="start-button" width="313" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Nqi-GS-gm1"/>
+        <segue reference="wSN-xN-Xvd"/>
     </inferredMetricsTieBreakers>
 </document>

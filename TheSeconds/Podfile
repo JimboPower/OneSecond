@@ -4,9 +4,9 @@
 target 'TheSeconds' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  pod 'Kingfisher', '~> 3.0'
   pod 'Hue'
-  pod 'SwiftyTimer'
-  pod 'SquishButton'
-  pod 'Firebase/Core'
+  pod 'Firebase'
+  pod 'Firebase/Database'
   pod 'SAConfettiView', :git => 'https://github.com/tibikolozsi/SAConfettiView.git', :branch =>‘master’
 end

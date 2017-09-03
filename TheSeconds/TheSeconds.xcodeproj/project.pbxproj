@@ -21,6 +21,7 @@
 		EB1D44B41F1E379A00BE8772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1D44B21F1E379A00BE8772 /* LaunchScreen.storyboard */; };
 		EB5405571F261C03004E01AE /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB5405561F261BF0004E01AE /* Trattatello.ttf */; };
 		EBD9B9911F4C38B30073A6DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBD9B9901F4C38B30073A6DE /* GoogleService-Info.plist */; };
+		EBF45EDB1F5C8E5700305A73 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF45EDA1F5C8E5600305A73 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		EB1D44B31F1E379A00BE8772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB5405561F261BF0004E01AE /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Trattatello.ttf; path = ../../../Trattatello.ttf; sourceTree = "<group>"; };
 		EBD9B9901F4C38B30073A6DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EBF45EDA1F5C8E5600305A73 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				EB07A24B1F4876BD00467A1E /* Model */,
 				C88058F61EF28C48001DD5A2 /* AppDelegate.swift */,
+				EBF45EDA1F5C8E5600305A73 /* APIService.swift */,
 				EB0B302F1EF43D5E00C8DEDE /* Extensions */,
 				C88058FD1EF28C49001DD5A2 /* Assets.xcassets */,
 				EB07A2511F48783300467A1E /* Main Game */,
@@ -277,6 +280,7 @@
 				EB07A2481F486DC100467A1E /* ContainerController.swift in Sources */,
 				EB07A24D1F4876CD00467A1E /* PowerUp.swift in Sources */,
 				EB07A24F1F48782B00467A1E /* ShopTableViewCell.swift in Sources */,
+				EBF45EDB1F5C8E5700305A73 /* APIService.swift in Sources */,
 				EB07A24A1F48765700467A1E /* ShopController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

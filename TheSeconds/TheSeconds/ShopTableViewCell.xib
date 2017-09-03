@@ -26,11 +26,15 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gg1-CY-XiS">
                     <rect key="frame" x="25" y="25" width="332" height="229"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageIce" translatesAutoresizingMaskIntoConstraints="NO" id="vYd-HN-1yM">
-                            <rect key="frame" x="0.0" y="57.5" width="84" height="114"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYd-HN-1yM">
+                            <rect key="frame" x="0.0" y="79.5" width="97.5" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="QOw-r4-hOo"/>
+                                <constraint firstAttribute="height" constant="70" id="sGr-aK-Gbm"/>
+                            </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="6CR-8P-6Li">
-                            <rect key="frame" x="96" y="29.5" width="236" height="170"/>
+                            <rect key="frame" x="109.5" y="29.5" width="222.5" height="170"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="Oz1-8T-8vc">
                                     <rect key="frame" x="0.0" y="0.0" width="222" height="96"/>
@@ -101,7 +105,6 @@
         </view>
     </objects>
     <resources>
-        <image name="ImageIce" width="79" height="114"/>
         <image name="ImageTableShop" width="365" height="237"/>
         <image name="acorn-icon" width="37" height="46"/>
     </resources>

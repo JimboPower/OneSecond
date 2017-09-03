@@ -17,4 +17,9 @@ class ShopTableViewCell: UITableViewCell {
     @IBOutlet weak var labelPrize: UILabel!
     
     static let identifier = "ShopTableViewCell"
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundColor = .clear
+    }
 }

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-TheSeconds.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,12 +34,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SquishButton.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyTimer.xcscheme</key>
+		<key>leveldb-library.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,22 +52,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BC39466A1386D1829C248C37FCD72FE</key>
+		<key>1756C247F30DA70A94467D2C6A1DC1D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4B5F4854BEDA586472579B165CC83F5A</key>
+		<key>17DF07E20A62193ABD5CCD4663F5A04A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A340D45537F9239BA2D7D7C6F23A7BA</key>
+		<key>266AE1506DAD13D34C0725E909C0C476</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3B139D4F3D95AE7B52A31D724D6BD55</key>
+		<key>6F712943B3C5592E82604940D11CE08A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
+		<key>DD8E644C9A81DAAD975A98AEDA80F69F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E88EFACF0437D1EADB6116951DEB36A5</key>
+		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
