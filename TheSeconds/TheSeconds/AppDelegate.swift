@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

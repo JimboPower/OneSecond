@@ -21,11 +21,25 @@ class ShopController: UIViewController {
         observePowerUps()
     }
     
+    
+    
     internal func observePowerUps() {
-        APIService.observePowerUps { (powerUp) in
+        APIService.observePowerUps {
+            (powerUp) in
             self.powerUps.append(powerUp)
+            self.powerUps = self.powerUps.sorted(by: { (p1, p2) -> Bool in
+                if let tier1 = p1.tier, let tier2 = p1.tier {
+                    return tier1 < tier2
+                } else {
+                    return true
+                }
+            })
             self.tableView.reloadData()
         }
+    }
+    
+    @IBAction func didTapBackButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -35,6 +49,7 @@ extension ShopController {
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: ShopTableViewCell.identifier, bundle: .main), forCellReuseIdentifier: ShopTableViewCell.identifier)
         tableView.separatorColor = .clear
+        tableView.showsVerticalScrollIndicator = false
     }
 }
 
@@ -71,6 +86,12 @@ extension ShopController: UITableViewDataSource {
             cell.leftImageView.kf.setImage(with: url)
         } else {
             cell.leftImageView.image = nil
+        }
+        
+        if let onSale = powerUp.isOnSale {
+            cell.saleRibbonImageView.isHidden = !onSale
+        } else {
+            cell.saleRibbonImageView.isHidden = true
         }
         return cell
     }

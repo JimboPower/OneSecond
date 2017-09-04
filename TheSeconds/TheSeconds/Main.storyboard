@@ -80,7 +80,7 @@
                                 <rect key="frame" x="38" y="150" width="300" height="367"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YsG-N0-2UY">
-                                <rect key="frame" x="0.0" y="10" width="375" height="630"/>
+                                <rect key="frame" x="0.0" y="-10" width="375" height="650"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dYG-9p-2Nd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="252"/>
@@ -164,7 +164,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-hW-p0O">
-                                        <rect key="frame" x="115" y="252" width="145.5" height="144"/>
+                                        <rect key="frame" x="115" y="252" width="145.5" height="184"/>
                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="85"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -173,7 +173,7 @@
                                         </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-8L-fZo">
-                                        <rect key="frame" x="148" y="396" width="79" height="134"/>
+                                        <rect key="frame" x="148" y="436" width="79" height="114"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <state key="normal" backgroundImage="ImageIce">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -183,7 +183,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrH-6H-K0X">
-                                        <rect key="frame" x="56" y="530" width="263" height="100"/>
+                                        <rect key="frame" x="56" y="550" width="263" height="100"/>
                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
                                         <state key="normal" title="Start" backgroundImage="start-button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -276,14 +276,13 @@
                                     <outlet property="delegate" destination="WEL-TE-vdI" id="fkr-8K-CYR"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syF-Rl-XEx">
-                                <rect key="frame" x="64" y="198" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syF-Rl-XEx">
+                                <rect key="frame" x="10" y="0.0" width="53" height="30"/>
+                                <state key="normal" title="Indietro">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="wSN-xN-Xvd"/>
+                                    <action selector="didTapBackButton:" destination="WEL-TE-vdI" eventType="touchUpInside" id="rUN-cS-4eG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -291,6 +290,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jn9-yl-z43" secondAttribute="trailing" constant="10" id="21k-f5-iQn"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="centerY" secondItem="jRA-Zn-df1" secondAttribute="centerY" id="C19-Fm-JMz"/>
+                            <constraint firstItem="syF-Rl-XEx" firstAttribute="top" secondItem="d2p-ch-uMb" secondAttribute="bottom" id="Dqf-Bn-6Cx"/>
                             <constraint firstAttribute="trailing" secondItem="j0Y-Eb-nsl" secondAttribute="trailing" id="L54-3R-goA"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" multiplier="0.34" id="LH4-85-N2Q"/>
                             <constraint firstItem="jn9-yl-z43" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" multiplier="0.65" id="MSS-Af-MT6"/>
@@ -300,6 +300,7 @@
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="top" secondItem="jRA-Zn-df1" secondAttribute="top" id="j0n-qM-qVp"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="width" secondItem="jRA-Zn-df1" secondAttribute="width" id="jwO-E6-BvQ"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" id="p97-7v-OLT"/>
+                            <constraint firstItem="syF-Rl-XEx" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" constant="10" id="taI-su-APD"/>
                             <constraint firstItem="jn9-yl-z43" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" constant="10" id="yD4-oq-fIv"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" multiplier="1.5" id="yIL-3Y-HEH"/>
                         </constraints>
@@ -310,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="467-5D-GcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3884" y="684"/>
+            <point key="canvasLocation" x="3884" y="683.20839580209895"/>
         </scene>
     </scenes>
     <resources>
@@ -324,7 +325,4 @@
         <image name="background" width="1280" height="903"/>
         <image name="start-button" width="313" height="103"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="wSN-xN-Xvd"/>
-    </inferredMetricsTieBreakers>
 </document>
