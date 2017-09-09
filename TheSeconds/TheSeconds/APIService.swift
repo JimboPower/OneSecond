@@ -14,7 +14,6 @@ class APIService: NSObject {
     class func observePowerUps(completion: ((_ powerUp: PowerUp) -> Void)?) {
         Database.database().reference().child("power-ups").observe(.childAdded, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: Any] {
-                print(dictionary)
                 let powerUp = PowerUp(dictionary: dictionary)
                 completion?(powerUp)
             }

@@ -9,11 +9,14 @@
 import UIKit
 import Kingfisher
 
-class ShopController: UIViewController {
+class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
 
     var powerUps = [PowerUp]()
 
-    @IBOutlet weak var tableView: UITableView!
+    let cellIdentifier = "cellIdentifier"
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,42 +37,73 @@ class ShopController: UIViewController {
                     return true
                 }
             })
-            self.tableView.reloadData()
+            self.collectionView.reloadData()
         }
     }
     
     @IBAction func didTapBackButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        let numberOfCells = Int(view.frame.width/2)
+        print("OK YOU HAVE", numberOfCells, "CELLS")
+        print("ruota!!!")
+    }
 }
 
 // MARK: - Setup
 extension ShopController {
     internal func setupTableView() {
-        tableView.tableFooterView = UIView()
-        tableView.register(UINib(nibName: ShopTableViewCell.identifier, bundle: .main), forCellReuseIdentifier: ShopTableViewCell.identifier)
-        tableView.separatorColor = .clear
-        tableView.showsVerticalScrollIndicator = false
+        collectionView.register(UINib(nibName:"ShopTableViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.backgroundColor = .clear
     }
 }
 
-extension ShopController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+extension ShopController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            print("iPhone")
+            return CGSize(width: view.frame.width, height: 200)
+            break
+        case .pad:
+            print("ipad")
+            return CGSize(width: (view.frame.width)/2, height: (view.frame.height)*0.24)
+            break
+        case .unspecified:
+            print("I don't know")
+            break
+        default:
+            print("I don't know")
+            // Uh, oh! What could it be?
+        }
+        return CGSize(width: 0, height: 0)
     }
 }
 
-extension ShopController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
+extension ShopController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return powerUps.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ShopTableViewCell.identifier, for: indexPath) as! ShopTableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ShopTableViewCell
+        
         let powerUp = powerUps[indexPath.row]
         cell.titleLabel.text = powerUp.title
         
@@ -88,11 +122,12 @@ extension ShopController: UITableViewDataSource {
             cell.leftImageView.image = nil
         }
         
-        if let onSale = powerUp.isOnSale {
-            cell.saleRibbonImageView.isHidden = !onSale
-        } else {
-            cell.saleRibbonImageView.isHidden = true
-        }
+        ///if let onSale = powerUp.isOnSale {
+           // cell.saleRibbonImageView.isHidden = !onSale
+        //} else {
+          ///  cell.saleRibbonImageView.isHidden = true
+       // }
+        
         return cell
     }
 }

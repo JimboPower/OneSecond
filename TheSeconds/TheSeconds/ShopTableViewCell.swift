@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShopTableViewCell: UITableViewCell {
+class ShopTableViewCell: UICollectionViewCell {
     
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var saleRibbonImageView: UIImageView!
@@ -21,5 +21,7 @@ class ShopTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
+        saleRibbonImageView.alpha = 0
+
     }
 }

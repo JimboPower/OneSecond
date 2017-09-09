@@ -15,7 +15,7 @@ class PowerUp: NSObject {
     var maximumLevels: Int?
     var backgroundEffectImageUrl: String?
     var text: String?
-    var isOnSale: Bool?
+    ///var isOnSale: Bool?
     var tier: Int?
     
     init(dictionary: [String: Any]) {
@@ -43,9 +43,9 @@ class PowerUp: NSObject {
             self.text = text
         }
         
-        if let onSale = dictionary["isOnSale"] as? Bool {
-            self.isOnSale = onSale
-        }
+        //if let onSale = dictionary["isOnSale"] as? Bool {
+          //  self.isOnSale = onSale
+        //}
         
         if let tier = dictionary["tier"] as? Int {
             self.tier = tier
