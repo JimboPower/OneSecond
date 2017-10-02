@@ -8,5 +8,5 @@ target 'TheSeconds' do
   pod 'Hue'
   pod 'Firebase'
   pod 'Firebase/Database'
-  pod 'SAConfettiView', :git => 'https://github.com/tibikolozsi/SAConfettiView.git', :branch =>‘master’
+  pod 'SAConfettiView', :git => 'https://github.com/tibikolozsi/SAConfettiView.git' #, :branch =>‘master’
 end

@@ -50,7 +50,5 @@ class PowerUp: NSObject {
         if let tier = dictionary["tier"] as? Int {
             self.tier = tier
         }
-        
-        
     }
 }

@@ -7,6 +7,7 @@
 /////
 
 import UIKit
+
 import SAConfettiView
 
 class ViewController: UIViewController {
@@ -26,8 +27,9 @@ class ViewController: UIViewController {
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
-        isTimerRunning = !isTimerRunning
-
+        startStopButton.setTitle("Start", for: .normal)
+        milliseconds = 0
+        seconds = 0
     }
     @IBOutlet weak var labelRecord: UILabel!
     @IBOutlet weak var labelScore: UILabel!
@@ -36,12 +38,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var leafScore: UIImageView!
     @IBOutlet weak var imageWood: UIImageView!
     @IBOutlet weak var leafBest: UIImageView!
-    
     @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
     }
     @IBOutlet weak var buttonViewIce: UIButton!
-    
     func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
         containerViewController?.overlayEffectImageView.isHidden = isHidden
     }
@@ -196,7 +196,6 @@ class ViewController: UIViewController {
         buttonViewIce.isUserInteractionEnabled = false
         print(best)
     }
-    
     override func viewDidAppear(_ animated: Bool) {
     }
 }
