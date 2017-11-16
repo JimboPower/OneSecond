@@ -67,11 +67,9 @@ extension ShopController: UICollectionViewDelegate {
         case .phone:
             print("iPhone")
             return CGSize(width: view.frame.width, height: 200)
-            break
         case .pad:
             print("ipad")
             return CGSize(width: (view.frame.width)/2, height: (view.frame.height)*0.24)
-            break
         case .unspecified:
             print("I don't know")
             break

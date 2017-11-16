@@ -81,11 +81,12 @@ class ViewController: UIViewController {
             self.stopAnimationForView(self.imageWood)
             self.durationRuotate = 0.9
             self.ruotate()
+            confettiView.stopConfetti()
             buttonViewIce.isUserInteractionEnabled = false
             startStopButton.setTitle("Start", for: .normal)
             self.stopAnimationForView(self.imageWood)
             print(best)
-            if seconds >= 1 && suffix == 0{
+            if seconds >= 1 && suffix == 0 {
                 score += 1
                 labelUpdate()
             }else{
@@ -96,6 +97,7 @@ class ViewController: UIViewController {
                     print("ciao")
                     labelUpdate()
                     bestDefault.set(score, forKey: "best")
+                    confettiView.startConfetti()
                 }
                 score = 0
                 labelUpdate()
