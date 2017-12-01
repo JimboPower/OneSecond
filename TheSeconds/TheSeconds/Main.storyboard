@@ -95,7 +95,7 @@
                                                         <rect key="frame" x="19" y="-30" width="145" height="200"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-yC-jnq">
-                                                        <rect key="frame" x="54" y="46" width="75" height="49"/>
+                                                        <rect key="frame" x="41" y="55" width="101" height="31.5"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -149,7 +149,7 @@
                                                         <rect key="frame" x="-39" y="-30" width="145" height="200"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inr-RI-iuN">
-                                                        <rect key="frame" x="3" y="46" width="62.5" height="49"/>
+                                                        <rect key="frame" x="-8.5" y="55" width="85.5" height="31.5"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -167,7 +167,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-hW-p0O">
-                                        <rect key="frame" x="115" y="246.5" width="145.5" height="154.5"/>
+                                        <rect key="frame" x="105" y="274" width="165.5" height="99.5"/>
                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="85"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -176,7 +176,7 @@
                                         </variation>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-8L-fZo">
-                                        <rect key="frame" x="164" y="401" width="47" height="0.0"/>
+                                        <rect key="frame" x="164" y="373.5" width="47" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <state key="normal" title="Ice">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -255,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3156" y="675"/>
+            <point key="canvasLocation" x="3158" y="682"/>
         </scene>
         <!--Shop Controller-->
         <scene sceneID="Ppp-WE-Siv">

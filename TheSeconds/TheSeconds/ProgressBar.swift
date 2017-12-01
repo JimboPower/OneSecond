@@ -111,6 +111,11 @@ class ProgressBar: UIView, CAAnimationDelegate {
         pauseAnimation()
     }
     
+    
+    public func reset() {
+        fgProgressLayer.removeAllAnimations()
+    }
+    
     public func stop() {
         stopAnimation()
     }
@@ -121,8 +126,8 @@ class ProgressBar: UIView, CAAnimationDelegate {
         fgProgressLayer.strokeEnd = 0.0
         animation.keyPath = "strokeEnd"
         animation.fromValue = CGFloat(0.0)
-        animation.toValue = CGFloat(1.0)
-        animation.duration = CFTimeInterval(1.001)
+        animation.toValue = CGFloat(1.009)
+        animation.duration = CFTimeInterval(1.009)
         animation.delegate = self
         animation.isRemovedOnCompletion = false
         animation.isAdditive = true
@@ -141,13 +146,16 @@ class ProgressBar: UIView, CAAnimationDelegate {
     }
     
     fileprivate func stopAnimation() {
-        fgProgressLayer.speed = 1.009
+        fgProgressLayer.speed = 0
         fgProgressLayer.timeOffset = 0.0
         fgProgressLayer.beginTime = 0.0
         fgProgressLayer.strokeEnd = 0.0
         fgProgressLayer.removeAllAnimations()
         animationDidStart = false
     }
+    
+    
+    
     
     fileprivate func pauseAnimation(){
         let pausedTime = fgProgressLayer.convertTime(CACurrentMediaTime(), from: nil)

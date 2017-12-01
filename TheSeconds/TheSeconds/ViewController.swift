@@ -21,6 +21,9 @@ class ViewController: UIViewController, CountdownTimerDelegate {
     var score = 0
     var suffix = 0
     var best = 0
+    
+    var prova = false
+    
     var isTimerRunning = false
     var isTimerRunningIce = false
     var confettiView: SAConfettiView!
@@ -44,6 +47,7 @@ class ViewController: UIViewController, CountdownTimerDelegate {
     @IBOutlet weak var leafBest: UIImageView!
     @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
+        
     }
     @IBOutlet weak var buttonViewIce: UIButton!
     func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
@@ -111,11 +115,12 @@ class ViewController: UIViewController, CountdownTimerDelegate {
             }
             
             progressBarView.pause()
-            
             timer.invalidate()
             
         }else{
+            
             progressBarView.start()
+            
             print("ciao")
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
