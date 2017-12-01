@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func intervalTime() {
+    @objc func intervalTime() {
             durationRuotate = 0.9
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
@@ -108,14 +108,8 @@ class ViewController: UIViewController {
                 milliseconds = 0
             }
 
-            progressBarView.pause()
             timer.invalidate()
-            
         }else{
-
-            
-            progressBarView.start()
-            
             print("ciao")
 
             timeIntervalIce.invalidate()

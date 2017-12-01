@@ -93,7 +93,11 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-yC-jnq">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                         <rect key="frame" x="41" y="55" width="101" height="31.5"/>
+=======
+                                                        <rect key="frame" x="54" y="45.5" width="75" height="49"/>
+>>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
 =======
                                                         <rect key="frame" x="54" y="45.5" width="75" height="49"/>
 >>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
@@ -151,7 +155,11 @@
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inr-RI-iuN">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                         <rect key="frame" x="-8.5" y="55" width="85.5" height="31.5"/>
+=======
+                                                        <rect key="frame" x="3" y="45.5" width="62.5" height="49"/>
+>>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
 =======
                                                         <rect key="frame" x="3" y="45.5" width="62.5" height="49"/>
 >>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
@@ -173,7 +181,11 @@
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-hW-p0O">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <rect key="frame" x="105" y="274" width="165.5" height="99.5"/>
+=======
+                                        <rect key="frame" x="115" y="247" width="145.5" height="154.5"/>
+>>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
 =======
                                         <rect key="frame" x="115" y="247" width="145.5" height="154.5"/>
 >>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
@@ -186,7 +198,11 @@
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-8L-fZo">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <rect key="frame" x="164" y="373.5" width="47" height="0.0"/>
+=======
+                                        <rect key="frame" x="164" y="401.5" width="47" height="0.0"/>
+>>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
 =======
                                         <rect key="frame" x="164" y="401.5" width="47" height="0.0"/>
 >>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
@@ -264,7 +280,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <point key="canvasLocation" x="3158" y="682"/>
+=======
+            <point key="canvasLocation" x="3145" y="684"/>
+>>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
 =======
             <point key="canvasLocation" x="3145" y="684"/>
 >>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
