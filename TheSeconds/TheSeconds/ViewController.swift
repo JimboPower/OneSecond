@@ -107,16 +107,11 @@ class ViewController: UIViewController {
                 labelUpdate()
                 milliseconds = 0
             }
-<<<<<<< HEAD
 
             timer.invalidate()
         }else{
             print("ciao")
-
-=======
             timer.invalidate()
-        }else{
->>>>>>> parent of 49921b7... Aggiunto Cerchio ma da sistemare
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
             isTimerRunning = true
