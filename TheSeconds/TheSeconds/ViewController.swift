@@ -10,10 +10,7 @@ import UIKit
 
 import SAConfettiView
 
-class ViewController: UIViewController, CountdownTimerDelegate {
-
-    
-    
+class ViewController: UIViewController {
     var timer = Timer()
     var timeIntervalIce = Timer()
     var seconds = 0
@@ -37,7 +34,6 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         milliseconds = 0
         seconds = 0
     }
-    @IBOutlet weak var progressBarView: ProgressBar!
     @IBOutlet weak var labelRecord: UILabel!
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!
@@ -73,7 +69,7 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         }
     }
     
-    @objc func intervalTime() {
+    func intervalTime() {
             durationRuotate = 0.9
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
@@ -83,7 +79,6 @@ class ViewController: UIViewController, CountdownTimerDelegate {
     
     func buttonTapped() {
         if isTimerRunning {
-        
             isTimerRunning = false
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
@@ -111,17 +106,18 @@ class ViewController: UIViewController, CountdownTimerDelegate {
                 score = 0
                 labelUpdate()
                 milliseconds = 0
-
             }
-            
+
             progressBarView.pause()
             timer.invalidate()
             
         }else{
+
             
             progressBarView.start()
             
             print("ciao")
+
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
             isTimerRunning = true
@@ -143,7 +139,6 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         milliseconds = 0
         startStopButton.setTitle("Stop", for: .normal)
         ruotate()
-        
         buttonViewIce.isUserInteractionEnabled = true
         timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
             self.incrementMiliseconds()
@@ -215,35 +210,7 @@ class ViewController: UIViewController, CountdownTimerDelegate {
         labelUpdate()
         buttonViewIce.isUserInteractionEnabled = false
         print(best)
-        setupCircle()
     }
-    
-    ////Circle code
-    
-
-    func countdownTimerDone() {
-        
-    }
-    
-    var countdownTimerDidStart = false
-    
-    lazy var countdownTimer: CountdownTimer = {
-        let countdownTimer = CountdownTimer()
-        return countdownTimer
-    }()
-    
-    let selectedSecs:Int = 120
-
-    func countdownTime(time: (hours: String, minutes: String, seconds: String)) {
-        
-    }
-    
-    func setupCircle() {
-        countdownTimer.delegate = self as? CountdownTimerDelegate
-        countdownTimer.setTimer(hours: 0, minutes: 0, seconds: selectedSecs)
-        progressBarView.setProgressBar(hours: 0, minutes: 0, seconds: selectedSecs)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
     }
 }
