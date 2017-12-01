@@ -79,20 +79,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wood" translatesAutoresizingMaskIntoConstraints="NO" id="Ij8-Y5-vQI">
                                 <rect key="frame" x="38" y="150" width="300" height="367"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIi-l3-8o4" customClass="ProgressBar" customModule="TheSeconds" customModuleProvider="target">
+                                <rect key="frame" x="-0.5" y="133" width="375.5" height="400"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YsG-N0-2UY">
-                                <rect key="frame" x="0.5" y="10" width="374.5" height="630"/>
+                                <rect key="frame" x="1" y="10" width="374.5" height="630"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dYG-9p-2Nd">
-                                        <rect key="frame" x="0.0" y="0.0" width="374.5" height="118.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374.5" height="117.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-1a-fpR">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="118.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="117.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageLeafScore" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-pb-M57">
                                                         <rect key="frame" x="18.5" y="-30" width="145" height="200"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-yC-jnq">
-                                                        <rect key="frame" x="53.5" y="46" width="75" height="49"/>
+                                                        <rect key="frame" x="40.5" y="55" width="101" height="31.5"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -108,13 +111,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwl-4y-223">
-                                                <rect key="frame" x="125" y="0.0" width="124.5" height="118.5"/>
+                                                <rect key="frame" x="125" y="0.0" width="124.5" height="117.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageGoToShop" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-p5-1gs">
-                                                        <rect key="frame" x="-12" y="-119" width="149.5" height="355.5"/>
+                                                        <rect key="frame" x="-12" y="-118" width="149.5" height="352.5"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78l-gz-jMP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="118.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="117.5"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="24"/>
                                                         <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="38" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="29" maxY="0.0"/>
@@ -140,13 +143,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wos-Qf-sdX">
-                                                <rect key="frame" x="249.5" y="0.0" width="125" height="118.5"/>
+                                                <rect key="frame" x="249.5" y="0.0" width="125" height="117.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageLeafBest" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-cX-Khs">
                                                         <rect key="frame" x="-39" y="-30" width="145" height="200"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inr-RI-iuN">
-                                                        <rect key="frame" x="3" y="46" width="62.5" height="49"/>
+                                                        <rect key="frame" x="-8.5" y="55" width="85.5" height="31.5"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -164,7 +167,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-hW-p0O">
-                                        <rect key="frame" x="114.5" y="247" width="145.5" height="154.5"/>
+                                        <rect key="frame" x="104.5" y="274" width="165.5" height="99.5"/>
                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="85"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -173,7 +176,7 @@
                                         </variation>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-8L-fZo">
-                                        <rect key="frame" x="164" y="401.5" width="47" height="0.0"/>
+                                        <rect key="frame" x="164" y="373.5" width="47" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <state key="normal" title="Ice">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -214,12 +217,16 @@
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.55" id="Aup-dF-2Yg"/>
                             <constraint firstItem="JQg-cX-Khs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="Bhu-E8-NFV"/>
                             <constraint firstItem="QrH-6H-K0X" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="CmY-tG-Of7"/>
+                            <constraint firstItem="KIi-l3-8o4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="Ekt-JS-9aj"/>
                             <constraint firstItem="RkK-pb-M57" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.44" constant="-20" id="Gu0-2z-Z8a">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
                             </constraint>
                             <constraint firstItem="w78-un-wf7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.7" id="JkO-d0-KYP"/>
+                            <constraint firstItem="KIi-l3-8o4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KOs-iJ-ZpO"/>
+                            <constraint firstItem="KIi-l3-8o4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQj-Gx-nCL"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mbk-dr-hNn"/>
                             <constraint firstItem="RkK-pb-M57" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="NI8-jR-jJ3"/>
+                            <constraint firstItem="KIi-l3-8o4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ntl-18-uxV"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YsG-N0-2UY" secondAttribute="bottom" constant="27" id="Rgb-Ax-nt6"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="U49-ey-XtT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JQg-cX-Khs" secondAttribute="trailing" constant="3" id="YbN-Gj-I3J"/>
@@ -242,6 +249,7 @@
                         <outlet property="labelTimer" destination="sZU-hW-p0O" id="TdU-ab-FYz"/>
                         <outlet property="leafBest" destination="JQg-cX-Khs" id="NCM-ec-pSm"/>
                         <outlet property="leafScore" destination="RkK-pb-M57" id="xxu-Ia-f6c"/>
+                        <outlet property="progressView" destination="KIi-l3-8o4" id="pql-FP-i7e"/>
                         <outlet property="startStopButton" destination="QrH-6H-K0X" id="rVe-6W-ph6"/>
                     </connections>
                 </viewController>
@@ -278,6 +286,7 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-Mw-EYT">
                                 <rect key="frame" x="0.0" y="242" width="375" height="425"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Vx-N8-a4B">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -292,6 +301,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="customSize" width="50" height="50"/>
                                     </collectionViewCell>
                                 </cells>

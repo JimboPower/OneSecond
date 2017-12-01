@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     var prova = false
     
+    @IBOutlet weak var progressView: ProgressBar!
     var isTimerRunning = false
     var isTimerRunningIce = false
     var confettiView: SAConfettiView!
@@ -107,9 +108,14 @@ class ViewController: UIViewController {
                 labelUpdate()
                 milliseconds = 0
             }
-
+            progressView.pause()
             timer.invalidate()
         }else{
+            
+
+            progressView.start()
+  
+            
             print("ciao")
             timer.invalidate()
             timeIntervalIce.invalidate()
