@@ -19,8 +19,6 @@ class ViewController: UIViewController {
     var suffix = 0
     var best = 0
     
-    var prova = false
-    
     @IBOutlet weak var progressView: ProgressBar!
     var isTimerRunning = false
     var isTimerRunningIce = false
@@ -28,6 +26,7 @@ class ViewController: UIViewController {
     let bestDefault = UserDefaults.standard
     var containerViewController: ContainerController?
     var durationRuotate = 0.9
+    var prova: Bool = true
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
@@ -63,14 +62,17 @@ class ViewController: UIViewController {
             self.stopAnimationForView(self.imageWood)
             self.durationRuotate = 3
             self.ruotate()
+            
             if isTimerRunning == true {
-                timeIntervalIce = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(intervalTime) , userInfo: nil, repeats: true)}
-        }else{
+                timeIntervalIce = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(intervalTime) , userInfo: nil, repeats: true)
+            }
+            }else{
             normalRun()
         }
     }
     
-    func intervalTime() {
+    
+    @objc func intervalTime() {
             durationRuotate = 0.9
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
@@ -80,6 +82,10 @@ class ViewController: UIViewController {
     
     func buttonTapped() {
         if isTimerRunning {
+            
+            progressView.stop()
+
+            
             isTimerRunning = false
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
@@ -108,14 +114,15 @@ class ViewController: UIViewController {
                 labelUpdate()
                 milliseconds = 0
             }
-            progressView.pause()
-            timer.invalidate()
-        }else{
-            
 
-            progressView.start()
-  
+            timer.invalidate()
             
+        }else{
+            progressView.resetAnimation()
+            progressView.start()
+            progressView.resetAnimation()
+
+
             print("ciao")
             timer.invalidate()
             timeIntervalIce.invalidate()
@@ -127,8 +134,10 @@ class ViewController: UIViewController {
             buttonViewIce.isUserInteractionEnabled = true
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
+
             })
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
+            
         }
     }
     
