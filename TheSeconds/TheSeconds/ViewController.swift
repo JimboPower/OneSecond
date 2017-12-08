@@ -11,14 +11,15 @@ import UIKit
 import SAConfettiView
 
 class ViewController: UIViewController {
+    
     var timer = Timer()
+    var timerCircle = Timer()
     var timeIntervalIce = Timer()
     var seconds = 0
     var milliseconds = 0
     var score = 0
     var suffix = 0
     var best = 0
-    
     @IBOutlet weak var progressView: ProgressBar!
     var isTimerRunning = false
     var isTimerRunningIce = false
@@ -27,6 +28,9 @@ class ViewController: UIViewController {
     var containerViewController: ContainerController?
     var durationRuotate = 0.9
     var prova: Bool = true
+    var prova2 = true
+    var count = 0
+
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
@@ -66,25 +70,29 @@ class ViewController: UIViewController {
             if isTimerRunning == true {
                 timeIntervalIce = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(intervalTime) , userInfo: nil, repeats: true)
             }
-            }else{
+        }else{
             normalRun()
         }
     }
     
     
     @objc func intervalTime() {
-            durationRuotate = 0.9
-            timeIntervalIce.invalidate()
-            isTimerRunningIce = false
-            buttonTapped()
-            normalRun()
+        durationRuotate = 0.9
+        timeIntervalIce.invalidate()
+        isTimerRunningIce = false
+        buttonTapped()
+        normalRun()
     }
     
     func buttonTapped() {
         if isTimerRunning {
             
-            progressView.stop()
-
+            if prova == false {
+                prova2 = false
+            }
+            prova = !prova
+            
+            print(prova)
             
             isTimerRunning = false
             timeIntervalIce.invalidate()
@@ -96,16 +104,13 @@ class ViewController: UIViewController {
             buttonViewIce.isUserInteractionEnabled = false
             startStopButton.setTitle("Start", for: .normal)
             self.stopAnimationForView(self.imageWood)
-            print(best)
             if seconds >= 1 && suffix == 0 {
                 score += 1
                 labelUpdate()
             }else{
-                print("You lose")
                 labelUpdate()
                 if best < score {
                     best = score
-                    print("ciao")
                     labelUpdate()
                     bestDefault.set(score, forKey: "best")
                     confettiView.startConfetti()
@@ -114,17 +119,36 @@ class ViewController: UIViewController {
                 labelUpdate()
                 milliseconds = 0
             }
-
+            
+            progressView.pause()
             timer.invalidate()
+            count = 0
+            timerCircle.invalidate()
             
         }else{
-            progressView.resetAnimation()
+        
+
+            if prova2 == false {
+                tab3()
+            }
+
+            tab1()
+            if prova == true {
+                tab2()
+                progressView.stop()
+                progressView.start()
+            }
+            
+            tab2()
+            if prova == false {
+                tab1()
+            }
+            progressView.stop()
             progressView.start()
-            progressView.resetAnimation()
+            
 
-
-            print("ciao")
             timer.invalidate()
+            count = 0
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
             isTimerRunning = true
@@ -132,14 +156,59 @@ class ViewController: UIViewController {
             startStopButton.setTitle("Stop", for: .normal)
             ruotate()
             buttonViewIce.isUserInteractionEnabled = true
+            
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
-
+                self.count += 1
+                self.timeCircle()
             })
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
-            
         }
     }
+    
+    
+    
+    func tab1 () {
+   // progressBar3.alpha = 1
+    //  progressView.alpha = 0.5
+  // p//rogressView2.alpha = 1
+    }
+    
+    
+    func tab2 () {
+ //   progressBar3.alpha = 1
+ //   progressView.alpha = 1
+//    progressView2.alpha = 0.5
+    }
+    
+    func tab3 () {
+     // progressBar3.alpha = 0.5
+    //  progressView.alpha = 1
+   //   progressView2.alpha = 1
+    }
+    
+    func timeCircle() {
+
+        if count == 100  {
+            
+            if prova == false {
+                tab1()
+                prova = true
+                prova2 = false
+            }
+            if prova == true {
+                tab2()
+                progressView.stop()
+                progressView.start()
+                prova = false
+                count = 0
+                prova2 = false
+            }
+            count = 0
+        }
+        
+    }
+    
     
     func normalRun() {
         isTimerRunning = true
@@ -218,7 +287,7 @@ class ViewController: UIViewController {
         setupLabels()
         labelUpdate()
         buttonViewIce.isUserInteractionEnabled = false
-        print(best)
+
     }
     override func viewDidAppear(_ animated: Bool) {
     }

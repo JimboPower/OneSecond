@@ -80,7 +80,7 @@
                                 <rect key="frame" x="38" y="150" width="300" height="367"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KIi-l3-8o4" customClass="ProgressBar" customModule="TheSeconds" customModuleProvider="target">
-                                <rect key="frame" x="-0.5" y="133" width="375.5" height="400"/>
+                                <rect key="frame" x="38" y="133" width="300" height="400"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YsG-N0-2UY">
                                 <rect key="frame" x="1" y="10" width="374.5" height="630"/>
@@ -226,7 +226,7 @@
                             <constraint firstItem="KIi-l3-8o4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQj-Gx-nCL"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mbk-dr-hNn"/>
                             <constraint firstItem="RkK-pb-M57" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="NI8-jR-jJ3"/>
-                            <constraint firstItem="KIi-l3-8o4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ntl-18-uxV"/>
+                            <constraint firstItem="KIi-l3-8o4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="Ntl-18-uxV"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YsG-N0-2UY" secondAttribute="bottom" constant="27" id="Rgb-Ax-nt6"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="U49-ey-XtT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JQg-cX-Khs" secondAttribute="trailing" constant="3" id="YbN-Gj-I3J"/>
