@@ -12,7 +12,12 @@ import SAConfettiView
 
 class ViewController: UIViewController {
     
+    let selectedSecs = 1 // secondi
     var timer = Timer()
+    
+    
+    
+    
     var timerCircle = Timer()
     var timeIntervalIce = Timer()
     var seconds = 0
@@ -27,17 +32,17 @@ class ViewController: UIViewController {
     let bestDefault = UserDefaults.standard
     var containerViewController: ContainerController?
     var durationRuotate = 0.9
-    var prova: Bool = true
-    var prova2 = true
     var count = 0
 
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+    
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
         startStopButton.setTitle("Start", for: .normal)
         milliseconds = 0
         seconds = 0
     }
+    
     @IBOutlet weak var labelRecord: UILabel!
     @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!
@@ -45,10 +50,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var leafScore: UIImageView!
     @IBOutlet weak var imageWood: UIImageView!
     @IBOutlet weak var leafBest: UIImageView!
+    
     @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
-        
     }
+    
     @IBOutlet weak var buttonViewIce: UIButton!
     func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
         containerViewController?.overlayEffectImageView.isHidden = isHidden
@@ -86,14 +92,7 @@ class ViewController: UIViewController {
     
     func buttonTapped() {
         if isTimerRunning {
-            
-            if prova == false {
-                prova2 = false
-            }
-            prova = !prova
-            
-            print(prova)
-            
+            progressView.stop()
             isTimerRunning = false
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
@@ -120,33 +119,12 @@ class ViewController: UIViewController {
                 milliseconds = 0
             }
             
-            progressView.pause()
             timer.invalidate()
             count = 0
             timerCircle.invalidate()
             
         }else{
-        
-
-            if prova2 == false {
-                tab3()
-            }
-
-            tab1()
-            if prova == true {
-                tab2()
-                progressView.stop()
-                progressView.start()
-            }
-            
-            tab2()
-            if prova == false {
-                tab1()
-            }
-            progressView.stop()
             progressView.start()
-            
-
             timer.invalidate()
             count = 0
             timeIntervalIce.invalidate()
@@ -160,55 +138,10 @@ class ViewController: UIViewController {
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
                 self.count += 1
-                self.timeCircle()
             })
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
         }
     }
-    
-    
-    
-    func tab1 () {
-   // progressBar3.alpha = 1
-    //  progressView.alpha = 0.5
-  // p//rogressView2.alpha = 1
-    }
-    
-    
-    func tab2 () {
- //   progressBar3.alpha = 1
- //   progressView.alpha = 1
-//    progressView2.alpha = 0.5
-    }
-    
-    func tab3 () {
-     // progressBar3.alpha = 0.5
-    //  progressView.alpha = 1
-   //   progressView2.alpha = 1
-    }
-    
-    func timeCircle() {
-
-        if count == 100  {
-            
-            if prova == false {
-                tab1()
-                prova = true
-                prova2 = false
-            }
-            if prova == true {
-                tab2()
-                progressView.stop()
-                progressView.start()
-                prova = false
-                count = 0
-                prova2 = false
-            }
-            count = 0
-        }
-        
-    }
-    
     
     func normalRun() {
         isTimerRunning = true
@@ -236,6 +169,13 @@ class ViewController: UIViewController {
     
     func incrementMiliseconds() {
         milliseconds += 1
+        
+        if self.milliseconds%100 == 0 {
+            print("SHOULD START PROGRESS VIEW")
+            self.progressView.stop()
+            self.progressView.start()
+        }
+        
         display(miliseconds: milliseconds)
     }
     
@@ -280,6 +220,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        progressView.setProgressBar(hours: 0, minutes: 0, seconds: selectedSecs)
+        
         setupConfetti()
         setupLabels()
         best = bestDefault.integer(forKey: "best")
