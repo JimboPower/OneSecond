@@ -7,25 +7,17 @@
 /////
 
 import UIKit
-
 import SAConfettiView
 
 class ViewController: UIViewController {
-    
     let selectedSecs = 1 // secondi
     var timer = Timer()
-    
-    
-    
-    
-    var timerCircle = Timer()
     var timeIntervalIce = Timer()
     var seconds = 0
     var milliseconds = 0
     var score = 0
     var suffix = 0
     var best = 0
-    @IBOutlet weak var progressView: ProgressBar!
     var isTimerRunning = false
     var isTimerRunningIce = false
     var confettiView: SAConfettiView!
@@ -33,7 +25,10 @@ class ViewController: UIViewController {
     var containerViewController: ContainerController?
     var durationRuotate = 0.9
     var count = 0
+    let shapeLayer = CAShapeLayer()
+    let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
 
+    var prova = true
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
     
     @IBAction func buttonShop(_ sender: Any) {
@@ -80,7 +75,7 @@ class ViewController: UIViewController {
             normalRun()
         }
     }
-    
+
     
     @objc func intervalTime() {
         durationRuotate = 0.9
@@ -90,9 +85,20 @@ class ViewController: UIViewController {
         normalRun()
     }
     
+    
     func buttonTapped() {
+
+        if prova == true {
+            
+            startProgressCircle()
+        
+        }else{
+            pauseAnimation()
+            prova = true
+        }
         if isTimerRunning {
-            progressView.stop()
+            
+            ////Timer stops
             isTimerRunning = false
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
@@ -118,13 +124,9 @@ class ViewController: UIViewController {
                 labelUpdate()
                 milliseconds = 0
             }
-            
             timer.invalidate()
             count = 0
-            timerCircle.invalidate()
-            
         }else{
-            progressView.start()
             timer.invalidate()
             count = 0
             timeIntervalIce.invalidate()
@@ -134,14 +136,34 @@ class ViewController: UIViewController {
             startStopButton.setTitle("Stop", for: .normal)
             ruotate()
             buttonViewIce.isUserInteractionEnabled = true
-            
+
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
                 self.count += 1
+                if self.count == 100 {
+                    self.count = 0
+                    self.startProgressCircle()
+                }
+                
+                print(self.count)
             })
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
         }
     }
+    
+    func startProgressCircle() {
+        basicAnimation.fromValue = CGFloat(0.0)
+        basicAnimation.toValue = 1.00
+        basicAnimation.isAdditive = true
+        basicAnimation.fillMode = kCAFillModeForwards
+        basicAnimation.duration = CFTimeInterval(1.25)
+        basicAnimation.fillMode = kCAFillModeForwards
+        basicAnimation.isRemovedOnCompletion = false
+        shapeLayer.speed = 1
+        shapeLayer.add(basicAnimation, forKey: "urSoBasic")
+        prova = false
+    }
+    
     
     func normalRun() {
         isTimerRunning = true
@@ -169,13 +191,6 @@ class ViewController: UIViewController {
     
     func incrementMiliseconds() {
         milliseconds += 1
-        
-        if self.milliseconds%100 == 0 {
-            print("SHOULD START PROGRESS VIEW")
-            self.progressView.stop()
-            self.progressView.start()
-        }
-        
         display(miliseconds: milliseconds)
     }
     
@@ -219,9 +234,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        progressView.setProgressBar(hours: 0, minutes: 0, seconds: selectedSecs)
-        
+        super.viewDidLoad()        
         setupConfetti()
         setupLabels()
         best = bestDefault.integer(forKey: "best")
@@ -229,8 +242,39 @@ class ViewController: UIViewController {
         setupLabels()
         labelUpdate()
         buttonViewIce.isUserInteractionEnabled = false
+        progressBarSetUp()
+    
 
     }
+    
+    
+    ///Circle Progress setup
+    
+    func progressBarSetUp() {
+        let center = view.center
+        let trackLayer = CAShapeLayer()
+        let circularPath = UIBezierPath(arcCenter: center, radius: 165, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        trackLayer.path = circularPath.cgPath
+        trackLayer.strokeColor = UIColor.lightGray.cgColor
+        trackLayer.lineWidth = 10
+        trackLayer.fillColor = UIColor.clear.cgColor
+        trackLayer.lineCap = kCALineCapRound
+        view.layer.addSublayer(trackLayer)
+        shapeLayer.path = circularPath.cgPath
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.lineWidth = 10
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeEnd = 0
+        view.layer.addSublayer(shapeLayer)
+    }
+    
+    
+    func pauseAnimation(){
+        let pausedTime = shapeLayer.convertTime(CACurrentMediaTime(), from: nil)
+        shapeLayer.speed = 0.0
+        shapeLayer.timeOffset = pausedTime
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
     }
 }

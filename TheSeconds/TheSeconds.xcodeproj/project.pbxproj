@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		6CD854A7F662A8814F2B8606 /* Pods_TheSeconds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */; };
 		C82265171FD1C84D00544625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82265161FD1C84D00544625 /* Main.storyboard */; };
-		C850BB4A1FDB3930002F9660 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C850BB491FDB392F002F9660 /* ProgressBar.swift */; };
-		C850BB4C1FDB3ABD002F9660 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C850BB4B1FDB3ABC002F9660 /* CustomColors.swift */; };
 		C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F61EF28C48001DD5A2 /* AppDelegate.swift */; };
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
@@ -30,8 +28,6 @@
 		6E257AD1041A2CB7F9F428C6 /* Pods-TheSeconds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSeconds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheSeconds/Pods-TheSeconds.debug.xcconfig"; sourceTree = "<group>"; };
 		7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheSeconds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82265161FD1C84D00544625 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		C850BB491FDB392F002F9660 /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBar.swift; path = "../../../../Downloads/CountdownTimer-master-3/CountdownTimer/ProgressBar.swift"; sourceTree = "<group>"; };
-		C850BB4B1FDB3ABC002F9660 /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		C88058F31EF28C48001DD5A2 /* TheSeconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSeconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88058F61EF28C48001DD5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88058F81EF28C48001DD5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,15 +62,6 @@
 				7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C82265181FD1E7EC00544625 /* CircleProgress */ = {
-			isa = PBXGroup;
-			children = (
-				C850BB4B1FDB3ABC002F9660 /* CustomColors.swift */,
-				C850BB491FDB392F002F9660 /* ProgressBar.swift */,
-			);
-			name = CircleProgress;
 			sourceTree = "<group>";
 		};
 		C88058EA1EF28C47001DD5A2 = {
@@ -143,7 +130,6 @@
 		EB07A2511F48783300467A1E /* Main Game */ = {
 			isa = PBXGroup;
 			children = (
-				C82265181FD1E7EC00544625 /* CircleProgress */,
 				C88058F81EF28C48001DD5A2 /* ViewController.swift */,
 				EB07A2471F486DC100467A1E /* ContainerController.swift */,
 			);
@@ -308,8 +294,6 @@
 				EB07A24D1F4876CD00467A1E /* PowerUp.swift in Sources */,
 				EB07A24F1F48782B00467A1E /* ShopTableViewCell.swift in Sources */,
 				EBF45EDB1F5C8E5700305A73 /* APIService.swift in Sources */,
-				C850BB4A1FDB3930002F9660 /* ProgressBar.swift in Sources */,
-				C850BB4C1FDB3ABD002F9660 /* CustomColors.swift in Sources */,
 				EB07A24A1F48765700467A1E /* ShopController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

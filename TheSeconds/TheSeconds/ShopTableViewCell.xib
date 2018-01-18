@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -33,16 +33,16 @@
                             </constraints>
                         </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="6CR-8P-6Li">
-                            <rect key="frame" x="-45" y="53.5" width="757" height="122.5"/>
+                            <rect key="frame" x="-45" y="20" width="757" height="189"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fut-Ev-DB5">
-                                    <rect key="frame" x="0.0" y="0.0" width="757" height="122.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="757" height="189"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-9" translatesAutoresizingMaskIntoConstraints="NO" id="Oz1-8T-8vc">
-                                            <rect key="frame" x="0.0" y="0.0" width="757" height="70.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="757" height="115"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ice Freeze" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XWq-s1-zVX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="58.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="173.5" height="91"/>
                                                     <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="29"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serve a rallentare il tempo." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyi-qc-kte">
-                                                    <rect key="frame" x="0.0" y="49.5" width="757" height="21"/>
+                                                    <rect key="frame" x="0.0" y="82" width="757" height="33"/>
                                                     <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="18"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -59,22 +59,22 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZIK-uS-TQf">
-                                            <rect key="frame" x="0.0" y="70.5" width="757" height="52"/>
+                                            <rect key="frame" x="0.0" y="115" width="757" height="74"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acorn-icon" translatesAutoresizingMaskIntoConstraints="NO" id="usy-sc-bIb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="37" height="52"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="74"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="ev0-4y-yvh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="757" height="52"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="757" height="74"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-zZ-oeF">
-                                                            <rect key="frame" x="0.0" y="11" width="28" height="29.5"/>
+                                                            <rect key="frame" x="0.0" y="14.5" width="23.5" height="45.5"/>
                                                             <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRd-MU-gVr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="757" height="52"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="757" height="74"/>
                                                             <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="34"/>
                                                             <state key="normal" title="Compra">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,7 +99,7 @@
                 </imageView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="gg1-CY-XiS" secondAttribute="trailing" constant="25" id="0qK-IF-agz"/>
+                <constraint firstAttribute="trailing" secondItem="gg1-CY-XiS" secondAttribute="trailing" constant="72" id="0qK-IF-agz"/>
                 <constraint firstAttribute="bottom" secondItem="81p-Ez-4E1" secondAttribute="bottom" id="7pw-Vb-FCb"/>
                 <constraint firstItem="81p-Ez-4E1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EQd-a0-XQH"/>
                 <constraint firstAttribute="bottom" secondItem="gg1-CY-XiS" secondAttribute="bottom" constant="25" id="Fxs-RO-qwc"/>
@@ -118,7 +118,7 @@
                 <outlet property="saleRibbonImageView" destination="ZE8-zW-DoA" id="Ifd-8N-8gD"/>
                 <outlet property="titleLabel" destination="XWq-s1-zVX" id="rij-Sz-1Ry"/>
             </connections>
-            <point key="canvasLocation" x="-79.5" y="-140.5"/>
+            <point key="canvasLocation" x="-52" y="-136"/>
         </view>
     </objects>
     <resources>
