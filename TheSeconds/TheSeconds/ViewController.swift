@@ -10,7 +10,6 @@ import UIKit
 import SAConfettiView
 
 class ViewController: UIViewController {
-    let selectedSecs = 1 // secondi
     var timer = Timer()
     var timeIntervalIce = Timer()
     var seconds = 0
@@ -24,7 +23,7 @@ class ViewController: UIViewController {
     let bestDefault = UserDefaults.standard
     var containerViewController: ContainerController?
     var durationRuotate = 0.9
-    var count = 0
+    var count = 1
     let shapeLayer = CAShapeLayer()
     let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
 
@@ -47,6 +46,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var leafBest: UIImageView!
     
     @IBAction func startStopButtonTapped(_ sender: Any) {
+        trackLayer.strokeColor = UIColor(red: 255/255, green: 241/255, blue: 118/255, alpha: 1).cgColor
         buttonTapped()
     }
     
@@ -89,9 +89,7 @@ class ViewController: UIViewController {
     func buttonTapped() {
 
         if prova == true {
-            
             startProgressCircle()
-        
         }else{
             pauseAnimation()
             prova = true
@@ -112,6 +110,8 @@ class ViewController: UIViewController {
             if seconds >= 1 && suffix == 0 {
                 score += 1
                 labelUpdate()
+                trackLayer.strokeColor = UIColor(red: 33/255, green: 150/255, blue: 243/255, alpha: 1).cgColor
+                
             }else{
                 labelUpdate()
                 if best < score {
@@ -136,15 +136,14 @@ class ViewController: UIViewController {
             startStopButton.setTitle("Stop", for: .normal)
             ruotate()
             buttonViewIce.isUserInteractionEnabled = true
-
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
                 self.count += 1
-                if self.count == 100 {
-                    self.count = 0
+                print(self.shapeLayer.strokeEnd)
+                if self.count == 101 {
+                    self.count = 1
                     self.startProgressCircle()
                 }
-                
                 print(self.count)
             })
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
@@ -152,11 +151,10 @@ class ViewController: UIViewController {
     }
     
     func startProgressCircle() {
-        basicAnimation.fromValue = CGFloat(0.0)
         basicAnimation.toValue = 1.00
         basicAnimation.isAdditive = true
         basicAnimation.fillMode = kCAFillModeForwards
-        basicAnimation.duration = CFTimeInterval(1.25)
+        basicAnimation.duration = CFTimeInterval(1.25902626)
         basicAnimation.fillMode = kCAFillModeForwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.speed = 1
@@ -247,24 +245,24 @@ class ViewController: UIViewController {
 
     }
     
+
     
     ///Circle Progress setup
-    
+    let trackLayer = CAShapeLayer()
     func progressBarSetUp() {
         let center = view.center
-        let trackLayer = CAShapeLayer()
-        let circularPath = UIBezierPath(arcCenter: center, radius: 165, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: center, radius: 170, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         trackLayer.path = circularPath.cgPath
-        trackLayer.strokeColor = UIColor.lightGray.cgColor
-        trackLayer.lineWidth = 10
+        trackLayer.strokeColor = UIColor(red: 255/255, green: 241/255, blue: 118/255, alpha: 1).cgColor
+        trackLayer.lineWidth = 13
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.lineCap = kCALineCapRound
         view.layer.addSublayer(trackLayer)
         shapeLayer.path = circularPath.cgPath
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 10
+        shapeLayer.strokeColor = UIColor(red: 33/255, green: 150/255, blue: 243/255, alpha: 1).cgColor
+        shapeLayer.lineWidth = 13
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeEnd = 0
+        shapeLayer.strokeEnd = 0.0
         view.layer.addSublayer(shapeLayer)
     }
     
@@ -275,6 +273,4 @@ class ViewController: UIViewController {
         shapeLayer.timeOffset = pausedTime
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-    }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Edoardo de Cal. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class PowerUp: NSObject {
     var cost: Int?

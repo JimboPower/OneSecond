@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -74,25 +75,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="w78-un-wf7">
-                                <rect key="frame" x="-169" y="-233" width="713" height="1133"/>
+                                <rect key="frame" x="-169" y="-233.5" width="713" height="1134"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wood" translatesAutoresizingMaskIntoConstraints="NO" id="Ij8-Y5-vQI">
-                                <rect key="frame" x="38" y="150" width="300" height="367"/>
+                                <rect key="frame" x="47" y="150" width="281.5" height="367"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YsG-N0-2UY">
-                                <rect key="frame" x="1" y="10" width="374.5" height="630"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YsG-N0-2UY">
+                                <rect key="frame" x="1" y="10" width="373.5" height="630"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dYG-9p-2Nd">
-                                        <rect key="frame" x="0.0" y="0.0" width="374.5" height="117.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373.5" height="238.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mH1-1a-fpR">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="117.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="238.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageLeafScore" translatesAutoresizingMaskIntoConstraints="NO" id="RkK-pb-M57">
-                                                        <rect key="frame" x="18.5" y="-30" width="145" height="200"/>
+                                                        <rect key="frame" x="17.5" y="-30" width="145" height="200"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-yC-jnq">
-                                                        <rect key="frame" x="40.5" y="54.5" width="101" height="31.5"/>
+                                                        <rect key="frame" x="53" y="46" width="75" height="49"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -108,13 +109,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwl-4y-223">
-                                                <rect key="frame" x="125" y="0.0" width="124.5" height="117.5"/>
+                                                <rect key="frame" x="124.5" y="0.0" width="124.5" height="238.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageGoToShop" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-p5-1gs">
-                                                        <rect key="frame" x="-12" y="-118" width="149.5" height="352.5"/>
+                                                        <rect key="frame" x="-12" y="-238.5" width="149" height="715.5"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78l-gz-jMP">
-                                                        <rect key="frame" x="8" y="0.0" width="124.5" height="117.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78l-gz-jMP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="238.5"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="24"/>
                                                         <inset key="titleEdgeInsets" minX="17" minY="0.0" maxX="38" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="29" maxY="0.0"/>
@@ -140,13 +141,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wos-Qf-sdX">
-                                                <rect key="frame" x="249.5" y="0.0" width="125" height="117.5"/>
+                                                <rect key="frame" x="249" y="0.0" width="124.5" height="238.5"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageLeafBest" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-cX-Khs">
-                                                        <rect key="frame" x="-39" y="-30" width="145" height="200"/>
+                                                        <rect key="frame" x="-39.5" y="-30" width="145" height="200"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inr-RI-iuN">
-                                                        <rect key="frame" x="-8.5" y="54.5" width="85.5" height="31.5"/>
+                                                        <rect key="frame" x="2.5" y="46" width="62.5" height="49"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="27"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -164,7 +165,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-hW-p0O">
-                                        <rect key="frame" x="104.5" y="274" width="165.5" height="99.5"/>
+                                        <rect key="frame" x="114" y="246.5" width="145.5" height="154.5"/>
                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="85"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -172,29 +173,31 @@
                                             <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="200"/>
                                         </variation>
                                     </label>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdz-8L-fZo">
-                                        <rect key="frame" x="164" y="373.5" width="47" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                        <state key="normal" title="Ice">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonIceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eY7-hW-TX0"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrH-6H-K0X">
-                                        <rect key="frame" x="56" y="530" width="263" height="100"/>
-                                        <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
-                                        <state key="normal" title="Start" backgroundImage="start-button">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="60"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="startStopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEE-OH-gKD"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t94-pZ-1rB">
+                                        <rect key="frame" x="30.5" y="409" width="313" height="221"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BC0-PW-RDE">
+                                                <rect key="frame" x="124.5" y="0.0" width="64" height="118"/>
+                                                <state key="normal" image="861930_snow_512x512"/>
+                                                <connections>
+                                                    <action selector="buttonIceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FlO-Sy-ORY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrH-6H-K0X">
+                                                <rect key="frame" x="0.0" y="118" width="313" height="103"/>
+                                                <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
+                                                <state key="normal" title="Start" backgroundImage="start-button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="60"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="startStopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEE-OH-gKD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="dYG-9p-2Nd" secondAttribute="trailing" id="IcB-9K-p2g"/>
@@ -213,7 +216,6 @@
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9SW-SD-zEH"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.55" id="Aup-dF-2Yg"/>
                             <constraint firstItem="JQg-cX-Khs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="Bhu-E8-NFV"/>
-                            <constraint firstItem="QrH-6H-K0X" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="CmY-tG-Of7"/>
                             <constraint firstItem="RkK-pb-M57" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.44" constant="-20" id="Gu0-2z-Z8a">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
                             </constraint>
@@ -221,7 +223,7 @@
                             <constraint firstItem="w78-un-wf7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mbk-dr-hNn"/>
                             <constraint firstItem="RkK-pb-M57" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="NI8-jR-jJ3"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YsG-N0-2UY" secondAttribute="bottom" constant="27" id="Rgb-Ax-nt6"/>
-                            <constraint firstItem="Ij8-Y5-vQI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="U49-ey-XtT"/>
+                            <constraint firstItem="Ij8-Y5-vQI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="U49-ey-XtT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JQg-cX-Khs" secondAttribute="trailing" constant="3" id="YbN-Gj-I3J"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1.9" id="ZMh-kq-tlN"/>
                             <constraint firstItem="YsG-N0-2UY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-10" id="ZhH-Nb-g8r"/>
@@ -230,11 +232,10 @@
                             <constraint firstItem="sZU-hW-p0O" firstAttribute="centerX" secondItem="Ij8-Y5-vQI" secondAttribute="centerX" id="fwL-kI-mFo"/>
                             <constraint firstItem="RkK-pb-M57" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="mOc-3k-8yw"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="njX-ti-jKr"/>
-                            <constraint firstItem="QrH-6H-K0X" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="oZ7-hA-vx3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonViewIce" destination="Vdz-8L-fZo" id="YRz-zK-IU1"/>
+                        <outlet property="buttonViewIce" destination="BC0-PW-RDE" id="VZJ-HE-dME"/>
                         <outlet property="imageIce" destination="W4z-eP-uw1" id="k0z-fz-yew"/>
                         <outlet property="imageWood" destination="Ij8-Y5-vQI" id="rnh-m8-yj7"/>
                         <outlet property="labelRecord" destination="Inr-RI-iuN" id="Pio-3b-UVw"/>
@@ -247,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3145" y="684"/>
+            <point key="canvasLocation" x="3230" y="617"/>
         </scene>
         <!--Shop Controller-->
         <scene sceneID="Ppp-WE-Siv">
@@ -332,6 +333,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="861930_snow_512x512" width="64" height="64"/>
         <image name="ImageGoToShop" width="236" height="236"/>
         <image name="ImageLeafBest" width="196" height="94"/>
         <image name="ImageLeafScore" width="196" height="94"/>
