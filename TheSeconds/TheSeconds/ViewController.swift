@@ -20,16 +20,17 @@ class ViewController: UIViewController {
     var isTimerRunning = false
     var isTimerRunningIce = false
     var confettiView: SAConfettiView!
-    let bestDefault = UserDefaults.standard
     var containerViewController: ContainerController?
     var durationRuotate = 0.9
     var count = 1
+    var prova = true
     let shapeLayer = CAShapeLayer()
     let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-
-    var prova = true
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-    
+    let trackLayer = CAShapeLayer()
+    let bestDefault = UserDefaults.standard
+
+
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
         startStopButton.setTitle("Start", for: .normal)
@@ -54,6 +55,7 @@ class ViewController: UIViewController {
     func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
         containerViewController?.overlayEffectImageView.isHidden = isHidden
     }
+    
     @IBAction func buttonIceTapped(_ sender: Any) {
         if isTimerRunning == true {
             shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
@@ -75,7 +77,6 @@ class ViewController: UIViewController {
             normalRun()
         }
     }
-
     
     @objc func intervalTime() {
         durationRuotate = 0.9
@@ -84,10 +85,9 @@ class ViewController: UIViewController {
         buttonTapped()
         normalRun()
     }
-    
+
     
     func buttonTapped() {
-
         if prova == true {
             startProgressCircle()
         }else{
@@ -95,7 +95,6 @@ class ViewController: UIViewController {
             prova = true
         }
         if isTimerRunning {
-            
             ////Timer stops
             isTimerRunning = false
             timeIntervalIce.invalidate()
@@ -111,7 +110,6 @@ class ViewController: UIViewController {
                 score += 1
                 labelUpdate()
                 trackLayer.strokeColor = UIColor(red: 33/255, green: 150/255, blue: 243/255, alpha: 1).cgColor
-                
             }else{
                 labelUpdate()
                 if best < score {
@@ -161,7 +159,6 @@ class ViewController: UIViewController {
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
         prova = false
     }
-    
     
     func normalRun() {
         isTimerRunning = true
@@ -241,14 +238,9 @@ class ViewController: UIViewController {
         labelUpdate()
         buttonViewIce.isUserInteractionEnabled = false
         progressBarSetUp()
-    
-
     }
     
-
-    
     ///Circle Progress setup
-    let trackLayer = CAShapeLayer()
     func progressBarSetUp() {
         let center = view.center
         let circularPath = UIBezierPath(arcCenter: center, radius: 170, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
@@ -266,11 +258,9 @@ class ViewController: UIViewController {
         view.layer.addSublayer(shapeLayer)
     }
     
-    
     func pauseAnimation(){
         let pausedTime = shapeLayer.convertTime(CACurrentMediaTime(), from: nil)
         shapeLayer.speed = 0.0
         shapeLayer.timeOffset = pausedTime
     }
-    
 }
