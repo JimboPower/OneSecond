@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
     let trackLayer = CAShapeLayer()
     let bestDefault = UserDefaults.standard
-
+    var radiusCircle = CGFloat(0)
 
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
@@ -239,20 +239,37 @@ class ViewController: UIViewController {
         buttonViewIce.isUserInteractionEnabled = false
         progressBarSetUp()
     }
+
     
     ///Circle Progress setup
     func progressBarSetUp() {
+        print()
         let center = view.center
-        let circularPath = UIBezierPath(arcCenter: center, radius: 170, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        var circularPath = UIBezierPath(arcCenter: center, radius: 0, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let deviceIdiom = UIScreen.main.traitCollection.userInterfaceIdiom
+        switch(deviceIdiom) {
+        case .pad:
+            circularPath = UIBezierPath(arcCenter: center, radius: 380, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+            print("iPad style UI")
+            trackLayer.lineWidth = 20
+            shapeLayer.lineWidth = 20
+            break
+        case .phone:
+            circularPath = UIBezierPath(arcCenter: center, radius: 130, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+            print("iPhone and iPod touch style UI")
+            trackLayer.lineWidth = 13
+            shapeLayer.lineWidth = 13
+            break
+        default:
+            print("Unspecified UI idiom")
+        }
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor(red: 255/255, green: 241/255, blue: 118/255, alpha: 1).cgColor
-        trackLayer.lineWidth = 13
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.lineCap = kCALineCapRound
         view.layer.addSublayer(trackLayer)
         shapeLayer.path = circularPath.cgPath
         shapeLayer.strokeColor = UIColor(red: 33/255, green: 150/255, blue: 243/255, alpha: 1).cgColor
-        shapeLayer.lineWidth = 13
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeEnd = 0.0
         view.layer.addSublayer(shapeLayer)

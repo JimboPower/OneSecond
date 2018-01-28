@@ -15,6 +15,7 @@ class ShopTableViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelPrize: UILabel!
+    @IBOutlet weak var buttonBuy: UIButton!
     
     static let identifier = "ShopTableViewCell"
     
@@ -22,6 +23,5 @@ class ShopTableViewCell: UICollectionViewCell {
         super.awakeFromNib()
         backgroundColor = .clear
         saleRibbonImageView.alpha = 0
-
     }
 }

@@ -120,6 +120,9 @@ extension ShopController: UICollectionViewDataSource {
             cell.leftImageView.image = nil
         }
         
+        cell.buttonBuy.tag = indexPath.row
+        cell.buttonBuy.addTarget(self, action: #selector(ShopController.buttonAction), for: .touchUpInside)
+        
         ///if let onSale = powerUp.isOnSale {
            // cell.saleRibbonImageView.isHidden = !onSale
         //} else {
@@ -128,4 +131,9 @@ extension ShopController: UICollectionViewDataSource {
         
         return cell
     }
+
+    func buttonAction() {
+        print("Ciao")
+    }
+    
 }
