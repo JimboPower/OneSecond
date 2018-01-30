@@ -12,13 +12,14 @@
 		C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F61EF28C48001DD5A2 /* AppDelegate.swift */; };
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
+		C88DA30D2020CA3900E3FBDD /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88DA30C2020CA3900E3FBDD /* CircleProgress.swift */; };
+		C88DA3102020D5BE00E3FBDD /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */; };
 		EB07A2481F486DC100467A1E /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07A2471F486DC100467A1E /* ContainerController.swift */; };
 		EB07A24A1F48765700467A1E /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07A2491F48765700467A1E /* ShopController.swift */; };
 		EB07A24D1F4876CD00467A1E /* PowerUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07A24C1F4876CD00467A1E /* PowerUp.swift */; };
 		EB07A24F1F48782B00467A1E /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07A24E1F48782B00467A1E /* ShopTableViewCell.swift */; };
 		EB07A2531F48801300467A1E /* ShopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB07A2521F48801300467A1E /* ShopTableViewCell.xib */; };
 		EB1D44B41F1E379A00BE8772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1D44B21F1E379A00BE8772 /* LaunchScreen.storyboard */; };
-		EB5405571F261C03004E01AE /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB5405561F261BF0004E01AE /* Trattatello.ttf */; };
 		EBD9B9911F4C38B30073A6DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBD9B9901F4C38B30073A6DE /* GoogleService-Info.plist */; };
 		EBF45EDB1F5C8E5700305A73 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF45EDA1F5C8E5600305A73 /* APIService.swift */; };
 /* End PBXBuildFile section */
@@ -33,13 +34,14 @@
 		C88058F81EF28C48001DD5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C88058FD1EF28C49001DD5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C88059021EF28C49001DD5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C88DA30C2020CA3900E3FBDD /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
+		C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trattatello.ttf; sourceTree = "<group>"; };
 		EB07A2471F486DC100467A1E /* ContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
 		EB07A2491F48765700467A1E /* ShopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
 		EB07A24C1F4876CD00467A1E /* PowerUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerUp.swift; sourceTree = "<group>"; };
 		EB07A24E1F48782B00467A1E /* ShopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
 		EB07A2521F48801300467A1E /* ShopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopTableViewCell.xib; sourceTree = "<group>"; };
 		EB1D44B31F1E379A00BE8772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EB5405561F261BF0004E01AE /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Trattatello.ttf; path = ../../../Trattatello.ttf; sourceTree = "<group>"; };
 		EBD9B9901F4C38B30073A6DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBF45EDA1F5C8E5600305A73 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,17 +89,34 @@
 			children = (
 				C88058F61EF28C48001DD5A2 /* AppDelegate.swift */,
 				EBF45EDA1F5C8E5600305A73 /* APIService.swift */,
-				EB0B302F1EF43D5E00C8DEDE /* Extensions */,
+				C88DA30B2020CA0000E3FBDD /* View */,
 				EB07A24B1F4876BD00467A1E /* Model */,
 				EB07A2511F48783300467A1E /* Main Game */,
 				EB07A2501F48782E00467A1E /* Shop */,
 				EB1D44B21F1E379A00BE8772 /* LaunchScreen.storyboard */,
 				C82265161FD1C84D00544625 /* Main.storyboard */,
 				C88058FD1EF28C49001DD5A2 /* Assets.xcassets */,
+				C88DA30F2020CD8B00E3FBDD /* Project files */,
+			);
+			path = TheSeconds;
+			sourceTree = "<group>";
+		};
+		C88DA30B2020CA0000E3FBDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C88DA30C2020CA3900E3FBDD /* CircleProgress.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C88DA30F2020CD8B00E3FBDD /* Project files */ = {
+			isa = PBXGroup;
+			children = (
+				C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */,
 				C88059021EF28C49001DD5A2 /* Info.plist */,
 				EBD9B9901F4C38B30073A6DE /* GoogleService-Info.plist */,
 			);
-			path = TheSeconds;
+			name = "Project files";
 			sourceTree = "<group>";
 		};
 		E9CC8928A59E885EB3CFFC1E /* Pods */ = {
@@ -134,14 +153,6 @@
 				EB07A2471F486DC100467A1E /* ContainerController.swift */,
 			);
 			name = "Main Game";
-			sourceTree = "<group>";
-		};
-		EB0B302F1EF43D5E00C8DEDE /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				EB5405561F261BF0004E01AE /* Trattatello.ttf */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,11 +219,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88DA3102020D5BE00E3FBDD /* Trattatello.ttf in Resources */,
 				EB1D44B41F1E379A00BE8772 /* LaunchScreen.storyboard in Resources */,
 				C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */,
 				EB07A2531F48801300467A1E /* ShopTableViewCell.xib in Resources */,
 				C82265171FD1C84D00544625 /* Main.storyboard in Resources */,
-				EB5405571F261C03004E01AE /* Trattatello.ttf in Resources */,
 				EBD9B9911F4C38B30073A6DE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +305,7 @@
 				EB07A24D1F4876CD00467A1E /* PowerUp.swift in Sources */,
 				EB07A24F1F48782B00467A1E /* ShopTableViewCell.swift in Sources */,
 				EBF45EDB1F5C8E5700305A73 /* APIService.swift in Sources */,
+				C88DA30D2020CA3900E3FBDD /* CircleProgress.swift in Sources */,
 				EB07A24A1F48765700467A1E /* ShopController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

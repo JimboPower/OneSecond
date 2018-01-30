@@ -6,9 +6,7 @@
 //  Copyright © 2017 Edoardo de Cal. All rights reserved.
 //
 
-import UIKit
 import Firebase
-import FirebaseDatabase
 
 class APIService: NSObject {
     class func observePowerUps(completion: ((_ powerUp: PowerUp) -> Void)?) {

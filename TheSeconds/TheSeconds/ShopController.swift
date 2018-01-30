@@ -97,13 +97,18 @@ extension ShopController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return powerUps.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ShopTableViewCell
         
+        cell.buttonBuy.tag = indexPath.row
+        cell.buttonBuy.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        
+        
         let powerUp = powerUps[indexPath.row]
         cell.titleLabel.text = powerUp.title
+       
         
         if let cost = powerUp.cost {
             cell.labelPrize.text = String(describing: cost)
@@ -120,9 +125,6 @@ extension ShopController: UICollectionViewDataSource {
             cell.leftImageView.image = nil
         }
         
-        cell.buttonBuy.tag = indexPath.row
-        cell.buttonBuy.addTarget(self, action: #selector(ShopController.buttonAction), for: .touchUpInside)
-        
         ///if let onSale = powerUp.isOnSale {
            // cell.saleRibbonImageView.isHidden = !onSale
         //} else {
@@ -132,7 +134,7 @@ extension ShopController: UICollectionViewDataSource {
         return cell
     }
 
-    func buttonAction() {
+    @objc func buttonAction(sender: UIButton) {
         print("Ciao")
     }
     
