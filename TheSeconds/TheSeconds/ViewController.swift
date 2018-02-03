@@ -9,7 +9,27 @@
 import UIKit
 import SAConfettiView
 
+enum PowerEffect {
+    case none
+    case freeze
+    case fire
+    case green
+}
+
 class ViewController: UIViewController {
+    
+    var powerStatus: PowerEffect = .none {
+        didSet {
+            switch powerStatus {
+            case .freeze:
+                shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
+            case .fire:
+                shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
+            default:
+                break
+            }
+        }
+    }
     
     var score = 0 {
         didSet {
@@ -25,6 +45,7 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var circleProgress: CircleProgress!
     var timer = Timer()
     var timeIntervalIce = Timer()
     var seconds = 0
@@ -42,6 +63,13 @@ class ViewController: UIViewController {
     let bestDefault = UserDefaults.standard
     var radiusCircle = CGFloat(0)
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupConfetti()
+        best = bestDefault.integer(forKey: "best")
+        shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
+    }
+    
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
         startStopButton.setTitle("Start", for: .normal)
@@ -49,25 +77,23 @@ class ViewController: UIViewController {
         seconds = 0
     }
     
-    @IBOutlet weak var backGroundImage: UIImageView!
-    @IBOutlet weak var labelRecord: UILabel!
-    @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
-    @IBOutlet weak var leafScore: UIImageView!
     @IBOutlet weak var imageWood: UIImageView!
-    @IBOutlet weak var leafBest: UIImageView!
-    
     @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
     }
     
     @IBOutlet weak var buttonViewIce: UIButton!
+    
     func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
         containerViewController?.overlayEffectImageView.isHidden = isHidden
+        // nascondi dopo tot sec
     }
     
     @IBAction func buttonIceTapped(_ sender: Any) {
+        powerStatus = .freeze
+        
         if isTimerRunning == true {
             shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
             isTimerRunningIce = true
@@ -83,6 +109,7 @@ class ViewController: UIViewController {
             
             if isTimerRunning == true {
                 timeIntervalIce = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(intervalTime) , userInfo: nil, repeats: true)
+                count = 0
             }
         }else{
             normalRun()
@@ -99,79 +126,80 @@ class ViewController: UIViewController {
 
     
     func buttonTapped() {
-    /*
-        
+
         if prova == true {
-            startProgressCircle()
-        }else{
-            pauseAnimation()
+            circleProgress.start()
+            prova = false
+        } else {
+            circleProgress.pause()
             prova = true
         }
+
         if isTimerRunning {
             ////Timer stops
+            circleProgress.pause()
             isTimerRunning = false
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
             self.stopAnimationForView(self.imageWood)
             self.durationRotate = 0.9
             self.rotate()
-            confettiView.stopConfetti()
-            buttonViewIce.isUserInteractionEnabled = false
+           /// buttonViewIce.isUserInteractionEnabled = false
             startStopButton.setTitle("Start", for: .normal)
             self.stopAnimationForView(self.imageWood)
             if seconds >= 1 && suffix == 0 {
                 score += 1
-                labelUpdate()
+                circleProgress.fullColorWin()
             }else{
-                labelUpdate()
-                if best < score {
-                    best = score
-                    labelUpdate()
-                    bestDefault.set(score, forKey: "best")
-                    confettiView.startConfetti()
-                }
                 score = 0
-                labelUpdate()
                 milliseconds = 0
             }
             timer.invalidate()
             count = 0
         }else{
             timer.invalidate()
+            circleProgress.resetColor()
             count = 0
-            timeIntervalIce.invalidate()
             isTimerRunningIce = false
             isTimerRunning = true
             shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
+            
+            timeIntervalIce.invalidate()
             startStopButton.setTitle("Stop", for: .normal)
             rotate()
-            buttonViewIce.isUserInteractionEnabled = true
+        //buttonViewIce.isUserInteractionEnabled = true
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
                 self.count += 1
                 if self.count == 101 {
                     self.count = 1
-                    self.startProgressCircle()
+                    self.circleProgress.start()
                 }
             })
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
- 
-        }*/
+            
+        }
     }
-        
+
     func normalRun() {
+        milliseconds = 0
+        count = 0
         isTimerRunning = true
         timeIntervalIce.invalidate()
-        shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
-        milliseconds = 0
         startStopButton.setTitle("Stop", for: .normal)
         rotate()
         buttonViewIce.isUserInteractionEnabled = true
         timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
             self.incrementMiliseconds()
+            self.count += 1
+            if self.count == 101 {
+                self.count = 1
+                self.circleProgress.start()
+            }
         })
         RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
     }
+   
     
     func display(miliseconds: Int) {
         seconds = miliseconds / 100
@@ -188,11 +216,6 @@ class ViewController: UIViewController {
         display(miliseconds: milliseconds)
     }
     
-    func labelUpdate() {
-        labelScore.text = "Score: \(score)"
-        labelRecord.text = "Best: \(best)"
-    }
-    
     func setupButtonAndLabel() {
         startStopButton.layer.shadowOpacity = 0.2
         startStopButton.layer.shadowColor = UIColor.black.cgColor
@@ -202,15 +225,12 @@ class ViewController: UIViewController {
     }
     
     func setupConfetti() {
+        /*
         self.confettiView = SAConfettiView(frame: self.view.bounds)
         self.view.addSubview(confettiView)
         confettiView.type = .image(UIImage(named: "ConfettiLeaf")!)
         confettiView.isUserInteractionEnabled = false
-    }
-    
-    func setupLabels() {
-        labelScore.transform = CGAffineTransform(rotationAngle: 270)
-        labelRecord.transform = CGAffineTransform(rotationAngle: -50)
+         */
     }
     
     func rotate() {
@@ -225,15 +245,5 @@ class ViewController: UIViewController {
         let transform = myView.layer.presentation()?.transform
         myView.layer.transform = transform!
         myView.layer.removeAllAnimations()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()        
-        setupConfetti()
-        setupLabels()
-        best = bestDefault.integer(forKey: "best")
-        shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
-        setupLabels()
-        labelUpdate()
     }
 }

@@ -13,15 +13,11 @@ class CircleProgress: UIView {
     private var trackLayer = CAShapeLayer()
     private var shapeLayer = CAShapeLayer()
     private var basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
         setupTrackLayer()
         setupShapeLayer()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
     
     func start() {
@@ -36,7 +32,11 @@ class CircleProgress: UIView {
     }
     
     func setupTrackLayer() {
-        let circularPath = UIBezierPath(arcCenter: center, radius: 0, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        
+        let centerPoint = CGPoint(x: bounds.width/2 , y: bounds.height/2)
+
+        print(centerPoint)
+        let circularPath = UIBezierPath(arcCenter: centerPoint, radius: frame.width/2, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         trackLayer.lineWidth = 20
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = #colorLiteral(red: 1, green: 0.9450980392, blue: 0.462745098, alpha: 1).cgColor
@@ -45,17 +45,28 @@ class CircleProgress: UIView {
         layer.addSublayer(trackLayer)
     }
     
+    func fullColorWin() {
+        trackLayer.strokeColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).cgColor
+    }
+    
+    func resetColor() {
+        trackLayer.strokeColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1).cgColor
+    }
+    
+    
+    
     func setupShapeLayer() {
-        let circularPath = UIBezierPath(arcCenter: center, radius: 0, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let centerPoint = CGPoint(x: bounds.width/2 , y: bounds.height/2)
+        let circularPath = UIBezierPath(arcCenter: centerPoint, radius: frame.width/2, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         shapeLayer.lineWidth = 20
         shapeLayer.path = circularPath.cgPath
-        shapeLayer.strokeColor = UIColor(red: 33/255, green: 150/255, blue: 243/255, alpha: 1).cgColor
+        shapeLayer.strokeColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeEnd = 0.0
         layer.addSublayer(shapeLayer)
     }
     
-    func pauseAnimation() {
+    func pause(){
         let pausedTime = shapeLayer.convertTime(CACurrentMediaTime(), from: nil)
         shapeLayer.speed = 0.0
         shapeLayer.timeOffset = pausedTime
