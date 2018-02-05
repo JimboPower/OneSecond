@@ -104,32 +104,26 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-2A-X53">
                                 <rect key="frame" x="0.0" y="25" width="375" height="622"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="Phv-QS-bfb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-50" translatesAutoresizingMaskIntoConstraints="NO" id="Phv-QS-bfb">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-ac-bFB">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2v4-ub-Y3b">
-                                                        <rect key="frame" x="25" y="8" width="160" height="74"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="160" id="M0F-uJ-gTg"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="28"/>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2v4-ub-Y3b">
+                                                        <rect key="frame" x="25" y="8" width="150" height="74"/>
+                                                        <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="26"/>
                                                         <state key="normal" title="Score: 0" backgroundImage="ImageLeafScore"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="40"/>
+                                                            <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="60"/>
                                                         </variation>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDI-Nt-WRN">
-                                                        <rect key="frame" x="190" y="8" width="160" height="74"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="160" id="sUQ-7J-tmU"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="28"/>
+                                                        <rect key="frame" x="200" y="8" width="150" height="74"/>
+                                                        <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="26"/>
                                                         <state key="normal" title="Best: 54" backgroundImage="ImageLeafBest"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="40"/>
+                                                            <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="60"/>
                                                         </variation>
                                                     </button>
                                                 </subviews>
@@ -141,9 +135,12 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="25" bottom="8" right="25"/>
                                             </stackView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acorn-icon" translatesAutoresizingMaskIntoConstraints="NO" id="YK0-cO-h5w">
-                                                <rect key="frame" x="0.0" y="50" width="375" height="46"/>
+                                                <rect key="frame" x="0.0" y="40" width="375" height="40"/>
                                             </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YK0-cO-h5w" firstAttribute="width" secondItem="YDI-Nt-WRN" secondAttribute="height" multiplier="375:74" id="y6G-fo-hpw"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xs0-gK-a9Y">
                                         <rect key="frame" x="0.0" y="482" width="375" height="140"/>
@@ -158,6 +155,9 @@
                                                             <constraint firstAttribute="height" constant="60" id="idM-k9-Pwy"/>
                                                         </constraints>
                                                         <state key="normal" image="861930_snow_512x512" backgroundImage="BackGroundButtonBoost"/>
+                                                        <connections>
+                                                            <action selector="buttonIceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqL-1Z-eF2"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-Gw-vId">
                                                         <rect key="frame" x="230" y="0.0" width="60" height="60"/>
@@ -165,7 +165,7 @@
                                                             <constraint firstAttribute="width" constant="60" id="gqt-13-9Y9"/>
                                                             <constraint firstAttribute="height" constant="60" id="ihe-1s-5QO"/>
                                                         </constraints>
-                                                        <state key="normal" image="acorn-icon" backgroundImage="BackGroundButtonBoost"/>
+                                                        <state key="normal" image="green" backgroundImage="BackGroundButtonBoost"/>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -187,16 +187,21 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-6U-qGE">
-                                <rect key="frame" x="175" y="72.5" width="26.5" height="51"/>
+                                <rect key="frame" x="175" y="59.5" width="26.5" height="51"/>
+                                <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="50"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.45121049880000003" green="0.95160979030000004" blue="0.58054214719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TYd-2A-X53" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2Lw-UZ-90H"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="3IJ-mb-Vj4"/>
+                            <constraint firstItem="YK0-cO-h5w" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="6rr-7J-3bA"/>
                             <constraint firstAttribute="trailing" secondItem="TYd-2A-X53" secondAttribute="trailing" id="Azj-2W-VGv"/>
                             <constraint firstItem="sZU-hW-p0O" firstAttribute="centerY" secondItem="Ij8-Y5-vQI" secondAttribute="centerY" id="CXM-qC-SBA"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.2" id="IxZ-ie-Fwx"/>
@@ -210,13 +215,16 @@
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHi-L2-2yg"/>
                             <constraint firstItem="cwc-6U-qGE" firstAttribute="centerY" secondItem="YK0-cO-h5w" secondAttribute="centerY" id="igN-RW-hxj"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kyW-Uv-f2O"/>
+                            <constraint firstItem="2v4-ub-Y3b" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="nsO-yb-AWL"/>
                             <constraint firstItem="TYd-2A-X53" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="oyb-RU-zAG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TYd-2A-X53" secondAttribute="bottom" constant="20" id="pFX-af-txy"/>
                             <constraint firstItem="QrH-6H-K0X" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="pkk-Ng-saD"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1.5" id="upv-oj-8Ur"/>
+                            <constraint firstItem="YDI-Nt-WRN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="y5E-Y4-Bcb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buttonViewIce" destination="A3G-lH-1Ch" id="ig3-Bc-EAS"/>
                         <outlet property="circleProgress" destination="GxD-bD-HM4" id="a0O-dh-Wap"/>
                         <outlet property="imageIce" destination="W4z-eP-uw1" id="k0z-fz-yew"/>
                         <outlet property="imageWood" destination="Ij8-Y5-vQI" id="rnh-m8-yj7"/>
@@ -244,7 +252,7 @@
                                 <rect key="frame" x="-169" y="-167" width="713" height="1001"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageSignShop" translatesAutoresizingMaskIntoConstraints="NO" id="j0Y-Eb-nsl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="227"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syF-Rl-XEx">
                                 <rect key="frame" x="10" y="20" width="53" height="30"/>
@@ -256,7 +264,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-Mw-EYT">
-                                <rect key="frame" x="0.0" y="242" width="375" height="425"/>
+                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Vx-N8-a4B">
                                     <size key="itemSize" width="50" height="50"/>
@@ -287,7 +295,7 @@
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="centerY" secondItem="jRA-Zn-df1" secondAttribute="centerY" id="C19-Fm-JMz"/>
                             <constraint firstItem="syF-Rl-XEx" firstAttribute="top" secondItem="d2p-ch-uMb" secondAttribute="bottom" id="Dqf-Bn-6Cx"/>
                             <constraint firstAttribute="trailing" secondItem="j0Y-Eb-nsl" secondAttribute="trailing" id="L54-3R-goA"/>
-                            <constraint firstItem="j0Y-Eb-nsl" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" multiplier="0.34" id="LH4-85-N2Q"/>
+                            <constraint firstItem="j0Y-Eb-nsl" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" multiplier="0.3" id="LH4-85-N2Q"/>
                             <constraint firstItem="PVa-KD-FZW" firstAttribute="top" secondItem="bvh-Mw-EYT" secondAttribute="bottom" id="Maw-ZD-Axu"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="width" secondItem="jRA-Zn-df1" secondAttribute="width" multiplier="1.9" id="O7K-3c-46J"/>
                             <constraint firstItem="bvh-Mw-EYT" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" id="OoU-ms-g6d"/>
@@ -307,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="467-5D-GcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3964" y="617"/>
+            <point key="canvasLocation" x="3935" y="617"/>
         </scene>
     </scenes>
     <resources>
@@ -320,6 +328,7 @@
         <image name="Wood" width="306" height="317"/>
         <image name="acorn-icon" width="37" height="46"/>
         <image name="background" width="1280" height="903"/>
+        <image name="green" width="64" height="64"/>
         <image name="start-button" width="313" height="103"/>
     </resources>
 </document>

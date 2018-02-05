@@ -190,7 +190,7 @@
 				TargetAttributes = {
 					C88058F21EF28C48001DD5A2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = MQBHVKYU2E;
+						DevelopmentTeam = WC2NUT8MA5;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
@@ -422,11 +422,11 @@
 			baseConfigurationReference = 6E257AD1041A2CB7F9F428C6 /* Pods-TheSeconds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MQBHVKYU2E;
+				DEVELOPMENT_TEAM = WC2NUT8MA5;
 				INFOPLIST_FILE = TheSeconds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.edoardodecal.onesecond;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edoardodecal.second;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -438,11 +438,11 @@
 			baseConfigurationReference = 00F85900F9CF4CA4C531D7BF /* Pods-TheSeconds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MQBHVKYU2E;
+				DEVELOPMENT_TEAM = WC2NUT8MA5;
 				INFOPLIST_FILE = TheSeconds/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.edoardodecal.onesecond;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edoardodecal.second;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
