@@ -44,7 +44,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     var best = 0 {
         didSet {
             buttonBest.setTitle("Best: \(best)", for: .normal)
-        
         }
     }
     
@@ -204,16 +203,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 score += 1
                 bestDefault.set(best, forKey: "bestScore")
                 circleProgress.fullColorWin()
-                
-                let bestScoreInt = GKScore(leaderboardIdentifier: LEADERBOARD_ID)
-                bestScoreInt.value = Int64(score)
-                GKScore.report([bestScoreInt]) { (error) in
-                    if error != nil {
-                        print(error!.localizedDescription)
-                    } else {
-                        print("Best Score submitted to your Leaderboard!")
-                    }
-                }
             
             }else{
                 if prova2 {
@@ -224,6 +213,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             timer.invalidate()
             count = 0
         }else{
+            
+            checkBestScore()
             timer.invalidate()
             circleProgress.resetColor()
             count = 0
@@ -246,6 +237,18 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
             
         }
+    }
+    
+    func checkBestScore() {
+        let bestScoreInt = GKScore(leaderboardIdentifier: LEADERBOARD_ID)
+            bestScoreInt.value = Int64(best)
+        GKScore.report([bestScoreInt]) { (error) in
+        if error != nil {
+            print(error!.localizedDescription)
+        } else {
+            print("Best Score submitted to your Leaderboard!")
+        }
+    }
     }
 
     func normalRun() {
