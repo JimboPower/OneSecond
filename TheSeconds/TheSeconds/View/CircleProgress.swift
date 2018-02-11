@@ -14,8 +14,7 @@ class CircleProgress: UIView {
     private var shapeLayer = CAShapeLayer()
     private var basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func draw(_ rect: CGRect) {
         setupTrackLayer()
         setupShapeLayer()
     }

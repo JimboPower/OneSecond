@@ -8,6 +8,7 @@
 
 import UIKit
 import SAConfettiView
+import GameKit
 
 enum PowerEffect {
     case none
@@ -33,15 +34,16 @@ class ViewController: UIViewController {
     
     var score = 0 {
         didSet {
+            buttonScore.setTitle("Score: \(score)", for: .normal)
             if score > best {
                 best = score
             }
         }
     }
     
-    var best = UserDefaults.standard.integer(forKey: "bestScore") {
+    var best = 0 {
         didSet {
-            UserDefaults.standard.set(best, forKey: "bestScore")
+            buttonBest.setTitle("Best: \(best)", for: .normal)
         }
     }
     
@@ -50,6 +52,7 @@ class ViewController: UIViewController {
     var timeIntervalIce = Timer()
     var seconds = 0
     var milliseconds = 0
+    var prova2 = true
     var suffix = 0
     var isTimerRunning = false
     var isTimerRunningIce = false
@@ -68,6 +71,9 @@ class ViewController: UIViewController {
         setupConfetti()
         best = bestDefault.integer(forKey: "best")
         shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
+        buttonBest.setTitle("Best: \(best)", for: .normal)
+        best = bestDefault.integer(forKey: "bestScore")
+        print("best: \(best)")
     }
     
     @IBAction func buttonShop(_ sender: Any) {
@@ -77,11 +83,14 @@ class ViewController: UIViewController {
         seconds = 0
     }
     
+    @IBOutlet weak var buttonBest: UIButton!
+    @IBOutlet weak var buttonScore: UIButton!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var imageWood: UIImageView!
     @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
+        prova2 = true
     }
     
     @IBOutlet weak var buttonViewIce: UIButton!
@@ -91,9 +100,11 @@ class ViewController: UIViewController {
         // nascondi dopo tot sec
     }
     
+    
     @IBAction func buttonIceTapped(_ sender: Any) {
+        /*
         powerStatus = .freeze
-        
+        prova2 = false
         if isTimerRunning == true {
             shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
             isTimerRunningIce = true
@@ -106,27 +117,52 @@ class ViewController: UIViewController {
             self.stopAnimationForView(self.imageWood)
             self.durationRotate = 3
             self.rotate()
-            
+            circleProgress.pause()
             if isTimerRunning == true {
                 timeIntervalIce = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(intervalTime) , userInfo: nil, repeats: true)
                 count = 0
             }
         }else{
-            normalRun()
+            //normalRun()
         }
+ */
     }
     
     @objc func intervalTime() {
         durationRotate = 0.9
         timeIntervalIce.invalidate()
         isTimerRunningIce = false
-        buttonTapped()
-        normalRun()
+        //button()
+       //normalRun()
     }
-
+    
+/*
+    func button() {
+        if prova == true {
+            circleProgress.start()
+            prova = false
+        } else {
+            circleProgress.pause()
+            prova = true
+        }
+        ////Timer stops
+        circleProgress.pause()
+        isTimerRunning = false
+        timeIntervalIce.invalidate()
+        isTimerRunningIce = false
+        self.stopAnimationForView(self.imageWood)
+        self.durationRotate = 0.9
+        rotate()
+        /// buttonViewIce.isUserInteractionEnabled = false
+        startStopButton.setTitle("Start", for: .normal)
+        stopAnimationForView(self.imageWood)
+        timer.invalidate()
+    }
+ */
     
     func buttonTapped() {
 
+        
         if prova == true {
             circleProgress.start()
             prova = false
@@ -145,14 +181,17 @@ class ViewController: UIViewController {
             self.durationRotate = 0.9
             self.rotate()
            /// buttonViewIce.isUserInteractionEnabled = false
-            startStopButton.setTitle("Start", for: .normal)
+            startStopButton.setTitle("Start", for: .reserved)
             self.stopAnimationForView(self.imageWood)
             if seconds >= 1 && suffix == 0 {
                 score += 1
+                bestDefault.set(best, forKey: "bestScore")
                 circleProgress.fullColorWin()
             }else{
+                if prova2 {
                 score = 0
                 milliseconds = 0
+                }
             }
             timer.invalidate()
             count = 0
@@ -165,9 +204,9 @@ class ViewController: UIViewController {
             shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
             
             timeIntervalIce.invalidate()
-            startStopButton.setTitle("Stop", for: .normal)
+            startStopButton.setTitle("Stop", for: .reserved)
             rotate()
-        //buttonViewIce.isUserInteractionEnabled = true
+            buttonViewIce.isUserInteractionEnabled = true
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
                 self.count += 1
@@ -182,14 +221,14 @@ class ViewController: UIViewController {
     }
 
     func normalRun() {
-        milliseconds = 0
-        count = 0
         isTimerRunning = true
         timeIntervalIce.invalidate()
         startStopButton.setTitle("Stop", for: .normal)
         rotate()
         buttonViewIce.isUserInteractionEnabled = true
+        timer.invalidate()
         timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
+            print(self.count)
             self.incrementMiliseconds()
             self.count += 1
             if self.count == 101 {
@@ -197,9 +236,11 @@ class ViewController: UIViewController {
                 self.circleProgress.start()
             }
         })
+        prova = !prova
         RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
     }
-   
+    
+    
     
     func display(miliseconds: Int) {
         seconds = miliseconds / 100
@@ -225,12 +266,10 @@ class ViewController: UIViewController {
     }
     
     func setupConfetti() {
-        /*
         self.confettiView = SAConfettiView(frame: self.view.bounds)
         self.view.addSubview(confettiView)
         confettiView.type = .image(UIImage(named: "ConfettiLeaf")!)
         confettiView.isUserInteractionEnabled = false
-         */
     }
     
     func rotate() {
