@@ -14,6 +14,8 @@ class CircleProgress: UIView {
     private var shapeLayer = CAShapeLayer()
     private var basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
     
+
+    
     override func draw(_ rect: CGRect) {
         setupTrackLayer()
         setupShapeLayer()
@@ -23,7 +25,7 @@ class CircleProgress: UIView {
         basicAnimation.toValue = 1.00
         basicAnimation.isAdditive = true
         basicAnimation.fillMode = kCAFillModeForwards
-        basicAnimation.duration = CFTimeInterval(1.25902626)
+        basicAnimation.duration = CFTimeInterval(1.259026275)
         basicAnimation.fillMode = kCAFillModeForwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.speed = 1

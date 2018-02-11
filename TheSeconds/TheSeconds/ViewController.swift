@@ -17,7 +17,7 @@ enum PowerEffect {
     case green
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GKGameCenterControllerDelegate {
     
     var powerStatus: PowerEffect = .none {
         didSet {
@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     var best = 0 {
         didSet {
             buttonBest.setTitle("Best: \(best)", for: .normal)
+        
         }
     }
     
@@ -65,6 +66,10 @@ class ViewController: UIViewController {
     let trackLayer = CAShapeLayer()
     let bestDefault = UserDefaults.standard
     var radiusCircle = CGFloat(0)
+    var gcEnabled = Bool()
+    var gcDefaultLeaderBoard = String()
+    let LEADERBOARD_ID = "com.score.OneSecond"
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +79,18 @@ class ViewController: UIViewController {
         buttonBest.setTitle("Best: \(best)", for: .normal)
         best = bestDefault.integer(forKey: "bestScore")
         print("best: \(best)")
+        authenticateLocalPlayer()
     }
+    
+    @IBAction func buttonBestTapped(_ sender: Any) {
+        let gcVC = GKGameCenterViewController()
+        gcVC.gameCenterDelegate = self
+        gcVC.viewState = .leaderboards
+        gcVC.leaderboardIdentifier = LEADERBOARD_ID
+        present(gcVC, animated: true, completion: nil)
+    }
+    
+
     
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
@@ -181,12 +197,24 @@ class ViewController: UIViewController {
             self.durationRotate = 0.9
             self.rotate()
            /// buttonViewIce.isUserInteractionEnabled = false
-            startStopButton.setTitle("Start", for: .reserved)
+            startStopButton.setTitle("Start", for: .normal)
             self.stopAnimationForView(self.imageWood)
-            if seconds >= 1 && suffix == 0 {
+            if seconds >= 1 //&& suffix == 0
+            {
                 score += 1
                 bestDefault.set(best, forKey: "bestScore")
                 circleProgress.fullColorWin()
+                
+                let bestScoreInt = GKScore(leaderboardIdentifier: LEADERBOARD_ID)
+                bestScoreInt.value = Int64(score)
+                GKScore.report([bestScoreInt]) { (error) in
+                    if error != nil {
+                        print(error!.localizedDescription)
+                    } else {
+                        print("Best Score submitted to your Leaderboard!")
+                    }
+                }
+            
             }else{
                 if prova2 {
                 score = 0
@@ -204,7 +232,7 @@ class ViewController: UIViewController {
             shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
             
             timeIntervalIce.invalidate()
-            startStopButton.setTitle("Stop", for: .reserved)
+            startStopButton.setTitle("Stop", for: .normal)
             rotate()
             buttonViewIce.isUserInteractionEnabled = true
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
@@ -284,5 +312,35 @@ class ViewController: UIViewController {
         let transform = myView.layer.presentation()?.transform
         myView.layer.transform = transform!
         myView.layer.removeAllAnimations()
+    }
+    
+    func authenticateLocalPlayer() {
+        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {(ViewController, error) -> Void in
+            if((ViewController) != nil) {
+                // 1. Show login if player is not logged in
+                self.present(ViewController!, animated: true, completion: nil)
+            } else if (localPlayer.isAuthenticated) {
+                // 2. Player is already authenticated & logged in, load game center
+                self.gcEnabled = true
+                
+                // Get the default leaderboard ID
+                localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifer, error) in
+                    if error != nil { print(error)
+                    } else { self.gcDefaultLeaderBoard = leaderboardIdentifer! }
+                })
+                
+            } else {
+                // 3. Game center is not enabled on the users device
+                self.gcEnabled = false
+                print("Local player could not be authenticated!")
+                print(error)
+            }
+        }
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 }

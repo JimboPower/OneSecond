@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -117,10 +118,13 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDI-Nt-WRN">
                                                         <rect key="frame" x="200" y="8" width="150" height="74"/>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="26"/>
-                                                        <state key="normal" title="Best: 54" backgroundImage="ImageLeafBest"/>
+                                                        <state key="normal" title="Best: 0" backgroundImage="ImageLeafBest"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="60"/>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="buttonBestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXD-z0-ra0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -141,7 +145,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xs0-gK-a9Y">
                                         <rect key="frame" x="0.0" y="467" width="375" height="155"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kPS-6B-f2M">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="kPS-6B-f2M">
                                                 <rect key="frame" x="27.5" y="0.0" width="320" height="75"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3G-lH-1Ch">
@@ -154,9 +158,15 @@
                                                             <action selector="buttonIceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqL-1Z-eF2"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-mU-f4w">
-                                                        <rect key="frame" x="137" y="22.5" width="46" height="30"/>
-                                                        <state key="normal" title="Button"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-mU-f4w">
+                                                        <rect key="frame" x="141.5" y="37.5" width="37.5" height="37.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Odl-mU-f4w" secondAttribute="height" multiplier="1:1" id="27H-Nr-hZ5"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="ShopButton" backgroundImage="BackGroundButtonBoost"/>
+                                                        <connections>
+                                                            <segue destination="WEL-TE-vdI" kind="show" id="ajQ-YS-dUB"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-Gw-vId">
                                                         <rect key="frame" x="245" y="0.0" width="75" height="75"/>
@@ -189,7 +199,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-6U-qGE">
-                                <rect key="frame" x="168.5" y="71.5" width="39" height="41"/>
+                                <rect key="frame" x="168.5" y="72" width="39" height="41"/>
                                 <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -208,6 +218,7 @@
                             <constraint firstItem="sZU-hW-p0O" firstAttribute="centerY" secondItem="Ij8-Y5-vQI" secondAttribute="centerY" id="CXM-qC-SBA"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.2" id="IxZ-ie-Fwx"/>
                             <constraint firstItem="gOm-Gw-vId" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="JJP-is-15u"/>
+                            <constraint firstItem="Odl-mU-f4w" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.1" id="LAo-hy-BvA"/>
                             <constraint firstItem="A3G-lH-1Ch" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="Lap-pg-8Ha"/>
                             <constraint firstItem="GxD-bD-HM4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="LvZ-Yv-5Zk"/>
                             <constraint firstItem="QrH-6H-K0X" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="P35-Mn-lJo"/>
@@ -241,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3166" y="617"/>
+            <point key="canvasLocation" x="3154" y="610"/>
         </scene>
         <!--Shop Controller-->
         <scene sceneID="Ppp-WE-Siv">
@@ -332,6 +343,7 @@
         <image name="ImageLeafScore" width="196" height="94"/>
         <image name="ImageSignShop" width="325" height="251"/>
         <image name="ScreenIced" width="1022" height="1066"/>
+        <image name="ShopButton" width="246" height="237"/>
         <image name="Wood" width="306" height="317"/>
         <image name="acorn-icon" width="37" height="46"/>
         <image name="background" width="1280" height="903"/>
