@@ -67,7 +67,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     var radiusCircle = CGFloat(0)
     var gcEnabled = Bool()
     var gcDefaultLeaderBoard = String()
-    let LEADERBOARD_ID = "com.score.OneSecond"
+    let leaderboardID = "com.score.OneSecond"
+    var greenActiveted = false
 
 
     override func viewDidLoad() {
@@ -77,8 +78,9 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
         buttonBest.setTitle("Best: \(best)", for: .normal)
         best = bestDefault.integer(forKey: "bestScore")
-        print("best: \(best)")
         authenticateLocalPlayer()
+        buttonViewGreen.isUserInteractionEnabled = false
+        buttonViewIce.isUserInteractionEnabled = false
     }
     
     @IBAction func buttonBestTapped(_ sender: Any) {
@@ -88,19 +90,13 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         buttonGameCenter()
     }
     
-    func buttonGameCenter() {
-        let gcVC = GKGameCenterViewController()
-        gcVC.gameCenterDelegate = self
-        gcVC.viewState = .leaderboards
-        gcVC.leaderboardIdentifier = LEADERBOARD_ID
-        present(gcVC, animated: true, completion: nil)
-    }
     
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
         startStopButton.setTitle("Start", for: .normal)
         milliseconds = 0
         seconds = 0
+        circleProgress.pause()
     }
     
     @IBOutlet weak var buttonBest: UIButton!
@@ -110,75 +106,40 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet weak var imageWood: UIImageView!
     @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
-        prova2 = true
     }
     
     @IBOutlet weak var buttonViewIce: UIButton!
+    @IBOutlet weak var buttonViewGreen: UIButton!
     
     func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
         containerViewController?.overlayEffectImageView.isHidden = isHidden
-        // nascondi dopo tot sec
     }
     
     
     @IBAction func buttonIceTapped(_ sender: Any) {
-        /*
         powerStatus = .freeze
-        prova2 = false
-        if isTimerRunning == true {
-            shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
-            isTimerRunningIce = true
-            timer.invalidate()
-            timer = Timer(timeInterval: 0.1, repeats: true, block: { (_) in
-                self.incrementMiliseconds()
-            })
-            RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
-            buttonViewIce.isUserInteractionEnabled = false
-            self.stopAnimationForView(self.imageWood)
-            self.durationRotate = 3
-            self.rotate()
-            circleProgress.pause()
-            if isTimerRunning == true {
-                timeIntervalIce = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(intervalTime) , userInfo: nil, repeats: true)
-                count = 0
-            }
-        }else{
-            //normalRun()
-        }
- */
-    }
-    
-    @objc func intervalTime() {
-        durationRotate = 0.9
-        timeIntervalIce.invalidate()
-        isTimerRunningIce = false
-        //button()
-       //normalRun()
-    }
-    
-/*
-    func button() {
-        if prova == true {
-            circleProgress.start()
-            prova = false
-        } else {
-            circleProgress.pause()
-            prova = true
-        }
-        ////Timer stops
-        circleProgress.pause()
-        isTimerRunning = false
-        timeIntervalIce.invalidate()
-        isTimerRunningIce = false
-        self.stopAnimationForView(self.imageWood)
-        self.durationRotate = 0.9
-        rotate()
-        /// buttonViewIce.isUserInteractionEnabled = false
-        startStopButton.setTitle("Start", for: .normal)
-        stopAnimationForView(self.imageWood)
+        isTimerRunningIce = true
         timer.invalidate()
+        timer = Timer(timeInterval: 0.15, repeats: true, block: { (_) in
+            self.incrementMiliseconds()
+        })
+        RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
+        self.stopAnimationForView(self.imageWood)
+        self.durationRotate = 3
+        setUpTimer()
     }
- */
+    @IBAction func buttonGreenTapped(_ sender: Any) {
+        buttonViewGreen.isUserInteractionEnabled = false
+        circleProgress.greenPowerUp()
+        greenActiveted = true
+    }
+
+    func setUpTimer() {
+        self.rotate()
+        circleProgress.pause()
+        buttonViewIce.isUserInteractionEnabled = false
+    }
+    
     
     func buttonTapped() {
         
@@ -189,47 +150,52 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             circleProgress.pause()
             prova = true
         }
+        
 
+        
         if isTimerRunning {
             ////Timer stops
-            circleProgress.pause()
             isTimerRunning = false
             timeIntervalIce.invalidate()
             isTimerRunningIce = false
+            buttonViewGreen.isUserInteractionEnabled = false
             self.stopAnimationForView(self.imageWood)
             self.durationRotate = 0.9
-            self.rotate()
-           /// buttonViewIce.isUserInteractionEnabled = false
+            timer.invalidate()
+            setUpTimer()
             startStopButton.setTitle("Start", for: .normal)
             self.stopAnimationForView(self.imageWood)
-            if seconds >= 1 //&& suffix == 0
-            {
+            if seconds >= 1 && suffix == 0 {
                 score += 1
                 bestDefault.set(best, forKey: "bestScore")
                 circleProgress.fullColorWin()
-            
             }else{
-                if prova2 {
-                score = 0
-                milliseconds = 0
+                
+                if !greenActiveted {
+                    score = 0
+                    circleProgress.resetColor()
                 }
+                milliseconds = 0
             }
-            timer.invalidate()
             count = 0
         }else{
-            
             checkBestScore()
             timer.invalidate()
-            circleProgress.resetColor()
+            if score <= 1 && greenActiveted {
+                circleProgress.greenPowerUp()
+            }else{
+                circleProgress.resetColor()
+                greenActiveted = false
+            }
             count = 0
             isTimerRunningIce = false
             isTimerRunning = true
             shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
-            
             timeIntervalIce.invalidate()
             startStopButton.setTitle("Stop", for: .normal)
             rotate()
             buttonViewIce.isUserInteractionEnabled = true
+            buttonViewGreen.isUserInteractionEnabled = true
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
                 self.count += 1
@@ -242,41 +208,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             
         }
     }
-    
-    func checkBestScore() {
-        let bestScoreInt = GKScore(leaderboardIdentifier: LEADERBOARD_ID)
-            bestScoreInt.value = Int64(best)
-        GKScore.report([bestScoreInt]) { (error) in
-        if error != nil {
-            print(error!.localizedDescription)
-        } else {
-            print("Best Score submitted to your Leaderboard!")
-        }
-    }
-    }
 
-    func normalRun() {
-        isTimerRunning = true
-        timeIntervalIce.invalidate()
-        startStopButton.setTitle("Stop", for: .normal)
-        rotate()
-        buttonViewIce.isUserInteractionEnabled = true
-        timer.invalidate()
-        timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
-            print(self.count)
-            self.incrementMiliseconds()
-            self.count += 1
-            if self.count == 101 {
-                self.count = 1
-                self.circleProgress.start()
-            }
-        })
-        prova = !prova
-        RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
-    }
-    
-    
-    
     func display(miliseconds: Int) {
         seconds = miliseconds / 100
         suffix = miliseconds - (seconds * 100)
@@ -321,6 +253,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         myView.layer.removeAllAnimations()
     }
     
+    
+    ////Game Center SetUp
     func authenticateLocalPlayer() {
         let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
         
@@ -345,6 +279,26 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 print(error)
             }
         }
+    }
+    
+    func checkBestScore() {
+        let bestScoreInt = GKScore(leaderboardIdentifier: leaderboardID)
+        bestScoreInt.value = Int64(best)
+        GKScore.report([bestScoreInt]) { (error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                print("Best Score submitted to your Leaderboard!")
+            }
+        }
+    }
+    
+    func buttonGameCenter() {
+        let gcVC = GKGameCenterViewController()
+        gcVC.gameCenterDelegate = self
+        gcVC.viewState = .leaderboards
+        gcVC.leaderboardIdentifier = leaderboardID
+        present(gcVC, animated: true, completion: nil)
     }
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {

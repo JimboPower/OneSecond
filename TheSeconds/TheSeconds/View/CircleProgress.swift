@@ -14,8 +14,6 @@ class CircleProgress: UIView {
     private var shapeLayer = CAShapeLayer()
     private var basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
     
-
-    
     override func draw(_ rect: CGRect) {
         setupTrackLayer()
         setupShapeLayer()
@@ -54,6 +52,9 @@ class CircleProgress: UIView {
         trackLayer.strokeColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1).cgColor
     }
     
+    func greenPowerUp() {
+        trackLayer.strokeColor = #colorLiteral(red: 0, green: 1, blue: 0, alpha: 1).cgColor
+    }
     
     
     func setupShapeLayer() {
