@@ -82,14 +82,19 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func buttonBestTapped(_ sender: Any) {
+        buttonGameCenter()
+    }
+    @IBAction func buttonScoreTapped(_ sender: Any) {
+        buttonGameCenter()
+    }
+    
+    func buttonGameCenter() {
         let gcVC = GKGameCenterViewController()
         gcVC.gameCenterDelegate = self
         gcVC.viewState = .leaderboards
         gcVC.leaderboardIdentifier = LEADERBOARD_ID
         present(gcVC, animated: true, completion: nil)
     }
-    
-
     
     @IBAction func buttonShop(_ sender: Any) {
         timer.invalidate()
@@ -176,7 +181,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
  */
     
     func buttonTapped() {
-
         
         if prova == true {
             circleProgress.start()

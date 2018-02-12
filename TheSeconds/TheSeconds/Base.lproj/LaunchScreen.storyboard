@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Trattatello.ttf">
-            <string>Trattatello</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -29,18 +24,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="TNY-bl-hML">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A de Cal Edoardo's Game" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdQ-mj-9x6">
-                                <rect key="frame" x="45" y="251" width="284" height="165"/>
-                                <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="TNY-bl-hML" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FOr-vb-wM9"/>
                             <constraint firstAttribute="trailing" secondItem="TNY-bl-hML" secondAttribute="trailing" id="V6A-2M-kAR"/>
-                            <constraint firstItem="sdQ-mj-9x6" firstAttribute="centerY" secondItem="TNY-bl-hML" secondAttribute="centerY" id="azL-q8-5oa"/>
-                            <constraint firstItem="sdQ-mj-9x6" firstAttribute="centerX" secondItem="TNY-bl-hML" secondAttribute="centerX" id="lLF-OI-16i"/>
                             <constraint firstItem="TNY-bl-hML" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="rZZ-cR-sM6"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="TNY-bl-hML" secondAttribute="bottom" id="zOh-8p-pgb"/>
                         </constraints>

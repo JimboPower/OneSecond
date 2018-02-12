@@ -114,6 +114,9 @@
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="60"/>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="buttonScoreTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wo-Vh-vcU"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDI-Nt-WRN">
                                                         <rect key="frame" x="200" y="8" width="150" height="74"/>
@@ -283,7 +286,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bvh-Mw-EYT">
-                                <rect key="frame" x="0.0" y="215" width="375" height="452"/>
+                                <rect key="frame" x="0.0" y="245" width="375" height="422"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Vx-N8-a4B">
                                     <size key="itemSize" width="50" height="50"/>
@@ -305,26 +308,47 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="WEL-TE-vdI" id="ABx-F2-G45"/>
-                                    <outlet property="delegate" destination="WEL-TE-vdI" id="CYT-Ar-9gL"/>
+                                    <outlet property="delegate" destination="WEL-TE-vdI" id="iO1-Xm-nKF"/>
                                 </connections>
                             </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acorn-icon" translatesAutoresizingMaskIntoConstraints="NO" id="3YE-Vc-qfX">
+                                <rect key="frame" x="171.5" y="197" width="32" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3YE-Vc-qfX" secondAttribute="height" multiplier="37:46" id="mmp-Ng-gKT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-91-jKh">
+                                <rect key="frame" x="176" y="194.5" width="23.5" height="45.5"/>
+                                <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
+                                <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="55"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="centerY" secondItem="jRA-Zn-df1" secondAttribute="centerY" id="C19-Fm-JMz"/>
                             <constraint firstItem="syF-Rl-XEx" firstAttribute="top" secondItem="d2p-ch-uMb" secondAttribute="bottom" id="Dqf-Bn-6Cx"/>
+                            <constraint firstItem="wY7-91-jKh" firstAttribute="centerY" secondItem="3YE-Vc-qfX" secondAttribute="centerY" id="FvF-e1-Mj6"/>
+                            <constraint firstItem="wY7-91-jKh" firstAttribute="centerX" secondItem="3YE-Vc-qfX" secondAttribute="centerX" id="H4P-6l-lPK"/>
                             <constraint firstAttribute="trailing" secondItem="j0Y-Eb-nsl" secondAttribute="trailing" id="L54-3R-goA"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" multiplier="0.3" id="LH4-85-N2Q"/>
                             <constraint firstItem="PVa-KD-FZW" firstAttribute="top" secondItem="bvh-Mw-EYT" secondAttribute="bottom" id="Maw-ZD-Axu"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="width" secondItem="jRA-Zn-df1" secondAttribute="width" id="O7K-3c-46J"/>
                             <constraint firstItem="bvh-Mw-EYT" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" id="OoU-ms-g6d"/>
-                            <constraint firstItem="bvh-Mw-EYT" firstAttribute="top" secondItem="j0Y-Eb-nsl" secondAttribute="bottom" constant="15" id="PDw-Om-xsN"/>
+                            <constraint firstItem="bvh-Mw-EYT" firstAttribute="top" secondItem="j0Y-Eb-nsl" secondAttribute="bottom" constant="45" id="PDw-Om-xsN"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="centerX" secondItem="jRA-Zn-df1" secondAttribute="centerX" id="TKy-1B-wf2"/>
+                            <constraint firstItem="bvh-Mw-EYT" firstAttribute="top" secondItem="3YE-Vc-qfX" secondAttribute="bottom" constant="8" id="hMd-tE-Ude"/>
                             <constraint firstAttribute="trailing" secondItem="bvh-Mw-EYT" secondAttribute="trailing" id="iGi-Jm-FmE"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="top" secondItem="jRA-Zn-df1" secondAttribute="top" id="j0n-qM-qVp"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="width" secondItem="jRA-Zn-df1" secondAttribute="width" id="jwO-E6-BvQ"/>
                             <constraint firstItem="j0Y-Eb-nsl" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" id="p97-7v-OLT"/>
+                            <constraint firstItem="3YE-Vc-qfX" firstAttribute="centerX" secondItem="bvh-Mw-EYT" secondAttribute="centerX" id="tEs-xn-3ve"/>
                             <constraint firstItem="syF-Rl-XEx" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leading" constant="10" id="taI-su-APD"/>
+                            <constraint firstItem="3YE-Vc-qfX" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" multiplier="0.06" id="ttw-eJ-maF"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="height" secondItem="jRA-Zn-df1" secondAttribute="height" id="yIL-3Y-HEH"/>
                         </constraints>
                     </view>

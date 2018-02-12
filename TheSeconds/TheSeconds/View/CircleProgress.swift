@@ -47,7 +47,7 @@ class CircleProgress: UIView {
     }
     
     func fullColorWin() {
-        trackLayer.strokeColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).cgColor
+        trackLayer.strokeColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1).cgColor
     }
     
     func resetColor() {
@@ -61,7 +61,7 @@ class CircleProgress: UIView {
         let circularPath = UIBezierPath(arcCenter: centerPoint, radius: frame.width/2, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         shapeLayer.lineWidth = 20
         shapeLayer.path = circularPath.cgPath
-        shapeLayer.strokeColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        shapeLayer.strokeColor = #colorLiteral(red: 0.4117647059, green: 0.8, blue: 0.968627451, alpha: 1)
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeEnd = 0.0
         layer.addSublayer(shapeLayer)
