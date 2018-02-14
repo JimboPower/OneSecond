@@ -63,8 +63,23 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     var prova = true
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
     let trackLayer = CAShapeLayer()
-    let bestDefault = UserDefaults.standard
+    let userDefault = UserDefaults.standard
     var radiusCircle = CGFloat(0)
+    var greenNumber = -5 {
+        didSet{
+            print(greenNumber)
+            labelGreenNumber.text = "\(greenNumber)"
+            iceNumber = userDefault.integer(forKey: "green")
+        }
+    }
+    
+    var iceNumber = -5 {
+        didSet{
+            print(iceNumber)
+            labelIceNumber.text = "\(iceNumber)"
+            iceNumber = userDefault.integer(forKey: "ice")
+        }
+    }
     var gcEnabled = Bool()
     var gcDefaultLeaderBoard = String()
     let leaderboardID = "com.score.OneSecond"
@@ -74,18 +89,36 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConfetti()
-        best = bestDefault.integer(forKey: "best")
         shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
-        buttonBest.setTitle("Best: \(best)", for: .normal)
-        best = bestDefault.integer(forKey: "bestScore")
         authenticateLocalPlayer()
         buttonViewGreen.isUserInteractionEnabled = false
         buttonViewIce.isUserInteractionEnabled = false
+
+        setupUserDefaultSetLabel()
+    }
+    
+
+    
+    
+    func setupUserDefaultSetLabel() {
+        best = userDefault.integer(forKey: "best")
+        buttonBest.setTitle("Best: \(best)", for: .normal)
+        
+        if iceNumber == -5 {
+            print("lol")
+            userDefault.set(5, forKey: "ice")
+            iceNumber = userDefault.integer(forKey: "ice")
+            labelIceNumber.text = "\(iceNumber)"
+        }else{
+            labelIceNumber.text = "\(iceNumber)"
+        }
+        
     }
     
     @IBAction func buttonBestTapped(_ sender: Any) {
         buttonGameCenter()
     }
+    
     @IBAction func buttonScoreTapped(_ sender: Any) {
         buttonGameCenter()
     }
@@ -108,13 +141,15 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         buttonTapped()
     }
     
+    @IBOutlet weak var labelIceNumber: UILabel!
+    @IBOutlet weak var labelGreenNumber: UILabel!
+    
     @IBOutlet weak var buttonViewIce: UIButton!
     @IBOutlet weak var buttonViewGreen: UIButton!
     
     func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
         containerViewController?.overlayEffectImageView.isHidden = isHidden
     }
-    
     
     @IBAction func buttonIceTapped(_ sender: Any) {
         powerStatus = .freeze
@@ -127,11 +162,14 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         self.stopAnimationForView(self.imageWood)
         self.durationRotate = 3
         setUpTimer()
+        iceNumber -= 1
     }
     @IBAction func buttonGreenTapped(_ sender: Any) {
         buttonViewGreen.isUserInteractionEnabled = false
         circleProgress.greenPowerUp()
         greenActiveted = true
+        greenNumber -= 1
+        print(greenNumber)
     }
 
     func setUpTimer() {
@@ -139,7 +177,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         circleProgress.pause()
         buttonViewIce.isUserInteractionEnabled = false
     }
-    
     
     func buttonTapped() {
         
@@ -150,8 +187,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             circleProgress.pause()
             prova = true
         }
-        
-
         
         if isTimerRunning {
             ////Timer stops
@@ -167,10 +202,9 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             self.stopAnimationForView(self.imageWood)
             if seconds >= 1 && suffix == 0 {
                 score += 1
-                bestDefault.set(best, forKey: "bestScore")
+                userDefault.set(best, forKey: "best")
                 circleProgress.fullColorWin()
             }else{
-                
                 if !greenActiveted {
                     score = 0
                     circleProgress.resetColor()
@@ -205,7 +239,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 }
             })
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
-            
         }
     }
 

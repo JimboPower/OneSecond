@@ -131,16 +131,18 @@ extension ShopController: UICollectionViewDataSource {
           ///  cell.saleRibbonImageView.isHidden = true
        // }
         
-        cell.buttonBuy.tag = indexPath.row
-        cell.buttonBuy.addTarget(self, action: "buttonAction", for: .touchUpInside)
-
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("section: \(indexPath.section)")
-        print("row: \(indexPath.row)")
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Hello")
+        if indexPath.row == 0 {
+        }else{
+            
+        }
     }
+    
     func buttonAction(sender: UIButton) {
         print("Ciao")
     }

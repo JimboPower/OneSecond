@@ -16,8 +16,12 @@ class ShopTableViewCell: UICollectionViewCell {
     @IBOutlet weak var labelDescription: UILabel!
     @IBOutlet weak var labelPrize: UILabel!
     @IBOutlet weak var buttonBuy: UIButton!
-    
     static let identifier = "ShopTableViewCell"
+    
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
