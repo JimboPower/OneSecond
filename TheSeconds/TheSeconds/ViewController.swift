@@ -68,16 +68,15 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     var greenNumber = -5 {
         didSet{
             print(greenNumber)
-            labelGreenNumber.text = "\(greenNumber)"
-            iceNumber = userDefault.integer(forKey: "green")
         }
     }
     
-    var iceNumber = -5 {
+    var iceNumber = UserDefaults.standard.integer(forKey: "ice") {
         didSet{
-            print(iceNumber)
+            userDefault.set(iceNumber, forKey: "ice")
             labelIceNumber.text = "\(iceNumber)"
             iceNumber = userDefault.integer(forKey: "ice")
+            print(iceNumber)
         }
     }
     var gcEnabled = Bool()
@@ -104,12 +103,13 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         best = userDefault.integer(forKey: "best")
         buttonBest.setTitle("Best: \(best)", for: .normal)
         
-        if iceNumber == -5 {
+        if iceNumber == 0 {
             print("lol")
             userDefault.set(5, forKey: "ice")
             iceNumber = userDefault.integer(forKey: "ice")
             labelIceNumber.text = "\(iceNumber)"
         }else{
+            iceNumber = userDefault.integer(forKey: "ice")
             labelIceNumber.text = "\(iceNumber)"
         }
         
@@ -163,6 +163,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         self.durationRotate = 3
         setUpTimer()
         iceNumber -= 1
+        userDefault.set(iceNumber, forKey: "ice")
+        iceNumber = userDefault.integer(forKey: "ice")
     }
     @IBAction func buttonGreenTapped(_ sender: Any) {
         buttonViewGreen.isUserInteractionEnabled = false
