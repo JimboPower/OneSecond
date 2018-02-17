@@ -20,6 +20,7 @@ class ShopTableViewCell: UICollectionViewCell {
     
     
     @IBAction func buttonTapped(_ sender: Any) {
+
     }
     
     

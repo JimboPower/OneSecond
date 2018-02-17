@@ -23,7 +23,7 @@ class CircleProgress: UIView {
         basicAnimation.toValue = 1.00
         basicAnimation.isAdditive = true
         basicAnimation.fillMode = kCAFillModeForwards
-        basicAnimation.duration = CFTimeInterval(1.259026275)
+        basicAnimation.duration = CFTimeInterval(1.259026277)
         basicAnimation.fillMode = kCAFillModeForwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.speed = 1

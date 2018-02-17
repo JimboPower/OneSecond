@@ -9,23 +9,44 @@
 import UIKit
 import Kingfisher
 
+
 class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
 
     var powerUps = [PowerUp]()
 
+    @IBAction func backButtonTapped(_ sender: Any) {
+        
+    }
+    
+    
+    
     let cellIdentifier = "cellIdentifier"
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var numberAcorn = 0
+    var iceNumber = 0
+    var greenNumber = 0
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         observePowerUps()
+        labelAcorn.text = "\(numberAcorn)"
+        labelGreen.text = "\(greenNumber)"
+        labelIce.text = "\(iceNumber)"
+        print(numberAcorn)
+        print(iceNumber)
+        print(greenNumber)
     }
     
     
+    @IBOutlet weak var labelAcorn: UILabel!
     
+    @IBOutlet weak var labelIce: UILabel!
+    @IBOutlet weak var labelGreen: UILabel!
     internal func observePowerUps() {
         APIService.observePowerUps {
             (powerUp) in
@@ -102,9 +123,6 @@ extension ShopController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ShopTableViewCell
         
-        cell.buttonBuy.tag = indexPath.row
-        cell.buttonBuy.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        
         
         let powerUp = powerUps[indexPath.row]
         cell.titleLabel.text = powerUp.title
@@ -135,12 +153,26 @@ extension ShopController: UICollectionViewDataSource {
         return cell
     }
     
+
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Hello")
+        
+        numberAcorn -= 5
+        UserDefaults.standard.set(numberAcorn, forKey: "acorn")
+
+        
         if indexPath.row == 0 {
+            greenNumber += 1
+            UserDefaults.standard.set(greenNumber, forKey: "green")
         }else{
-            
+            iceNumber += 1
+            UserDefaults.standard.set(iceNumber, forKey: "ice")
         }
+        
+        labelAcorn.text = "\(numberAcorn)"
+        labelGreen.text = "\(greenNumber)"
+        labelIce.text = "\(iceNumber)"
     }
     
     func buttonAction(sender: UIButton) {
