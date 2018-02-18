@@ -53,6 +53,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     
     @IBOutlet weak var circleProgress: CircleProgress!
     var timer = Timer()
+    var boolCheckUserDefault: Bool = UserDefaults.standard.bool(forKey: "bool")
     var timeIntervalIce = Timer()
     var seconds = 0
     var milliseconds = 0
@@ -76,7 +77,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         setupUserDefaultSetLabel()
-
     }
     
     var acornNumber = UserDefaults.standard.integer(forKey: "acorn") {
@@ -95,6 +95,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
 
         }
     }
+    
+    var number = 0
     
     var iceNumber = UserDefaults.standard.integer(forKey: "ice") {
         didSet{
@@ -123,21 +125,16 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         best = userDefault.integer(forKey: "best")
         buttonBest.setTitle("Best: \(best)", for: .normal)
         
+        if boolCheckUserDefault {
+        
         if iceNumber == 0 {
             userDefault.set(5, forKey: "ice")
             iceNumber = userDefault.integer(forKey: "ice")
             labelIceNumber.text = "\(iceNumber)"
-        }else{
-            iceNumber = userDefault.integer(forKey: "ice")
-            labelIceNumber.text = "\(iceNumber)"
-            print("Lol \(iceNumber)")
         }
         
         if greenNumber == 0 {
             userDefault.set(5, forKey: "green")
-            greenNumber = userDefault.integer(forKey: "green")
-            labelGreenNumber.text = "\(greenNumber)"
-        }else{
             greenNumber = userDefault.integer(forKey: "green")
             labelGreenNumber.text = "\(greenNumber)"
         }
@@ -146,11 +143,22 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             userDefault.set(20, forKey: "acorn")
             acornNumber = userDefault.integer(forKey: "acorn")
             labelAcorn.text = "\(acornNumber)"
+        }
+            
+        userDefault.set(false, forKey: "bool")
+        boolCheckUserDefault = userDefault.bool(forKey: "bool")
+            
         }else{
+            greenNumber = userDefault.integer(forKey: "green")
+            labelGreenNumber.text = "\(greenNumber)"
+            
+            iceNumber = userDefault.integer(forKey: "ice")
+            labelIceNumber.text = "\(iceNumber)"
+            print("Lol \(iceNumber)")
+            
             acornNumber = userDefault.integer(forKey: "acorn")
             labelAcorn.text = "\(acornNumber)"
         }
-        
     }
     
     @IBAction func buttonBestTapped(_ sender: Any) {
@@ -163,23 +171,17 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     
     
     @IBAction func buttonShop(_ sender: Any) {
-        timer.invalidate()
-        startStopButton.setTitle("Start", for: .normal)
-        milliseconds = 0
-        seconds = 0
-        circleProgress.pause()
-        isTimerRunning = false
-        prova = !prova
-
+        checkCirlceProgress()
+        timerStops()
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let shopController = segue.destination as? ShopController {
-            shopController.numberAcorn = acornNumber
+            shopController.acornNumber = acornNumber
             shopController.greenNumber = greenNumber
             shopController.iceNumber = iceNumber
-            print("Acorn: \(shopController.numberAcorn)")
+            print("Acorn: \(shopController.acornNumber)")
         }
     }
     
@@ -232,7 +234,33 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         buttonViewIce.isUserInteractionEnabled = false
     }
     
-    func buttonTapped() {
+    
+    func timerStops() {
+        ////Timer stops
+        isTimerRunning = false
+        timeIntervalIce.invalidate()
+        isTimerRunningIce = false
+        buttonViewGreen.isUserInteractionEnabled = false
+        self.stopAnimationForView(self.imageWood)
+        self.durationRotate = 0.9
+        timer.invalidate()
+        setUpTimer()
+        startStopButton.setTitle("Start", for: .normal)
+        self.stopAnimationForView(self.imageWood)
+        if seconds >= 1 && suffix == 0 {
+            score += 1
+            userDefault.set(best, forKey: "best")
+            circleProgress.fullColorWin()
+        }else{
+            if !greenActiveted {
+                score = 0
+                circleProgress.resetColor()
+            }
+            milliseconds = 0
+        }
+        count = 0
+    }
+    func checkCirlceProgress() {
         if prova == true {
             circleProgress.start()
             prova = false
@@ -240,31 +268,12 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             circleProgress.pause()
             prova = true
         }
-        
+    }
+    
+    func buttonTapped() {
+        checkCirlceProgress()
         if isTimerRunning {
-            ////Timer stops
-            isTimerRunning = false
-            timeIntervalIce.invalidate()
-            isTimerRunningIce = false
-            buttonViewGreen.isUserInteractionEnabled = false
-            self.stopAnimationForView(self.imageWood)
-            self.durationRotate = 0.9
-            timer.invalidate()
-            setUpTimer()
-            startStopButton.setTitle("Start", for: .normal)
-            self.stopAnimationForView(self.imageWood)
-            if seconds >= 1 && suffix == 0 {
-                score += 1
-                userDefault.set(best, forKey: "best")
-                circleProgress.fullColorWin()
-            }else{
-                if !greenActiveted {
-                    score = 0
-                    circleProgress.resetColor()
-                }
-                milliseconds = 0
-            }
-            count = 0
+            timerStops()
         }else{
             //Timer runs
             checkBestScore()
@@ -275,8 +284,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 circleProgress.resetColor()
                 greenActiveted = false
             }
-        
-            
             count = 0
             isTimerRunningIce = false
             isTimerRunning = true
@@ -286,6 +293,21 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             rotate()
             buttonViewIce.isUserInteractionEnabled = true
             buttonViewGreen.isUserInteractionEnabled = true
+            
+            if greenNumber == 0 {
+                buttonViewGreen.isUserInteractionEnabled = false
+                print(greenNumber)
+            }else{
+                buttonViewGreen.isUserInteractionEnabled = true
+            }
+            
+            if iceNumber == 0 {
+                buttonViewIce.isUserInteractionEnabled = false
+            }else{
+                buttonViewIce.isUserInteractionEnabled = true
+            }
+
+            
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
                 
