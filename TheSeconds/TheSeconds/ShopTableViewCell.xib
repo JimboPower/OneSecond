@@ -18,11 +18,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view multipleTouchEnabled="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="ShopTableViewCell" customModule="TheSeconds" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="757" height="279"/>
+            <rect key="frame" x="0.0" y="0.0" width="466" height="317"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageTableShop" translatesAutoresizingMaskIntoConstraints="NO" id="81p-Ez-4E1">
-                    <rect key="frame" x="0.0" y="0.0" width="757" height="279"/>
+                    <rect key="frame" x="0.0" y="0.0" width="466" height="317"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sale-ribbon" translatesAutoresizingMaskIntoConstraints="NO" id="ZE8-zW-DoA">
                     <rect key="frame" x="4" y="15" width="130" height="130"/>
@@ -31,20 +31,20 @@
                         <constraint firstAttribute="height" constant="130" id="Duo-pj-OhK"/>
                     </constraints>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gg1-CY-XiS">
-                    <rect key="frame" x="30" y="25" width="757" height="229"/>
+                <stackView opaque="NO" contentMode="scaleAspectFit" alignment="center" spacing="-16" translatesAutoresizingMaskIntoConstraints="NO" id="gg1-CY-XiS">
+                    <rect key="frame" x="2" y="25" width="466" height="267"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYd-HN-1yM">
-                            <rect key="frame" x="0.0" y="57.5" width="378.5" height="114.5"/>
+                            <rect key="frame" x="0.0" y="87" width="378.5" height="93"/>
                         </imageView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="6CR-8P-6Li">
-                            <rect key="frame" x="378.5" y="21" width="757" height="187"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6CR-8P-6Li">
+                            <rect key="frame" x="378.5" y="19" width="466" height="229.5"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fut-Ev-DB5">
-                                    <rect key="frame" x="0.0" y="0.0" width="757" height="187"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="fut-Ev-DB5">
+                                    <rect key="frame" x="0.0" y="0.0" width="466" height="229.5"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-9" translatesAutoresizingMaskIntoConstraints="NO" id="Oz1-8T-8vc">
-                                            <rect key="frame" x="0.0" y="0.0" width="757" height="115"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="Oz1-8T-8vc">
+                                            <rect key="frame" x="0.0" y="0.0" width="466" height="140.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ice Freeze" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XWq-s1-zVX">
                                                     <rect key="frame" x="0.0" y="0.0" width="173.5" height="91"/>
@@ -55,41 +55,50 @@
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="50"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serve a rallentare il tempo." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyi-qc-kte">
-                                                    <rect key="frame" x="0.0" y="82" width="757" height="33"/>
-                                                    <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyi-qc-kte">
+                                                    <rect key="frame" x="0.0" y="86" width="466" height="54.5"/>
+                                                    <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZIK-uS-TQf">
-                                            <rect key="frame" x="0.0" y="120" width="757" height="67"/>
+                                            <rect key="frame" x="0.0" y="135.5" width="466" height="94"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TiK-nk-gfx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="48" height="67"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="57.5" height="94"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="acorn-icon" translatesAutoresizingMaskIntoConstraints="NO" id="usy-sc-bIb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="67"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="94"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="nLT-HN-Q6o"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-zZ-oeF">
-                                                            <rect key="frame" x="29" y="0.0" width="19" height="67"/>
+                                                            <rect key="frame" x="29" y="0.0" width="28.5" height="94"/>
                                                             <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
+                                                            </variation>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ev0-4y-yvh">
-                                                    <rect key="frame" x="78" y="0.0" width="757" height="67"/>
+                                                    <rect key="frame" x="87.5" y="0.0" width="466" height="94"/>
                                                     <subviews>
                                                         <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRd-MU-gVr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="757" height="67"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="466" height="94"/>
                                                             <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
                                                             <state key="normal" title="Buy"/>
+                                                            <variation key="heightClass=regular-widthClass=regular">
+                                                                <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="45"/>
+                                                            </variation>
                                                             <connections>
                                                                 <action selector="buttonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="MJd-3y-yam"/>
                                                             </connections>
@@ -104,21 +113,24 @@
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="vYd-HN-1yM" firstAttribute="height" secondItem="gg1-CY-XiS" secondAttribute="height" multiplier="0.5" id="d4x-Dj-hFD"/>
+                        <constraint firstItem="vYd-HN-1yM" firstAttribute="height" secondItem="gg1-CY-XiS" secondAttribute="height" multiplier="0.35" id="d4x-Dj-hFD"/>
                     </constraints>
+                    <variation key="heightClass=regular-widthClass=regular"/>
                 </stackView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="gg1-CY-XiS" secondAttribute="trailing" constant="50" id="0qK-IF-agz"/>
+                <constraint firstAttribute="trailing" secondItem="gg1-CY-XiS" secondAttribute="trailing" id="0qK-IF-agz"/>
                 <constraint firstItem="81p-Ez-4E1" firstAttribute="centerY" secondItem="gg1-CY-XiS" secondAttribute="centerY" id="8fy-Dw-tNS"/>
                 <constraint firstItem="81p-Ez-4E1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EQd-a0-XQH"/>
                 <constraint firstAttribute="bottom" secondItem="gg1-CY-XiS" secondAttribute="bottom" constant="25" id="Fxs-RO-qwc"/>
                 <constraint firstItem="gg1-CY-XiS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="Npn-F0-05A"/>
                 <constraint firstItem="ZE8-zW-DoA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="SQO-dN-Th0"/>
-                <constraint firstItem="gg1-CY-XiS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="UB1-0m-hyX"/>
                 <constraint firstItem="ZE8-zW-DoA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="p1a-AL-2Mc"/>
                 <constraint firstAttribute="trailing" secondItem="81p-Ez-4E1" secondAttribute="trailing" id="rxm-EY-xGN"/>
                 <constraint firstItem="81p-Ez-4E1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="s11-bJ-ZKv"/>
+                <constraint firstItem="gg1-CY-XiS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-10" id="uoH-nC-T6L">
+                    <variation key="heightClass=regular-widthClass=regular" constant="2"/>
+                </constraint>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -129,7 +141,7 @@
                 <outlet property="saleRibbonImageView" destination="ZE8-zW-DoA" id="Ifd-8N-8gD"/>
                 <outlet property="titleLabel" destination="XWq-s1-zVX" id="rij-Sz-1Ry"/>
             </connections>
-            <point key="canvasLocation" x="-52.5" y="-136.5"/>
+            <point key="canvasLocation" x="93" y="-117.5"/>
         </view>
     </objects>
     <resources>

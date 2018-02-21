@@ -9,7 +9,6 @@
 import UIKit
 import Kingfisher
 
-
 class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
 
     var powerUps = [PowerUp]()
@@ -87,7 +86,7 @@ extension ShopController: UICollectionViewDelegate {
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
             print("iPhone")
-            return CGSize(width: view.frame.width, height: 200)
+            return CGSize(width: view.frame.width - 40, height: 220)
         case .pad:
             print("ipad")
             return CGSize(width: (view.frame.width)/2, height: (view.frame.height)*0.24)
@@ -158,23 +157,21 @@ extension ShopController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Hello")
         
-        acornNumber -= 5
-        UserDefaults.standard.set(acornNumber, forKey: "acorn")
-
-        
-        if indexPath.row == 0 {
-            greenNumber += 1
-            UserDefaults.standard.set(greenNumber, forKey: "green")
-        }else{
-            iceNumber += 1
-            UserDefaults.standard.set(iceNumber, forKey: "ice")
-
-
+        if acornNumber >= 5 {
+            acornNumber -= 5
+            UserDefaults.standard.set(acornNumber, forKey: "acorn")
+            if indexPath.row == 0 {
+                greenNumber += 1
+                UserDefaults.standard.set(greenNumber, forKey: "green")
+            }else{
+                iceNumber += 1
+                UserDefaults.standard.set(iceNumber, forKey: "ice")
+            }
+            labelAcorn.text = "\(acornNumber)"
+            labelGreen.text = "\(greenNumber)"
+            labelIce.text = "\(iceNumber)"
         }
-        
-        labelAcorn.text = "\(acornNumber)"
-        labelGreen.text = "\(greenNumber)"
-        labelIce.text = "\(iceNumber)"
+    
     }
     
     func buttonAction(sender: UIButton) {
