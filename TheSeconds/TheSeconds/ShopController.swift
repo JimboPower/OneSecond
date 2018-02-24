@@ -106,7 +106,6 @@ extension ShopController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ShopTableViewCell
-        cell.backgroundColor = .red
         
         let powerUp = powerUps[indexPath.row]
         cell.titleLabel.text = powerUp.title

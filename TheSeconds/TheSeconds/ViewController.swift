@@ -43,13 +43,20 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             buttonBest.setTitle("Best: \(best)", for: .normal)
         }
     }
+    
+    var isTimerRunning = false {
+        didSet {
+            showHideButtons()
+        }
+    }
+    
     var timer = Timer()
     var boolCheckUserDefault = UserDefaults.standard.bool(forKey: "bool")
     var timeIntervalIce = Timer()
     var seconds = 0
     var milliseconds = 0
     var suffix = 0
-    var isTimerRunning = false
+    
     var isTimerRunningIce = false
     var confettiView: SAConfettiView!
     var containerViewController: ContainerController?
@@ -74,13 +81,13 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         didSet{
             userDefault.set(greenNumber, forKey: "green")
             greenNumber = userDefault.integer(forKey: "green")
-            labelGreenNumber.text = "\(greenNumber)"
+            buttonViewGreen.setTitle(String(greenNumber), for: .normal)
         }
     }
     var iceNumber = UserDefaults.standard.integer(forKey: "ice") {
         didSet{
             userDefault.set(iceNumber, forKey: "ice")
-            labelIceNumber.text = "\(iceNumber)"
+            buttonViewIce.setTitle(String(iceNumber), for: .normal)
             iceNumber = userDefault.integer(forKey: "ice")
         }
     }
@@ -93,10 +100,12 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var imageWood: UIImageView!
-    @IBOutlet weak var labelIceNumber: UILabel!
-    @IBOutlet weak var labelGreenNumber: UILabel!
     @IBOutlet weak var buttonViewIce: UIButton!
     @IBOutlet weak var buttonViewGreen: UIButton!
+    @IBOutlet weak var buttonShop: UIButton!
+    
+    
+    
     @IBAction func buttonIceTapped(_ sender: Any) {
         powerStatus = .freeze
         isTimerRunningIce = true
@@ -155,13 +164,15 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
         authenticateLocalPlayer()
         setupUserDefaultSetLabel()
-        //SDStatusBarManager.sharedInstance().enableOverrides()
-    
-        buttonViewIce.isHidden = true
-        buttonViewGreen.isHidden = true
+        showHideButtons()
     }
     
-    ///Some functions
+    func showHideButtons() {
+        buttonViewIce.isHidden = !isTimerRunning
+        buttonViewGreen.isHidden = !isTimerRunning
+        buttonShop.isHidden = isTimerRunning
+    }
+    
     func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
         containerViewController?.overlayEffectImageView.isHidden = isHidden
     }
@@ -190,12 +201,15 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             userDefault.set(acornNumber, forKey: "acorn")
             acornNumber = userDefault.integer(forKey: "acorn")
             userDefault.set(best, forKey: "best")
+            best = userDefault.integer(forKey: "best")
             circleProgress.fullColorWin()
         }else{
             count = 0
             if !greenActiveted {
                 if score > best {
                     best = score
+                    userDefault.set(best, forKey: "best")
+                    best = userDefault.integer(forKey: "best")
                     confettiView.startConfetti()
                     print("Score: \(score)")
                     print("BEst: \(best)")
@@ -322,9 +336,9 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         
         if boolCheckUserDefault {
             greenNumber = userDefault.integer(forKey: "green")
-            labelGreenNumber.text = "\(greenNumber)"
+            buttonViewGreen.setTitle(String(greenNumber), for: .normal)
             iceNumber = userDefault.integer(forKey: "ice")
-            labelIceNumber.text = "\(iceNumber)"
+            buttonViewIce.setTitle(String(iceNumber), for: .normal)
             print("Lol \(iceNumber)")
             acornNumber = userDefault.integer(forKey: "acorn")
             labelAcorn.text = "\(acornNumber)"
@@ -333,12 +347,11 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             if iceNumber == 0 {
                 userDefault.set(5, forKey: "ice")
                 iceNumber = userDefault.integer(forKey: "ice")
-                labelIceNumber.text = "\(iceNumber)"
+                buttonViewIce.setTitle(String(iceNumber), for: .normal)
             }
             if greenNumber == 0 {
                 userDefault.set(5, forKey: "green")
                 greenNumber = userDefault.integer(forKey: "green")
-                labelGreenNumber.text = "\(greenNumber)"
             }
             if acornNumber == 0 {
                 userDefault.set(20, forKey: "acorn")

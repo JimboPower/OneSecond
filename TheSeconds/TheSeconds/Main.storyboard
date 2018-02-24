@@ -12,9 +12,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
         <array key="Trattatello.ttf">
             <string>Trattatello</string>
         </array>
@@ -153,23 +150,23 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xs0-gK-a9Y">
                                         <rect key="frame" x="0.0" y="483.66666666666669" width="414" height="217.33333333333331"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kPS-6B-f2M">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="kPS-6B-f2M">
                                                 <rect key="frame" x="31" y="0.0" width="352" height="102.66666666666667"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-Gw-vId">
-                                                        <rect key="frame" x="0.0" y="16.333333333333314" width="70" height="70"/>
+                                                        <rect key="frame" x="0.0" y="32.666666666666686" width="70" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="QFk-ly-nWj"/>
                                                             <constraint firstAttribute="height" constant="70" id="eyz-9f-m10"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                        <state key="normal" title="40" backgroundImage="greenButtonPowerup"/>
+                                                        <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="26"/>
+                                                        <state key="normal" title="0" backgroundImage="greenButtonPowerup"/>
                                                         <connections>
                                                             <action selector="buttonGreenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eVi-Bj-c8f"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-mU-f4w">
-                                                        <rect key="frame" x="151" y="26.333333333333314" width="50" height="50"/>
+                                                        <rect key="frame" x="151" y="52.666666666666686" width="50" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="NYE-pM-B2B"/>
                                                             <constraint firstAttribute="height" constant="50" id="Xhe-hM-8U1"/>
@@ -183,12 +180,13 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3G-lH-1Ch">
-                                                        <rect key="frame" x="282" y="16.333333333333314" width="70" height="70"/>
+                                                        <rect key="frame" x="282" y="32.666666666666686" width="70" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="8OC-az-qc3"/>
                                                             <constraint firstAttribute="height" constant="70" id="xAN-xe-qlU"/>
                                                         </constraints>
-                                                        <state key="normal" title="34" backgroundImage="IceButtonPowerUp"/>
+                                                        <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="26"/>
+                                                        <state key="normal" title="0" backgroundImage="IceButtonPowerUp"/>
                                                         <connections>
                                                             <action selector="buttonIceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqL-1Z-eF2"/>
                                                         </connections>
@@ -274,6 +272,7 @@
                     <connections>
                         <outlet property="buttonBest" destination="YDI-Nt-WRN" id="eTV-Jk-SWx"/>
                         <outlet property="buttonScore" destination="2v4-ub-Y3b" id="3ZZ-FL-Lks"/>
+                        <outlet property="buttonShop" destination="Odl-mU-f4w" id="izJ-Md-r6v"/>
                         <outlet property="buttonViewGreen" destination="gOm-Gw-vId" id="1Mt-GY-TyW"/>
                         <outlet property="buttonViewIce" destination="A3G-lH-1Ch" id="ig3-Bc-EAS"/>
                         <outlet property="circleProgress" destination="GxD-bD-HM4" id="a0O-dh-Wap"/>
