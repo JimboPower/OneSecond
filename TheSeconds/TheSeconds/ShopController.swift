@@ -17,9 +17,7 @@ class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
         
     }
     
-    
-    
-    let cellIdentifier = "cellIdentifier"
+let cellIdentifier = "cellIdentifier"
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -61,6 +59,7 @@ class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
         }
     }
     
+    
     @IBAction func didTapBackButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -83,20 +82,7 @@ extension ShopController {
 
 extension ShopController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch UIDevice.current.userInterfaceIdiom {
-        case .phone:
-            print("iPhone")
-            return CGSize(width: view.frame.width - 40, height: 220)
-        case .pad:
-            print("ipad")
-            return CGSize(width: (view.frame.width)/2, height: (view.frame.height)*0.24)
-        case .unspecified:
-            print("I don't know")
-            break
-        default:
-            print("I don't know")
-        }
-        return CGSize(width: 0, height: 0)
+        return CGSize(width: 365, height: 237)
     }
 }
 
@@ -120,7 +106,7 @@ extension ShopController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ShopTableViewCell
-        
+        cell.backgroundColor = .red
         
         let powerUp = powerUps[indexPath.row]
         cell.titleLabel.text = powerUp.title

@@ -9,10 +9,12 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
         <array key="Trattatello.ttf">
             <string>Trattatello</string>
         </array>
@@ -100,46 +102,41 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-2A-X53">
                                 <rect key="frame" x="0.0" y="25" width="414" height="701"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Phv-QS-bfb">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="88.666666666666671"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Phv-QS-bfb">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="88.333333333333329"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-ac-bFB">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="88.666666666666671"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-ac-bFB">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="88.333333333333329"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2v4-ub-Y3b">
-                                                        <rect key="frame" x="25" y="8" width="145" height="72.666666666666671"/>
+                                                        <rect key="frame" x="25" y="8" width="145" height="72.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="2v4-ub-Y3b" secondAttribute="height" multiplier="2:1" id="Qny-fn-mXw"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="26"/>
                                                         <state key="normal" title="Score: 0" backgroundImage="ImageLeafScore"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="62"/>
+                                                            <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="buttonScoreTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wo-Vh-vcU"/>
                                                         </connections>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ghianda" translatesAutoresizingMaskIntoConstraints="NO" id="YK0-cO-h5w">
-                                                        <rect key="frame" x="177" y="14.333333333333336" width="60" height="60.000000000000007"/>
+                                                        <rect key="frame" x="176" y="19.666666666666668" width="62" height="60.666666666666657"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="60" id="G9p-5P-4qn">
-                                                                <variation key="heightClass=regular-widthClass=regular" constant="120"/>
-                                                            </constraint>
-                                                            <constraint firstAttribute="height" constant="60" id="lDq-oI-3EE">
-                                                                <variation key="heightClass=regular-widthClass=regular" constant="110"/>
-                                                            </constraint>
+                                                            <constraint firstAttribute="width" secondItem="YK0-cO-h5w" secondAttribute="height" multiplier="60:59" id="fma-ac-BeZ"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDI-Nt-WRN">
-                                                        <rect key="frame" x="244" y="8" width="145" height="72.666666666666671"/>
+                                                        <rect key="frame" x="244" y="8" width="145" height="72.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="YDI-Nt-WRN" secondAttribute="height" multiplier="2:1" id="cYM-dZ-M19"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="26"/>
                                                         <state key="normal" title="Best: 0" backgroundImage="ImageLeafBest"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
-                                                            <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="62"/>
+                                                            <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="buttonBestTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXD-z0-ra0"/>
@@ -153,52 +150,53 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xs0-gK-a9Y">
-                                        <rect key="frame" x="0.0" y="520" width="414" height="181"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xs0-gK-a9Y">
+                                        <rect key="frame" x="0.0" y="483.66666666666669" width="414" height="217.33333333333331"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="kPS-6B-f2M">
-                                                <rect key="frame" x="20" y="0.0" width="374" height="66.333333333333329"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kPS-6B-f2M">
+                                                <rect key="frame" x="31" y="0.0" width="352" height="102.66666666666667"/>
                                                 <subviews>
-                                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-Gw-vId">
-                                                        <rect key="frame" x="0.0" y="0.33333333333337123" width="66.333333333333329" height="66"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-Gw-vId">
+                                                        <rect key="frame" x="0.0" y="16.333333333333314" width="70" height="70"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="gOm-Gw-vId" secondAttribute="height" multiplier="1:1" id="p6n-7I-uG1"/>
+                                                            <constraint firstAttribute="width" constant="70" id="QFk-ly-nWj"/>
+                                                            <constraint firstAttribute="height" constant="70" id="eyz-9f-m10"/>
                                                         </constraints>
-                                                        <state key="normal" image="green" backgroundImage="BackGroundButtonBoost"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <state key="normal" title="40" backgroundImage="greenButtonPowerup"/>
                                                         <connections>
                                                             <action selector="buttonGreenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eVi-Bj-c8f"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-mU-f4w">
-                                                        <rect key="frame" x="166.33333333333334" y="25.666666666666625" width="41.333333333333343" height="40.666666666666657"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-mU-f4w">
+                                                        <rect key="frame" x="151" y="26.333333333333314" width="50" height="50"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" secondItem="Odl-mU-f4w" secondAttribute="height" multiplier="1:1" id="27H-Nr-hZ5"/>
+                                                            <constraint firstAttribute="width" constant="50" id="NYE-pM-B2B"/>
+                                                            <constraint firstAttribute="height" constant="50" id="Xhe-hM-8U1"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button" image="ShopButton" backgroundImage="BackGroundButtonBoost"/>
+                                                        <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                        <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                                        <state key="normal" backgroundImage="ShopButton"/>
                                                         <connections>
                                                             <action selector="buttonShop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wG0-EB-oPg"/>
                                                             <segue destination="WEL-TE-vdI" kind="show" id="ajQ-YS-dUB"/>
                                                         </connections>
                                                     </button>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="Dkb-OL-L0J">
-                                                        <rect key="frame" x="307.66666666666669" y="0.0" width="66.333333333333314" height="66.333333333333329"/>
-                                                        <subviews>
-                                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3G-lH-1Ch">
-                                                                <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="66.333333333333329"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="A3G-lH-1Ch" secondAttribute="height" multiplier="1:1" id="4MD-vw-li4"/>
-                                                                </constraints>
-                                                                <state key="normal" image="861930_snow_512x512" backgroundImage="BackGroundButtonBoost"/>
-                                                                <connections>
-                                                                    <action selector="buttonIceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqL-1Z-eF2"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3G-lH-1Ch">
+                                                        <rect key="frame" x="282" y="16.333333333333314" width="70" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="8OC-az-qc3"/>
+                                                            <constraint firstAttribute="height" constant="70" id="xAN-xe-qlU"/>
+                                                        </constraints>
+                                                        <state key="normal" title="34" backgroundImage="IceButtonPowerUp"/>
+                                                        <connections>
+                                                            <action selector="buttonIceTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqL-1Z-eF2"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrH-6H-K0X">
-                                                <rect key="frame" x="37.333333333333343" y="78.333333333333371" width="339.33333333333326" height="102.66666666666669"/>
+                                                <rect key="frame" x="37.333333333333343" y="114.66666666666669" width="339.33333333333326" height="102.66666666666669"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="QrH-6H-K0X" secondAttribute="height" multiplier="145:44" id="hei-O4-GCx"/>
                                                 </constraints>
@@ -214,39 +212,20 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="kPS-6B-f2M" firstAttribute="leading" secondItem="xs0-gK-a9Y" secondAttribute="leading" constant="20" id="ZYv-TQ-MJm"/>
-                                            <constraint firstAttribute="trailing" secondItem="kPS-6B-f2M" secondAttribute="trailing" constant="20" id="bKI-LD-Xhv"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="kPS-6B-f2M" firstAttribute="width" secondItem="TYd-2A-X53" secondAttribute="width" multiplier="0.85" priority="999" id="t7K-xo-L5a"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-6U-qGE">
-                                <rect key="frame" x="201.33333333333334" y="57.666666666666671" width="12" height="43.666666666666671"/>
+                                <rect key="frame" x="201.33333333333334" y="63.333333333333343" width="12" height="43.666666666666657"/>
                                 <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="55"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oj-jO-nFi">
-                                <rect key="frame" x="46" y="551.66666666666663" width="15" height="54.666666666666629"/>
-                                <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="35"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAl-2T-XrV">
-                                <rect key="frame" x="354" y="550" width="15.333333333333314" height="56.333333333333371"/>
-                                <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="31"/>
-                                <color key="textColor" red="1" green="1" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="35"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -258,21 +237,16 @@
                             <constraint firstAttribute="trailing" secondItem="TYd-2A-X53" secondAttribute="trailing" id="Azj-2W-VGv"/>
                             <constraint firstItem="sZU-hW-p0O" firstAttribute="centerY" secondItem="Ij8-Y5-vQI" secondAttribute="centerY" id="CXM-qC-SBA"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="ESg-Lo-o1X"/>
+                            <constraint firstItem="YK0-cO-h5w" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="FC9-YK-jg4"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.2" id="IxZ-ie-Fwx"/>
-                            <constraint firstItem="Odl-mU-f4w" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.1" id="LAo-hy-BvA"/>
                             <constraint firstItem="GxD-bD-HM4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="LvZ-Yv-5Zk">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-80"/>
                             </constraint>
-                            <constraint firstItem="A3G-lH-1Ch" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.16" id="OVi-UA-v61"/>
                             <constraint firstItem="QrH-6H-K0X" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.82" id="P35-Mn-lJo"/>
                             <constraint firstItem="sZU-hW-p0O" firstAttribute="centerX" secondItem="Ij8-Y5-vQI" secondAttribute="centerX" id="Q8S-7r-Pzv"/>
-                            <constraint firstItem="EAl-2T-XrV" firstAttribute="centerY" secondItem="A3G-lH-1Ch" secondAttribute="centerY" id="QZp-8o-qbc"/>
                             <constraint firstItem="GxD-bD-HM4" firstAttribute="centerY" secondItem="Ij8-Y5-vQI" secondAttribute="centerY" id="RY0-aT-ACU"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VTb-8B-TeJ"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xqi-qT-QVd"/>
-                            <constraint firstItem="0Oj-jO-nFi" firstAttribute="centerY" secondItem="gOm-Gw-vId" secondAttribute="centerY" id="YXh-cO-qy4"/>
-                            <constraint firstItem="gOm-Gw-vId" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.16" id="e4K-Tk-CXZ"/>
-                            <constraint firstItem="0Oj-jO-nFi" firstAttribute="centerX" secondItem="gOm-Gw-vId" secondAttribute="centerX" id="esg-Ip-Ruw"/>
                             <constraint firstItem="GxD-bD-HM4" firstAttribute="centerX" secondItem="Ij8-Y5-vQI" secondAttribute="centerX" id="gEl-eq-Dl7"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHi-L2-2yg"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kyW-Uv-f2O"/>
@@ -280,7 +254,6 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TYd-2A-X53" secondAttribute="bottom" constant="10" id="pFX-af-txy"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="pIZ-ld-xcJ"/>
                             <constraint firstItem="QrH-6H-K0X" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="pkk-Ng-saD"/>
-                            <constraint firstItem="EAl-2T-XrV" firstAttribute="centerX" secondItem="A3G-lH-1Ch" secondAttribute="centerX" id="sAP-08-9GE"/>
                             <constraint firstItem="cwc-6U-qGE" firstAttribute="centerX" secondItem="YK0-cO-h5w" secondAttribute="centerX" id="tKf-oc-Qms"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1.5" id="upv-oj-8Ur"/>
                         </constraints>
@@ -307,8 +280,6 @@
                         <outlet property="imageIce" destination="W4z-eP-uw1" id="k0z-fz-yew"/>
                         <outlet property="imageWood" destination="Ij8-Y5-vQI" id="rnh-m8-yj7"/>
                         <outlet property="labelAcorn" destination="cwc-6U-qGE" id="mjl-w3-TJ7"/>
-                        <outlet property="labelGreenNumber" destination="0Oj-jO-nFi" id="rNj-lS-qNf"/>
-                        <outlet property="labelIceNumber" destination="EAl-2T-XrV" id="Zbl-di-xlf"/>
                         <outlet property="labelTimer" destination="sZU-hW-p0O" id="TdU-ab-FYz"/>
                         <outlet property="startStopButton" destination="QrH-6H-K0X" id="rVe-6W-ph6"/>
                     </connections>
@@ -474,6 +445,7 @@
     <resources>
         <image name="861930_snow_512x512" width="42" height="42"/>
         <image name="BackGroundButtonBoost" width="193" height="193"/>
+        <image name="IceButtonPowerUp" width="187" height="191"/>
         <image name="ImageLeafBest" width="196" height="94"/>
         <image name="ImageLeafScore" width="196" height="94"/>
         <image name="ImageSignShop" width="325" height="251"/>
@@ -483,6 +455,7 @@
         <image name="background" width="853" height="602"/>
         <image name="ghianda" width="100" height="149"/>
         <image name="green" width="42" height="42"/>
+        <image name="greenButtonPowerup" width="187" height="191"/>
         <image name="start-button" width="313" height="103"/>
     </resources>
 </document>

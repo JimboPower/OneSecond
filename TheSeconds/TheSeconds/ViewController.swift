@@ -44,7 +44,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         }
     }
     var timer = Timer()
-    var boolCheckUserDefault: Bool = UserDefaults.standard.bool(forKey: "bool")
+    var boolCheckUserDefault = UserDefaults.standard.bool(forKey: "bool")
     var timeIntervalIce = Timer()
     var seconds = 0
     var milliseconds = 0
@@ -154,10 +154,11 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         setupConfetti()
         shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
         authenticateLocalPlayer()
-        buttonViewGreen.isUserInteractionEnabled = false
-        buttonViewIce.isUserInteractionEnabled = false
         setupUserDefaultSetLabel()
         //SDStatusBarManager.sharedInstance().enableOverrides()
+    
+        buttonViewIce.isHidden = true
+        buttonViewGreen.isHidden = true
     }
     
     ///Some functions
@@ -199,7 +200,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                     print("Score: \(score)")
                     print("BEst: \(best)")
                 }
-
+    
                 score = 0
                 circleProgress.resetColor()
             }
