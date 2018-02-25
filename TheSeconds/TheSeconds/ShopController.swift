@@ -82,6 +82,11 @@ extension ShopController {
 
 extension ShopController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if view.frame.width == 320 {
+            return CGSize(width: 320, height: 192)
+
+        }
         return CGSize(width: 365, height: 237)
     }
 }
