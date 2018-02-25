@@ -96,9 +96,7 @@
                 <constraint firstItem="gg1-CY-XiS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Npn-F0-05A"/>
                 <constraint firstAttribute="trailing" secondItem="81p-Ez-4E1" secondAttribute="trailing" id="rxm-EY-xGN"/>
                 <constraint firstItem="81p-Ez-4E1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="s11-bJ-ZKv"/>
-                <constraint firstItem="gg1-CY-XiS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-10" id="uoH-nC-T6L">
-                    <variation key="heightClass=regular-widthClass=regular" constant="20"/>
-                </constraint>
+                <constraint firstItem="gg1-CY-XiS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="uoH-nC-T6L"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
