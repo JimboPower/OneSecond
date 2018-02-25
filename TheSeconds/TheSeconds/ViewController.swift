@@ -10,7 +10,6 @@ import UIKit
 import SAConfettiView
 import GameKit
 import AVFoundation
-import SimulatorStatusMagic
 
 enum PowerEffect {
     case none
