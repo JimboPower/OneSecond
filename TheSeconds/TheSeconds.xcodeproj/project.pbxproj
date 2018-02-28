@@ -13,6 +13,7 @@
 		C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F61EF28C48001DD5A2 /* AppDelegate.swift */; };
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
+		C88654C9204728170050DCFD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88654C8204728170050DCFD /* UIViewExtensions.swift */; };
 		C88DA30D2020CA3900E3FBDD /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88DA30C2020CA3900E3FBDD /* CircleProgress.swift */; };
 		C88DA3102020D5BE00E3FBDD /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */; };
 		C8A142822030D8CE00562A35 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A142812030D8CE00562A35 /* GameKit.framework */; };
@@ -37,6 +38,7 @@
 		C88058F81EF28C48001DD5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C88058FD1EF28C49001DD5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C88059021EF28C49001DD5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C88654C8204728170050DCFD /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		C88DA30C2020CA3900E3FBDD /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trattatello.ttf; sourceTree = "<group>"; };
 		C8A1427A2030B80A00562A35 /* TheSeconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheSeconds.entitlements; sourceTree = "<group>"; };
@@ -105,8 +107,17 @@
 				C82265161FD1C84D00544625 /* Main.storyboard */,
 				C88058FD1EF28C49001DD5A2 /* Assets.xcassets */,
 				C88DA30F2020CD8B00E3FBDD /* Project files */,
+				C88654CA2047283E0050DCFD /* Extensions */,
 			);
 			path = TheSeconds;
+			sourceTree = "<group>";
+		};
+		C88654CA2047283E0050DCFD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C88654C8204728170050DCFD /* UIViewExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		C88DA30B2020CA0000E3FBDD /* View */ = {
@@ -293,7 +304,6 @@
 				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SAConfettiView/SAConfettiView.framework",
-				"${BUILT_PRODUCTS_DIR}/SimulatorStatusMagic/SimulatorStatusMagic.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -303,7 +313,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAConfettiView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimulatorStatusMagic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -326,6 +335,7 @@
 				EB07A24F1F48782B00467A1E /* ShopTableViewCell.swift in Sources */,
 				EBF45EDB1F5C8E5700305A73 /* APIService.swift in Sources */,
 				C88DA30D2020CA3900E3FBDD /* CircleProgress.swift in Sources */,
+				C88654C9204728170050DCFD /* UIViewExtensions.swift in Sources */,
 				EB07A24A1F48765700467A1E /* ShopController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
