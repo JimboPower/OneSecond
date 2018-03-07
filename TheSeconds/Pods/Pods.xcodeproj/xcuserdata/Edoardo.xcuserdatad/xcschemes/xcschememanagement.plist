@@ -29,7 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+<<<<<<< HEAD
 		<key>SwiftySound.xcscheme</key>
+=======
+		<key>SimulatorStatusMagic.xcscheme</key>
+>>>>>>> parent of 38161c9... Finished 1.2
 		<dict>
 			<key>isShown</key>
 			<false/>

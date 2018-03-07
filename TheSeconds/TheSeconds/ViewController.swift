@@ -19,11 +19,6 @@ enum PowerEffect {
     case green
 }
 
-enum IfWin {
-    case none
-    case victory
-}
-
 class ViewController: UIViewController, GKGameCenterControllerDelegate {
 
     var powerStatus: PowerEffect = .none {
@@ -38,21 +33,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             }
         }
     }
-    
-    var ifWin: IfWin = .none {
-        didSet {
-            switch ifWin {
-            case .none:
-                confettiView.stopConfetti()
-            case .victory:
-                animationBounce()
-                confettiView.startConfetti()
-            default:
-                break
-            }
-        }
-    }
-    
     var score = 0 {
         didSet {
             buttonScore.setTitle("Score: \(score)", for: .normal)
@@ -76,9 +56,9 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     var seconds = 0
     var milliseconds = 0
     var suffix = 0
+    
     var isTimerRunningIce = false
-    var confettiLeafView = SAConfettiView()
-    var confettiView = SAConfettiView()
+    var confettiView: SAConfettiView!
     var containerViewController: ContainerController?
     var durationRotate = 0.9
     var count = 1
@@ -155,11 +135,9 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         greenNumber -= 1
         print(greenNumber)
     }
-    
-    @IBAction func startStopButton(_ sender: Any) {
+    @IBAction func startStopButtonTapped(_ sender: Any) {
         buttonTapped()
     }
-    
     @IBAction func buttonBestTapped(_ sender: Any) {
         buttonGameCenter()
     }
@@ -233,7 +211,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         self.durationRotate = 0.9
         timer.invalidate()
         setUpTimer()
-        startStopButton.setTitle("Play", for: .normal)
+        startStopButton.setTitle("Start", for: .normal)
         self.stopAnimationForView(self.imageWood)
         if seconds >= 1 && suffix == 0 {
             score += 1
@@ -243,17 +221,14 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             userDefault.set(best, forKey: "best")
             best = userDefault.integer(forKey: "best")
             circleProgress.fullColorWin()
-            ifWin = .victory
         }else{
             count = 0
-            labelTimer.shake()
             if !greenActiveted {
                 if score > best {
                     best = score
-                    animationBounceBest()
                     userDefault.set(best, forKey: "best")
                     best = userDefault.integer(forKey: "best")
-                    confettiLeafView.startConfetti()
+                    confettiView.startConfetti()
                     print("Score: \(score)")
                     print("BEst: \(best)")
                 }
@@ -283,9 +258,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             timerStops()
         }else{
             //Timer runs
-            ifWin = .none
             checkBestScore()
-            confettiLeafView.stopConfetti()
+            confettiView.stopConfetti()
             timer.invalidate()
             if greenActiveted {
                 circleProgress.greenPowerUp()
@@ -355,15 +329,10 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     func setupConfetti() {
-        self.confettiLeafView = SAConfettiView(frame: self.view.bounds)
-        self.view.addSubview(confettiLeafView)
-        self.confettiLeafView.type = .image(UIImage(named: "ConfettiLeaf")!)
-        self.confettiLeafView.isUserInteractionEnabled = false
-        self.confettiView.type = .confetti
         self.confettiView = SAConfettiView(frame: self.view.bounds)
         self.view.addSubview(confettiView)
-        self.confettiView.isUserInteractionEnabled = false
-        self.confettiView.intensity = 1
+        confettiView.type = .image(UIImage(named: "ConfettiLeaf")!)
+        confettiView.isUserInteractionEnabled = false
     }
     
     func rotate() {
@@ -378,29 +347,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         let transform = myView.layer.presentation()?.transform
         myView.layer.transform = transform!
         myView.layer.removeAllAnimations()
-    }
-    
-    func animationBounce() {
-        labelTimer.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        UIView.animate(withDuration: 1.0,
-                       delay: 0,
-                       usingSpringWithDamping: 0.2,
-                       initialSpringVelocity: 6.0,
-                       options: .allowUserInteraction,
-                       animations: { [weak self] in
-                        self?.labelTimer.transform = .identity
-            },
-                       completion: nil)
-    }
-    
-    func animationBounceBest() {
-        buttonBest.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        UIView.animate(withDuration: 1.0,
-                       delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 6.0, options: .allowUserInteraction,
-                       animations: { [weak self] in
-                        self?.buttonBest.transform = .identity
-            },
-                       completion: nil)
     }
     
     

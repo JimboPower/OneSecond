@@ -276,11 +276,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+<<<<<<< HEAD
 ## SwiftySound
 
 MIT License
 
 Copyright (c) 2017 Adam Cichy
+=======
+## SimulatorStatusMagic
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Shiny Development
+>>>>>>> parent of 38161c9... Finished 1.2
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -301,6 +309,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 38161c9... Finished 1.2
 ## leveldb-library
 
 Copyright (c) 2011 The LevelDB Authors. All rights reserved.

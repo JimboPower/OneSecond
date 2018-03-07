@@ -23,7 +23,7 @@ class CircleProgress: UIView {
         basicAnimation.toValue = 1.00
         basicAnimation.isAdditive = true
         basicAnimation.fillMode = kCAFillModeForwards
-        basicAnimation.duration = CFTimeInterval(1.25902628)
+        basicAnimation.duration = CFTimeInterval(1.259026277)
         basicAnimation.fillMode = kCAFillModeForwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.speed = 1
@@ -31,7 +31,9 @@ class CircleProgress: UIView {
     }
     
     func setupTrackLayer() {
+        
         let centerPoint = CGPoint(x: bounds.width/2 , y: bounds.height/2)
+
         print(centerPoint)
         let circularPath = UIBezierPath(arcCenter: centerPoint, radius: frame.width/2, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         trackLayer.lineWidth = 20
@@ -44,7 +46,6 @@ class CircleProgress: UIView {
     
     func fullColorWin() {
         trackLayer.strokeColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1).cgColor
-        
     }
     
     func resetColor() {

@@ -14,14 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-<<<<<<< HEAD
-               BlueprintIdentifier = 'D568655366990DF322B43CD8B68CD235'
-=======
-               BlueprintIdentifier = 'FD55C13A9DE78DF03E0F6EDC82C6DB9B'
->>>>>>> parent of 38161c9... Finished 1.2
-               BlueprintName = 'SAConfettiView'
+               BlueprintIdentifier = '3F867DC73A56CABBC41555EC3C2AF3F5'
+               BlueprintName = 'SimulatorStatusMagic'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SAConfettiView.framework'>
+               BuildableName = 'SimulatorStatusMagic.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
