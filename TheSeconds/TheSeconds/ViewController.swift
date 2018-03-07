@@ -165,6 +165,10 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         setupUserDefaultSetLabel()
         showHideButtons()
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of dbf602d... version 1.3 not finished
     
     func showHideButtons() {
         buttonViewIce.isHidden = !isTimerRunning
@@ -253,6 +257,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             timeIntervalIce.invalidate()
             startStopButton.setTitle("Stop", for: .normal)
             rotate()
+
             buttonViewIce.isUserInteractionEnabled = true
             buttonViewGreen.isUserInteractionEnabled = true
             
