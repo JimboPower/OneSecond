@@ -110,7 +110,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework"
 =======
   install_framework "${BUILT_PRODUCTS_DIR}/SimulatorStatusMagic/SimulatorStatusMagic.framework"
@@ -123,8 +122,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 =======
   install_framework "${BUILT_PRODUCTS_DIR}/SimulatorStatusMagic/SimulatorStatusMagic.framework"
 >>>>>>> parent of 38161c9... Finished 1.2
-=======
->>>>>>> parent of dbf602d... version 1.3 not finished
   install_framework "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
 fi
