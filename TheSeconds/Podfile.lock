@@ -34,12 +34,20 @@ PODS:
   - SAConfettiView (0.1.8)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   - SwiftySound (0.7.0)
 =======
   - SimulatorStatusMagic (2.1)
 >>>>>>> parent of 38161c9... Finished 1.2
 =======
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+  - SwiftySound (0.7.0)
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+  - SimulatorStatusMagic (2.1)
+>>>>>>> parent of 38161c9... Finished 1.2
 
 DEPENDENCIES:
   - Firebase
@@ -49,12 +57,20 @@ DEPENDENCIES:
   - SAConfettiView (from `https://github.com/tibikolozsi/SAConfettiView.git`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   - SwiftySound
 =======
   - SimulatorStatusMagic
 >>>>>>> parent of 38161c9... Finished 1.2
 =======
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+  - SwiftySound
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+  - SimulatorStatusMagic
+>>>>>>> parent of 38161c9... Finished 1.2
 
 EXTERNAL SOURCES:
   SAConfettiView:
@@ -79,6 +95,8 @@ SPEC CHECKSUMS:
   SAConfettiView: c87031a2280659261b730fce3669fb10e73636ee
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   SwiftySound: bca0bb721690fb65249f4776cb0875abd98e9941
 
 PODFILE CHECKSUM: d4675b7390a035be08a291627ef3fed24f34750c
@@ -91,5 +109,15 @@ PODFILE CHECKSUM: 563476a582376468d0bb0d76dafdf180ffb59c16
 
 PODFILE CHECKSUM: 3b81f745cd88cfbb783632214f0981f2c1f8acfe
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+  SwiftySound: bca0bb721690fb65249f4776cb0875abd98e9941
+
+PODFILE CHECKSUM: d4675b7390a035be08a291627ef3fed24f34750c
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+  SimulatorStatusMagic: 481558caf2b9ccb2ceba2cc193728d4db3dcac07
+
+PODFILE CHECKSUM: 563476a582376468d0bb0d76dafdf180ffb59c16
+>>>>>>> parent of 38161c9... Finished 1.2
 
 COCOAPODS: 1.3.1

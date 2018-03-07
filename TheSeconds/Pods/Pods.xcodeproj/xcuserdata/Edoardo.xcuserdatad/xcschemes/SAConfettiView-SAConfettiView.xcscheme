@@ -16,6 +16,8 @@
                BuildableIdentifier = 'primary'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                BlueprintIdentifier = 'BFC3F19933F9FC745C320E4C9A41C376'
 =======
                BlueprintIdentifier = 'CF73B68A009D1BEC4727BC2EA39E681F'
@@ -23,6 +25,12 @@
 =======
                BlueprintIdentifier = '17DF07E20A62193ABD5CCD4663F5A04A'
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+               BlueprintIdentifier = 'BFC3F19933F9FC745C320E4C9A41C376'
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+               BlueprintIdentifier = 'CF73B68A009D1BEC4727BC2EA39E681F'
+>>>>>>> parent of 38161c9... Finished 1.2
                BlueprintName = 'SAConfettiView-SAConfettiView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SAConfettiView.bundle'>

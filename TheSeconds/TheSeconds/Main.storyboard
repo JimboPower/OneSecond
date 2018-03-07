@@ -99,6 +99,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-2A-X53">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="20" width="375" height="637"/>
 =======
                                 <rect key="frame" x="0.0" y="25" width="834" height="1077"/>
@@ -106,6 +108,12 @@
 =======
                                 <rect key="frame" x="0.0" y="25" width="375" height="632"/>
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+                                <rect key="frame" x="0.0" y="20" width="375" height="637"/>
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+                                <rect key="frame" x="0.0" y="25" width="834" height="1077"/>
+>>>>>>> parent of 38161c9... Finished 1.2
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Phv-QS-bfb">
                                         <rect key="frame" x="0.0" y="0.0" width="834" height="162"/>
@@ -130,6 +138,8 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ghianda" translatesAutoresizingMaskIntoConstraints="NO" id="YK0-cO-h5w">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                                         <rect key="frame" x="159.5" y="18.5" width="56.5" height="55"/>
 =======
                                                         <rect key="frame" x="358.5" y="39" width="117" height="115"/>
@@ -137,6 +147,12 @@
 =======
                                                         <rect key="frame" x="161.5" y="22" width="52.5" height="51.5"/>
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+                                                        <rect key="frame" x="159.5" y="18.5" width="56.5" height="55"/>
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+                                                        <rect key="frame" x="358.5" y="39" width="117" height="115"/>
+>>>>>>> parent of 38161c9... Finished 1.2
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="YK0-cO-h5w" secondAttribute="height" multiplier="60:59" id="fma-ac-BeZ"/>
                                                         </constraints>
@@ -166,6 +182,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xs0-gK-a9Y">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                         <rect key="frame" x="0.0" y="445" width="375" height="192"/>
 =======
                                         <rect key="frame" x="0.0" y="805" width="834" height="272"/>
@@ -173,6 +191,12 @@
 =======
                                         <rect key="frame" x="0.0" y="440" width="375" height="192"/>
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+                                        <rect key="frame" x="0.0" y="445" width="375" height="192"/>
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+                                        <rect key="frame" x="0.0" y="805" width="834" height="272"/>
+>>>>>>> parent of 38161c9... Finished 1.2
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="kPS-6B-f2M">
                                                 <rect key="frame" x="62.5" y="0.0" width="709" height="133.5"/>
@@ -247,6 +271,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-6U-qGE">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="182" y="54.5" width="12" height="43.5"/>
 =======
                                 <rect key="frame" x="405.5" y="100.5" width="24.5" height="91"/>
@@ -254,6 +280,12 @@
 =======
                                 <rect key="frame" x="182.5" y="61" width="12" height="43.5"/>
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+                                <rect key="frame" x="182" y="54.5" width="12" height="43.5"/>
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+                                <rect key="frame" x="405.5" y="100.5" width="24.5" height="91"/>
+>>>>>>> parent of 38161c9... Finished 1.2
                                 <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -380,6 +412,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-91-jKh">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="181" y="192.5" width="12.5" height="45.5"/>
 =======
                                 <rect key="frame" x="408.5" y="284" width="17.5" height="63.5"/>
@@ -387,6 +421,12 @@
 =======
                                 <rect key="frame" x="181.5" y="192.5" width="12.5" height="45.5"/>
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+                                <rect key="frame" x="181" y="192.5" width="12.5" height="45.5"/>
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+                                <rect key="frame" x="408.5" y="284" width="17.5" height="63.5"/>
+>>>>>>> parent of 38161c9... Finished 1.2
                                 <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -398,6 +438,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4d-HC-pdJ">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="48" y="182" width="12.5" height="45.5"/>
 =======
                                 <rect key="frame" x="93.5" y="269.5" width="20" height="72.5"/>
@@ -405,6 +447,12 @@
 =======
                                 <rect key="frame" x="47.5" y="182" width="12.5" height="45.5"/>
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+                                <rect key="frame" x="48" y="182" width="12.5" height="45.5"/>
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+                                <rect key="frame" x="93.5" y="269.5" width="20" height="72.5"/>
+>>>>>>> parent of 38161c9... Finished 1.2
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -415,6 +463,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-d5-iel">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="316" y="182" width="12.5" height="45.5"/>
 =======
                                 <rect key="frame" x="720.5" y="269.5" width="20" height="72.5"/>
@@ -422,6 +472,12 @@
 =======
                                 <rect key="frame" x="315.5" y="182" width="12.5" height="45.5"/>
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+                                <rect key="frame" x="316" y="182" width="12.5" height="45.5"/>
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+                                <rect key="frame" x="720.5" y="269.5" width="20" height="72.5"/>
+>>>>>>> parent of 38161c9... Finished 1.2
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>

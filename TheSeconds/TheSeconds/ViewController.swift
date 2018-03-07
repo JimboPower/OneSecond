@@ -165,7 +165,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         setupUserDefaultSetLabel()
         showHideButtons()
     }
-
     
     func showHideButtons() {
         buttonViewIce.isHidden = !isTimerRunning
@@ -254,7 +253,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             timeIntervalIce.invalidate()
             startStopButton.setTitle("Stop", for: .normal)
             rotate()
-
             buttonViewIce.isUserInteractionEnabled = true
             buttonViewGreen.isUserInteractionEnabled = true
             

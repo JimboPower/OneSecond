@@ -304,6 +304,10 @@ THE SOFTWARE.
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
 ## SwiftySound
 
 MIT License
@@ -337,11 +341,18 @@ SOFTWARE.
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of 38161c9... Finished 1.2
 =======
 >>>>>>> parent of dbf602d... version 1.3 not finished
+=======
+>>>>>>> parent of 771fc91... Revert "Finished 1.2"
+=======
+
+>>>>>>> parent of 38161c9... Finished 1.2
 ## leveldb-library
 
 Copyright (c) 2011 The LevelDB Authors. All rights reserved.
