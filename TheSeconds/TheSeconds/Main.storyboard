@@ -98,10 +98,14 @@
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="TYd-2A-X53">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="20" width="375" height="637"/>
 =======
                                 <rect key="frame" x="0.0" y="25" width="834" height="1077"/>
 >>>>>>> parent of 38161c9... Finished 1.2
+=======
+                                <rect key="frame" x="0.0" y="25" width="375" height="632"/>
+>>>>>>> parent of dbf602d... version 1.3 not finished
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Phv-QS-bfb">
                                         <rect key="frame" x="0.0" y="0.0" width="834" height="162"/>
@@ -125,10 +129,14 @@
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ghianda" translatesAutoresizingMaskIntoConstraints="NO" id="YK0-cO-h5w">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                         <rect key="frame" x="159.5" y="18.5" width="56.5" height="55"/>
 =======
                                                         <rect key="frame" x="358.5" y="39" width="117" height="115"/>
 >>>>>>> parent of 38161c9... Finished 1.2
+=======
+                                                        <rect key="frame" x="161.5" y="22" width="52.5" height="51.5"/>
+>>>>>>> parent of dbf602d... version 1.3 not finished
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="YK0-cO-h5w" secondAttribute="height" multiplier="60:59" id="fma-ac-BeZ"/>
                                                         </constraints>
@@ -157,10 +165,14 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xs0-gK-a9Y">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         <rect key="frame" x="0.0" y="445" width="375" height="192"/>
 =======
                                         <rect key="frame" x="0.0" y="805" width="834" height="272"/>
 >>>>>>> parent of 38161c9... Finished 1.2
+=======
+                                        <rect key="frame" x="0.0" y="440" width="375" height="192"/>
+>>>>>>> parent of dbf602d... version 1.3 not finished
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="kPS-6B-f2M">
                                                 <rect key="frame" x="62.5" y="0.0" width="709" height="133.5"/>
@@ -215,7 +227,7 @@
                                                     <constraint firstAttribute="width" secondItem="QrH-6H-K0X" secondAttribute="height" multiplier="145:44" id="hei-O4-GCx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
-                                                <state key="normal" title="Play" backgroundImage="start-button">
+                                                <state key="normal" title="Start" backgroundImage="start-button">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -234,10 +246,14 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-6U-qGE">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="182" y="54.5" width="12" height="43.5"/>
 =======
                                 <rect key="frame" x="405.5" y="100.5" width="24.5" height="91"/>
 >>>>>>> parent of 38161c9... Finished 1.2
+=======
+                                <rect key="frame" x="182.5" y="61" width="12" height="43.5"/>
+>>>>>>> parent of dbf602d... version 1.3 not finished
                                 <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -246,17 +262,6 @@
                                     <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="50"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwo-jP-aVb">
-                                <rect key="frame" x="305" y="108" width="45" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="n6R-Rf-Zef"/>
-                                    <constraint firstAttribute="width" constant="45" id="qsK-Kc-xB4"/>
-                                </constraints>
-                                <state key="normal" image="TrophyButton"/>
-                                <connections>
-                                    <action selector="buttonGoToGameCenter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6N-dw-u2i"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45121049880000003" green="0.95160979030000004" blue="0.58054214719999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -268,7 +273,7 @@
                             <constraint firstAttribute="trailing" secondItem="TYd-2A-X53" secondAttribute="trailing" id="Azj-2W-VGv"/>
                             <constraint firstItem="sZU-hW-p0O" firstAttribute="centerY" secondItem="Ij8-Y5-vQI" secondAttribute="centerY" id="CXM-qC-SBA"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="ESg-Lo-o1X"/>
-                            <constraint firstItem="YK0-cO-h5w" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="FC9-YK-jg4"/>
+                            <constraint firstItem="YK0-cO-h5w" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.14" id="FC9-YK-jg4"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.2" id="IxZ-ie-Fwx"/>
                             <constraint firstItem="GxD-bD-HM4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="LvZ-Yv-5Zk">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
@@ -281,14 +286,12 @@
                             <constraint firstItem="GxD-bD-HM4" firstAttribute="centerX" secondItem="Ij8-Y5-vQI" secondAttribute="centerX" id="gEl-eq-Dl7"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHi-L2-2yg"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kyW-Uv-f2O"/>
-                            <constraint firstItem="TYd-2A-X53" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oyb-RU-zAG"/>
+                            <constraint firstItem="TYd-2A-X53" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="oyb-RU-zAG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TYd-2A-X53" secondAttribute="bottom" constant="10" id="pFX-af-txy"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="pIZ-ld-xcJ"/>
                             <constraint firstItem="QrH-6H-K0X" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.12" id="pkk-Ng-saD"/>
                             <constraint firstItem="cwc-6U-qGE" firstAttribute="centerX" secondItem="YK0-cO-h5w" secondAttribute="centerX" id="tKf-oc-Qms"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1.5" id="upv-oj-8Ur"/>
-                            <constraint firstItem="vwo-jP-aVb" firstAttribute="top" secondItem="YDI-Nt-WRN" secondAttribute="top" constant="80" id="wR7-VO-eed"/>
-                            <constraint firstItem="vwo-jP-aVb" firstAttribute="trailing" secondItem="YDI-Nt-WRN" secondAttribute="trailing" id="z5F-YU-Qzu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -320,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2941.5999999999999" y="624.73763118440786"/>
+            <point key="canvasLocation" x="2942" y="625"/>
         </scene>
         <!--Shop Controller-->
         <scene sceneID="Ppp-WE-Siv">
@@ -346,7 +349,7 @@
                                     <constraint firstAttribute="width" secondItem="syF-Rl-XEx" secondAttribute="height" multiplier="1:1" id="pi0-6E-1dZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="20"/>
-                                <state key="normal" title="Back">
+                                <state key="normal" title="Back" backgroundImage="BackGroundButtonBoost">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -376,10 +379,14 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-91-jKh">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="181" y="192.5" width="12.5" height="45.5"/>
 =======
                                 <rect key="frame" x="408.5" y="284" width="17.5" height="63.5"/>
 >>>>>>> parent of 38161c9... Finished 1.2
+=======
+                                <rect key="frame" x="181.5" y="192.5" width="12.5" height="45.5"/>
+>>>>>>> parent of dbf602d... version 1.3 not finished
                                 <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -390,10 +397,14 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4d-HC-pdJ">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="48" y="182" width="12.5" height="45.5"/>
 =======
                                 <rect key="frame" x="93.5" y="269.5" width="20" height="72.5"/>
 >>>>>>> parent of 38161c9... Finished 1.2
+=======
+                                <rect key="frame" x="47.5" y="182" width="12.5" height="45.5"/>
+>>>>>>> parent of dbf602d... version 1.3 not finished
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -403,10 +414,14 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-d5-iel">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 <rect key="frame" x="316" y="182" width="12.5" height="45.5"/>
 =======
                                 <rect key="frame" x="720.5" y="269.5" width="20" height="72.5"/>
 >>>>>>> parent of 38161c9... Finished 1.2
+=======
+                                <rect key="frame" x="315.5" y="182" width="12.5" height="45.5"/>
+>>>>>>> parent of dbf602d... version 1.3 not finished
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -496,13 +511,13 @@
     </scenes>
     <resources>
         <image name="861930_snow_512x512" width="64" height="64"/>
+        <image name="BackGroundButtonBoost" width="290" height="290"/>
         <image name="IceButtonPowerUp" width="280" height="286"/>
         <image name="ImageLeafBest" width="196" height="94"/>
         <image name="ImageLeafScore" width="196" height="94"/>
         <image name="ImageSignShop" width="325" height="251"/>
         <image name="ScreenIced" width="1022" height="1066"/>
         <image name="ShopButton" width="246" height="237"/>
-        <image name="TrophyButton" width="280" height="286"/>
         <image name="Wood" width="306" height="317"/>
         <image name="background" width="1280" height="903"/>
         <image name="ghianda" width="100" height="149"/>

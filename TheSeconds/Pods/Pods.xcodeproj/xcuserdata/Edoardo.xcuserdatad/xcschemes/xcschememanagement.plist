@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Hue.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,16 +29,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SAConfettiView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
+<<<<<<< HEAD
 <<<<<<< HEAD
 		<key>SwiftySound.xcscheme</key>
 =======
 		<key>SimulatorStatusMagic.xcscheme</key>
 >>>>>>> parent of 38161c9... Finished 1.2
+=======
+		<key>SAConfettiView.xcscheme</key>
+>>>>>>> parent of dbf602d... version 1.3 not finished
 		<dict>
 			<key>isShown</key>
 			<false/>

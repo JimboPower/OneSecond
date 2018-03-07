@@ -10,7 +10,6 @@ import UIKit
 import SAConfettiView
 import GameKit
 import AVFoundation
-import SwiftySound
 
 enum PowerEffect {
     case none
@@ -69,10 +68,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     var gcEnabled = Bool()
     var gcDefaultLeaderBoard = String()
     let leaderboardID = "com.score.OneSecond"
-    
-    let soundTrack = Sound(url: Bundle.main.url(forResource: "StarCommander1", withExtension: "wav")!)
-    let incorrectSound = Sound(url: Bundle.main.url(forResource: "incorrect", withExtension: "mp3")!)
-    let buttonPressed = Sound(url: Bundle.main.url(forResource: "ButtonPressed", withExtension: "mp3")!)
     var greenActiveted = false
     var acornNumber = UserDefaults.standard.integer(forKey: "acorn") {
         didSet{
@@ -109,9 +104,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet weak var buttonShop: UIButton!
     
     
-    @IBAction func buttonGoToGameCenter(_ sender: Any) {
-        buttonGameCenter()
-    }
     
     @IBAction func buttonIceTapped(_ sender: Any) {
         powerStatus = .freeze
@@ -145,7 +137,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         buttonGameCenter()
     }
     @IBAction func buttonShop(_ sender: Any) {
-        buttonPressed?.play()
         if isTimerRunning {
             timerStops()
             checkBestScore()
@@ -173,18 +164,9 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         authenticateLocalPlayer()
         setupUserDefaultSetLabel()
         showHideButtons()
-        setSoundtrack()
-        
-    }
-    
-    func setSoundtrack() {
-        soundTrack?.volume = 0.7
-        soundTrack?.play { completed in
-            print("completed: \(completed)")
-            self.setSoundtrack()
-        }
     }
 
+    
     func showHideButtons() {
         buttonViewIce.isHidden = !isTimerRunning
         buttonViewGreen.isHidden = !isTimerRunning
@@ -232,12 +214,10 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                     print("Score: \(score)")
                     print("BEst: \(best)")
                 }
+    
                 score = 0
                 circleProgress.resetColor()
             }
-            greenActiveted = false
-            incorrectSound?.volume = 0.5
-            incorrectSound?.play()
             milliseconds = 0
         }
     }
@@ -261,11 +241,11 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             checkBestScore()
             confettiView.stopConfetti()
             timer.invalidate()
-            if greenActiveted {
+            if score <= 1 && greenActiveted {
                 circleProgress.greenPowerUp()
-                greenActiveted = false
             }else{
                 circleProgress.resetColor()
+                greenActiveted = false
             }
             count = 0
             isTimerRunningIce = false
@@ -274,12 +254,9 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             timeIntervalIce.invalidate()
             startStopButton.setTitle("Stop", for: .normal)
             rotate()
+
             buttonViewIce.isUserInteractionEnabled = true
             buttonViewGreen.isUserInteractionEnabled = true
-            
-            ///Da cambiare
-            greenNumber = 100
-            ///////////////
             
             if greenNumber == 0 {
                 buttonViewGreen.isUserInteractionEnabled = false
@@ -287,6 +264,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             }else{
                 buttonViewGreen.isUserInteractionEnabled = true
             }
+            
             if iceNumber == 0 {
                 buttonViewIce.isUserInteractionEnabled = false
             }else{
@@ -294,6 +272,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             }
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
+                
                 self.count += 1
                 if self.count == 101 {
                     self.count = 1

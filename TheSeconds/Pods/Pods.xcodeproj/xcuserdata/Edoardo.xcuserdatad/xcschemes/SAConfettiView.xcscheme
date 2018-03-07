@@ -15,10 +15,14 @@
             <BuildableReference
                BuildableIdentifier = 'primary'
 <<<<<<< HEAD
+<<<<<<< HEAD
                BlueprintIdentifier = 'D568655366990DF322B43CD8B68CD235'
 =======
                BlueprintIdentifier = 'FD55C13A9DE78DF03E0F6EDC82C6DB9B'
 >>>>>>> parent of 38161c9... Finished 1.2
+=======
+               BlueprintIdentifier = 'DD8E644C9A81DAAD975A98AEDA80F69F'
+>>>>>>> parent of dbf602d... version 1.3 not finished
                BlueprintName = 'SAConfettiView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SAConfettiView.framework'>
