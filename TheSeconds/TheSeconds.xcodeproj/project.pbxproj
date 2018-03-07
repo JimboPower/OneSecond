@@ -14,6 +14,8 @@
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
 		C88654C9204728170050DCFD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88654C8204728170050DCFD /* UIViewExtensions.swift */; };
+		C88654CD204B362E0050DCFD /* StarCommander1.wav in Resources */ = {isa = PBXBuildFile; fileRef = C88654CC204B362C0050DCFD /* StarCommander1.wav */; };
+		C88654CF204B3BD50050DCFD /* incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C88654CE204B3BD40050DCFD /* incorrect.mp3 */; };
 		C88DA30D2020CA3900E3FBDD /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88DA30C2020CA3900E3FBDD /* CircleProgress.swift */; };
 		C88DA3102020D5BE00E3FBDD /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */; };
 		C8A142822030D8CE00562A35 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A142812030D8CE00562A35 /* GameKit.framework */; };
@@ -39,6 +41,8 @@
 		C88058FD1EF28C49001DD5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C88059021EF28C49001DD5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C88654C8204728170050DCFD /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		C88654CC204B362C0050DCFD /* StarCommander1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = StarCommander1.wav; sourceTree = "<group>"; };
+		C88654CE204B3BD40050DCFD /* incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrect.mp3; sourceTree = "<group>"; };
 		C88DA30C2020CA3900E3FBDD /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trattatello.ttf; sourceTree = "<group>"; };
 		C8A1427A2030B80A00562A35 /* TheSeconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheSeconds.entitlements; sourceTree = "<group>"; };
@@ -120,6 +124,16 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		C88654CB204995BE0050DCFD /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C8036C27203B24BC002042E1 /* ButtonPressed.mp3 */,
+				C88654CC204B362C0050DCFD /* StarCommander1.wav */,
+				C88654CE204B3BD40050DCFD /* incorrect.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		C88DA30B2020CA0000E3FBDD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +145,7 @@
 		C88DA30F2020CD8B00E3FBDD /* Project files */ = {
 			isa = PBXGroup;
 			children = (
-				C8036C27203B24BC002042E1 /* ButtonPressed.mp3 */,
+				C88654CB204995BE0050DCFD /* Sounds */,
 				C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */,
 				C88059021EF28C49001DD5A2 /* Info.plist */,
 				EBD9B9901F4C38B30073A6DE /* GoogleService-Info.plist */,
@@ -247,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88654CD204B362E0050DCFD /* StarCommander1.wav in Resources */,
 				C88DA3102020D5BE00E3FBDD /* Trattatello.ttf in Resources */,
 				EB1D44B41F1E379A00BE8772 /* LaunchScreen.storyboard in Resources */,
 				C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */,
@@ -254,6 +269,7 @@
 				C82265171FD1C84D00544625 /* Main.storyboard in Resources */,
 				EBD9B9911F4C38B30073A6DE /* GoogleService-Info.plist in Resources */,
 				C8036C28203B24BD002042E1 /* ButtonPressed.mp3 in Resources */,
+				C88654CF204B3BD50050DCFD /* incorrect.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,18 +317,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TheSeconds/Pods-TheSeconds-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SAConfettiView/SAConfettiView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAConfettiView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);

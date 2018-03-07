@@ -14,7 +14,7 @@ class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
     var powerUps = [PowerUp]()
 
     @IBAction func backButtonTapped(_ sender: Any) {
-        
+    
     }
     
 let cellIdentifier = "cellIdentifier"
@@ -24,8 +24,6 @@ let cellIdentifier = "cellIdentifier"
     var acornNumber = 0
     var iceNumber = 0
     var greenNumber = 0
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,6 +127,7 @@ extension ShopController: UICollectionViewDataSource {
             cell.leftImageView.kf.setImage(with: url)
         } else {
             cell.leftImageView.image = nil
+            
         }
         
         
@@ -142,7 +141,7 @@ extension ShopController: UICollectionViewDataSource {
         return cell
     }
     
-
+    ////https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/CreateATableView.html per risolvere immagini offline
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Hello")
