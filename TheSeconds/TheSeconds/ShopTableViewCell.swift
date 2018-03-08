@@ -27,6 +27,5 @@ class ShopTableViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
-        saleRibbonImageView.alpha = 0
     }
 }

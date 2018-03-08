@@ -53,7 +53,7 @@ class CircleProgress: UIView {
     }
     
     func greenPowerUp() {
-        trackLayer.strokeColor = #colorLiteral(red: 0, green: 1, blue: 0, alpha: 1).cgColor
+        trackLayer.strokeColor = #colorLiteral(red: 0.6900010871, green: 0.8016764323, blue: 0.1851779653, alpha: 1).cgColor
     }
     
     

@@ -127,9 +127,12 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         greenNumber -= 1
         print(greenNumber)
     }
-    @IBAction func startStopButtonTapped(_ sender: Any) {
+    
+
+    @IBAction func startStopButton(_ sender: Any) {
         buttonTapped()
     }
+    
     @IBAction func buttonBestTapped(_ sender: Any) {
         buttonGameCenter()
     }
@@ -204,6 +207,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             circleProgress.fullColorWin()
         }else{
             count = 0
+            greenActiveted = false
             if !greenActiveted {
                 if score > best {
                     best = score
@@ -213,7 +217,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                     print("Score: \(score)")
                     print("BEst: \(best)")
                 }
-                
+                labelTimer.shake()
                 score = 0
                 circleProgress.resetColor()
             }
@@ -240,7 +244,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             checkBestScore()
             confettiView.stopConfetti()
             timer.invalidate()
-            if score <= 1 && greenActiveted {
+            if greenActiveted {
                 circleProgress.greenPowerUp()
             }else{
                 circleProgress.resetColor()

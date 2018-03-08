@@ -153,22 +153,30 @@ extension ShopController: UICollectionViewDataSource {
         return cell
     }
     
-
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Hello")
-        
-        acornNumber -= 5
+   
+        let powerUp = powerUps[indexPath.row]
+        let cost = powerUp.cost
         UserDefaults.standard.set(acornNumber, forKey: "acorn")
 
         
-        if indexPath.row == 0 {
-            greenNumber += 1
-            UserDefaults.standard.set(greenNumber, forKey: "green")
+        if acornNumber >= cost! {
+            acornNumber -= cost!
+            if indexPath.row == 0 {
+                greenNumber += 1
+                UserDefaults.standard.set(greenNumber, forKey: "green")
+            }else{
+                iceNumber += 1
+                UserDefaults.standard.set(iceNumber, forKey: "ice")
+            }
         }else{
-            iceNumber += 1
-            UserDefaults.standard.set(iceNumber, forKey: "ice")
+            labelAcorn.shake()
         }
+        
+        
+
         
         labelAcorn.text = "\(acornNumber)"
         labelGreen.text = "\(greenNumber)"
@@ -180,3 +188,4 @@ extension ShopController: UICollectionViewDataSource {
     }
     
 }
+
