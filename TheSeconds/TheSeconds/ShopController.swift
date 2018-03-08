@@ -9,6 +9,7 @@
 import UIKit
 import Kingfisher
 
+
 class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
 
     var powerUps = [PowerUp]()
@@ -17,11 +18,13 @@ class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
         
     }
     
-let cellIdentifier = "cellIdentifier"
+    
+    
+    let cellIdentifier = "cellIdentifier"
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var acornNumber = 0
+    var numberAcorn = 0
     var iceNumber = 0
     var greenNumber = 0
     
@@ -31,10 +34,10 @@ let cellIdentifier = "cellIdentifier"
         super.viewDidLoad()
         setupTableView()
         observePowerUps()
-        labelAcorn.text = "\(acornNumber)"
+        labelAcorn.text = "\(numberAcorn)"
         labelGreen.text = "\(greenNumber)"
         labelIce.text = "\(iceNumber)"
-        print(acornNumber)
+        print(numberAcorn)
         print(iceNumber)
         print(greenNumber)
     }
@@ -59,7 +62,6 @@ let cellIdentifier = "cellIdentifier"
         }
     }
     
-    
     @IBAction func didTapBackButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -82,12 +84,21 @@ extension ShopController {
 
 extension ShopController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if view.frame.width == 320 {
-            return CGSize(width: 320, height: 192)
-
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            print("iPhone")
+            return CGSize(width: view.frame.width, height: 200)
+        case .pad:
+            print("ipad")
+            return CGSize(width: (view.frame.width)/2, height: (view.frame.height)*0.24)
+        case .unspecified:
+            print("I don't know")
+            break
+        default:
+            print("I don't know")
+            // Uh, oh! What could it be?
         }
-        return CGSize(width: 365, height: 237)
+        return CGSize(width: 0, height: 0)
     }
 }
 
@@ -112,6 +123,7 @@ extension ShopController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ShopTableViewCell
         
+        
         let powerUp = powerUps[indexPath.row]
         cell.titleLabel.text = powerUp.title
        
@@ -131,7 +143,6 @@ extension ShopController: UICollectionViewDataSource {
             cell.leftImageView.image = nil
         }
         
-        
         ///if let onSale = powerUp.isOnSale {
            // cell.saleRibbonImageView.isHidden = !onSale
         //} else {
@@ -147,21 +158,21 @@ extension ShopController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Hello")
         
-        if acornNumber >= 5 {
-            acornNumber -= 5
-            UserDefaults.standard.set(acornNumber, forKey: "acorn")
-            if indexPath.row == 0 {
-                greenNumber += 1
-                UserDefaults.standard.set(greenNumber, forKey: "green")
-            }else{
-                iceNumber += 1
-                UserDefaults.standard.set(iceNumber, forKey: "ice")
-            }
-            labelAcorn.text = "\(acornNumber)"
-            labelGreen.text = "\(greenNumber)"
-            labelIce.text = "\(iceNumber)"
+        numberAcorn -= 5
+        UserDefaults.standard.set(numberAcorn, forKey: "acorn")
+
+        
+        if indexPath.row == 0 {
+            greenNumber += 1
+            UserDefaults.standard.set(greenNumber, forKey: "green")
+        }else{
+            iceNumber += 1
+            UserDefaults.standard.set(iceNumber, forKey: "ice")
         }
-    
+        
+        labelAcorn.text = "\(numberAcorn)"
+        labelGreen.text = "\(greenNumber)"
+        labelIce.text = "\(iceNumber)"
     }
     
     func buttonAction(sender: UIButton) {

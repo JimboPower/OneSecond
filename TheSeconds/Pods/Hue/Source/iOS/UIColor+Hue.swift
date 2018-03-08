@@ -8,15 +8,15 @@ public extension UIColor {
   /// - Parameter hex: A hex string, can either contain # or not
   convenience init(hex string: String) {
     var hex = string.hasPrefix("#")
-      ? String(string.dropFirst())
+      ? String(string.characters.dropFirst())
       : string
-    guard hex.count == 3 || hex.count == 6
+    guard hex.characters.count == 3 || hex.characters.count == 6
       else {
         self.init(white: 1.0, alpha: 0.0)
         return
     }
-    if hex.count == 3 {
-      for (index, char) in hex.enumerated() {
+    if hex.characters.count == 3 {
+      for (index, char) in hex.characters.enumerated() {
         hex.insert(char, at: hex.index(hex.startIndex, offsetBy: index * 2))
       }
     }

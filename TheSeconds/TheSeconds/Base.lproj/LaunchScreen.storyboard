@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="TNY-bl-hML">
-                                <rect key="frame" x="-94" y="-66.5" width="563" height="800"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="TNY-bl-hML" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="1.5" id="Jvh-a5-yyA"/>
-                            <constraint firstItem="TNY-bl-hML" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="aO5-ng-duI"/>
-                            <constraint firstItem="TNY-bl-hML" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="gn6-Sr-6tv"/>
-                            <constraint firstItem="TNY-bl-hML" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="1.2" id="iLh-xH-7tt"/>
+                            <constraint firstItem="TNY-bl-hML" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="FOr-vb-wM9"/>
+                            <constraint firstAttribute="trailing" secondItem="TNY-bl-hML" secondAttribute="trailing" id="V6A-2M-kAR"/>
+                            <constraint firstItem="TNY-bl-hML" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="rZZ-cR-sM6"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="TNY-bl-hML" secondAttribute="bottom" id="zOh-8p-pgb"/>
                         </constraints>
                     </view>
                 </viewController>

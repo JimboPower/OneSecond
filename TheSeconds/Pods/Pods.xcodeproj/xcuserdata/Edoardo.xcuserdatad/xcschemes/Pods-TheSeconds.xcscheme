@@ -14,23 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-               BlueprintIdentifier = "C872112630CD8C582DA1C3500263A765"
-=======
-               BlueprintIdentifier = "1087FB4C311AFA9E6F6870550FAF9488"
->>>>>>> parent of 38161c9... Finished 1.2
-=======
                BlueprintIdentifier = "1756C247F30DA70A94467D2C6A1DC1D2"
->>>>>>> parent of dbf602d... version 1.3 not finished
-=======
-               BlueprintIdentifier = "C872112630CD8C582DA1C3500263A765"
->>>>>>> parent of 771fc91... Revert "Finished 1.2"
-=======
-               BlueprintIdentifier = "1087FB4C311AFA9E6F6870550FAF9488"
->>>>>>> parent of 38161c9... Finished 1.2
                BuildableName = "Pods_TheSeconds.framework"
                BlueprintName = "Pods-TheSeconds"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -63,23 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            BlueprintIdentifier = "C872112630CD8C582DA1C3500263A765"
-=======
-            BlueprintIdentifier = "1087FB4C311AFA9E6F6870550FAF9488"
->>>>>>> parent of 38161c9... Finished 1.2
-=======
             BlueprintIdentifier = "1756C247F30DA70A94467D2C6A1DC1D2"
->>>>>>> parent of dbf602d... version 1.3 not finished
-=======
-            BlueprintIdentifier = "C872112630CD8C582DA1C3500263A765"
->>>>>>> parent of 771fc91... Revert "Finished 1.2"
-=======
-            BlueprintIdentifier = "1087FB4C311AFA9E6F6870550FAF9488"
->>>>>>> parent of 38161c9... Finished 1.2
             BuildableName = "Pods_TheSeconds.framework"
             BlueprintName = "Pods-TheSeconds"
             ReferencedContainer = "container:Pods.xcodeproj">

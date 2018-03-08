@@ -8,25 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6CD854A7F662A8814F2B8606 /* Pods_TheSeconds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */; };
-		C8036C28203B24BD002042E1 /* ButtonPressed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C8036C27203B24BC002042E1 /* ButtonPressed.mp3 */; };
 		C82265171FD1C84D00544625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82265161FD1C84D00544625 /* Main.storyboard */; };
 		C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F61EF28C48001DD5A2 /* AppDelegate.swift */; };
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
-<<<<<<< HEAD
-		C88654C9204728170050DCFD /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88654C8204728170050DCFD /* UIViewExtensions.swift */; };
-<<<<<<< HEAD
-		C88654CD204B362E0050DCFD /* StarCommander1.wav in Resources */ = {isa = PBXBuildFile; fileRef = C88654CC204B362C0050DCFD /* StarCommander1.wav */; };
-		C88654CF204B3BD50050DCFD /* incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C88654CE204B3BD40050DCFD /* incorrect.mp3 */; };
-<<<<<<< HEAD
-=======
->>>>>>> parent of 38161c9... Finished 1.2
-=======
->>>>>>> parent of dbf602d... version 1.3 not finished
-=======
->>>>>>> parent of 771fc91... Revert "Finished 1.2"
-=======
->>>>>>> parent of 38161c9... Finished 1.2
 		C88DA30D2020CA3900E3FBDD /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88DA30C2020CA3900E3FBDD /* CircleProgress.swift */; };
 		C88DA3102020D5BE00E3FBDD /* Trattatello.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */; };
 		C8A142822030D8CE00562A35 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8A142812030D8CE00562A35 /* GameKit.framework */; };
@@ -44,27 +29,12 @@
 		00F85900F9CF4CA4C531D7BF /* Pods-TheSeconds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSeconds.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheSeconds/Pods-TheSeconds.release.xcconfig"; sourceTree = "<group>"; };
 		6E257AD1041A2CB7F9F428C6 /* Pods-TheSeconds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheSeconds.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheSeconds/Pods-TheSeconds.debug.xcconfig"; sourceTree = "<group>"; };
 		7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheSeconds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8036C27203B24BC002042E1 /* ButtonPressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ButtonPressed.mp3; sourceTree = "<group>"; };
 		C82265161FD1C84D00544625 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C88058F31EF28C48001DD5A2 /* TheSeconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSeconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88058F61EF28C48001DD5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88058F81EF28C48001DD5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C88058FD1EF28C49001DD5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C88059021EF28C49001DD5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		C88654C8204728170050DCFD /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		C88654CC204B362C0050DCFD /* StarCommander1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = StarCommander1.wav; sourceTree = "<group>"; };
-		C88654CE204B3BD40050DCFD /* incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrect.mp3; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
->>>>>>> parent of 38161c9... Finished 1.2
-=======
->>>>>>> parent of dbf602d... version 1.3 not finished
-=======
->>>>>>> parent of 771fc91... Revert "Finished 1.2"
-=======
->>>>>>> parent of 38161c9... Finished 1.2
 		C88DA30C2020CA3900E3FBDD /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trattatello.ttf; sourceTree = "<group>"; };
 		C8A1427A2030B80A00562A35 /* TheSeconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheSeconds.entitlements; sourceTree = "<group>"; };
@@ -137,35 +107,6 @@
 			path = TheSeconds;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-		C88654CA2047283E0050DCFD /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C88654C8204728170050DCFD /* UIViewExtensions.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-<<<<<<< HEAD
-		C88654CB204995BE0050DCFD /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				C8036C27203B24BC002042E1 /* ButtonPressed.mp3 */,
-				C88654CC204B362C0050DCFD /* StarCommander1.wav */,
-				C88654CE204B3BD40050DCFD /* incorrect.mp3 */,
-			);
-			name = Sounds;
-			sourceTree = "<group>";
-		};
-<<<<<<< HEAD
-=======
->>>>>>> parent of 38161c9... Finished 1.2
-=======
->>>>>>> parent of dbf602d... version 1.3 not finished
-=======
->>>>>>> parent of 771fc91... Revert "Finished 1.2"
-=======
->>>>>>> parent of 38161c9... Finished 1.2
 		C88DA30B2020CA0000E3FBDD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +118,6 @@
 		C88DA30F2020CD8B00E3FBDD /* Project files */ = {
 			isa = PBXGroup;
 			children = (
-				C8036C27203B24BC002042E1 /* ButtonPressed.mp3 */,
 				C88DA30E2020CD7F00E3FBDD /* Trattatello.ttf */,
 				C88059021EF28C49001DD5A2 /* Info.plist */,
 				EBD9B9901F4C38B30073A6DE /* GoogleService-Info.plist */,
@@ -299,7 +239,6 @@
 				EB07A2531F48801300467A1E /* ShopTableViewCell.xib in Resources */,
 				C82265171FD1C84D00544625 /* Main.storyboard in Resources */,
 				EBD9B9911F4C38B30073A6DE /* GoogleService-Info.plist in Resources */,
-				C8036C28203B24BD002042E1 /* ButtonPressed.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,22 +289,6 @@
 				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SAConfettiView/SAConfettiView.framework",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
-=======
-				"${BUILT_PRODUCTS_DIR}/SimulatorStatusMagic/SimulatorStatusMagic.framework",
->>>>>>> parent of 38161c9... Finished 1.2
-=======
->>>>>>> parent of dbf602d... version 1.3 not finished
-=======
-				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
->>>>>>> parent of 771fc91... Revert "Finished 1.2"
-=======
-				"${BUILT_PRODUCTS_DIR}/SimulatorStatusMagic/SimulatorStatusMagic.framework",
->>>>>>> parent of 38161c9... Finished 1.2
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -375,22 +298,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAConfettiView.framework",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
-=======
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimulatorStatusMagic.framework",
->>>>>>> parent of 38161c9... Finished 1.2
-=======
->>>>>>> parent of dbf602d... version 1.3 not finished
-=======
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
->>>>>>> parent of 771fc91... Revert "Finished 1.2"
-=======
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimulatorStatusMagic.framework",
->>>>>>> parent of 38161c9... Finished 1.2
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -537,7 +444,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -554,7 +460,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
