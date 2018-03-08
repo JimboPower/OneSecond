@@ -9,6 +9,7 @@
 import UIKit
 import SAConfettiView
 import GameKit
+import AVFoundation
 
 enum PowerEffect {
     case none
@@ -17,12 +18,8 @@ enum PowerEffect {
     case green
 }
 
-
-
 class ViewController: UIViewController, GKGameCenterControllerDelegate {
     
-
-
     var powerStatus: PowerEffect = .none {
         didSet {
             switch powerStatus {
@@ -35,50 +32,43 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             }
         }
     }
-        
     var score = 0 {
         didSet {
             buttonScore.setTitle("Score: \(score)", for: .normal)
-            if score > best {
-                best = score
-            }
         }
     }
-    
     var best = 0 {
         didSet {
             buttonBest.setTitle("Best: \(best)", for: .normal)
         }
     }
     
-    @IBOutlet weak var circleProgress: CircleProgress!
+    var isTimerRunning = false {
+        didSet {
+            showHideButtons()
+        }
+    }
+    
     var timer = Timer()
+    var boolCheckUserDefault = UserDefaults.standard.bool(forKey: "bool")
     var timeIntervalIce = Timer()
     var seconds = 0
     var milliseconds = 0
-    var prova2 = true
     var suffix = 0
-    var isTimerRunning = false
+    
     var isTimerRunningIce = false
     var confettiView: SAConfettiView!
     var containerViewController: ContainerController?
     var durationRotate = 0.9
     var count = 1
-    var prova = true
+    var checkerCirlceProgress = true
     let rotationAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
     let trackLayer = CAShapeLayer()
     let userDefault = UserDefaults.standard
-    var radiusCircle = CGFloat(0)
     var gcEnabled = Bool()
     var gcDefaultLeaderBoard = String()
     let leaderboardID = "com.score.OneSecond"
     var greenActiveted = false
-    
-    override func viewDidAppear(_ animated: Bool) {
-        setupUserDefaultSetLabel()
-
-    }
-    
     var acornNumber = UserDefaults.standard.integer(forKey: "acorn") {
         didSet{
             userDefault.set(acornNumber, forKey: "acorn")
@@ -86,122 +76,34 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             acornNumber = userDefault.integer(forKey: "acorn")
         }
     }
-    
     var greenNumber = UserDefaults.standard.integer(forKey: "green") {
         didSet{
             userDefault.set(greenNumber, forKey: "green")
             greenNumber = userDefault.integer(forKey: "green")
-            labelGreenNumber.text = "\(greenNumber)"
-
+            buttonViewGreen.setTitle(String(greenNumber), for: .normal)
         }
     }
-    
     var iceNumber = UserDefaults.standard.integer(forKey: "ice") {
         didSet{
             userDefault.set(iceNumber, forKey: "ice")
-            labelIceNumber.text = "\(iceNumber)"
+            buttonViewIce.setTitle(String(iceNumber), for: .normal)
             iceNumber = userDefault.integer(forKey: "ice")
         }
     }
-
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupConfetti()
-        shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
-        authenticateLocalPlayer()
-        buttonViewGreen.isUserInteractionEnabled = false
-        buttonViewIce.isUserInteractionEnabled = false
-        setupUserDefaultSetLabel()
-    }
     
-
-    
-    
-    func setupUserDefaultSetLabel() {
-        best = userDefault.integer(forKey: "best")
-        buttonBest.setTitle("Best: \(best)", for: .normal)
-        
-        if iceNumber == 0 {
-            userDefault.set(5, forKey: "ice")
-            iceNumber = userDefault.integer(forKey: "ice")
-            labelIceNumber.text = "\(iceNumber)"
-        }else{
-            iceNumber = userDefault.integer(forKey: "ice")
-            labelIceNumber.text = "\(iceNumber)"
-            print("Lol \(iceNumber)")
-        }
-        
-        if greenNumber == 0 {
-            userDefault.set(5, forKey: "green")
-            greenNumber = userDefault.integer(forKey: "green")
-            labelGreenNumber.text = "\(greenNumber)"
-        }else{
-            greenNumber = userDefault.integer(forKey: "green")
-            labelGreenNumber.text = "\(greenNumber)"
-        }
-        
-        if acornNumber == 0 {
-            userDefault.set(20, forKey: "acorn")
-            acornNumber = userDefault.integer(forKey: "acorn")
-            labelAcorn.text = "\(acornNumber)"
-        }else{
-            acornNumber = userDefault.integer(forKey: "acorn")
-            labelAcorn.text = "\(acornNumber)"
-        }
-        
-    }
-    
-    @IBAction func buttonBestTapped(_ sender: Any) {
-        buttonGameCenter()
-    }
-    
-    @IBAction func buttonScoreTapped(_ sender: Any) {
-        buttonGameCenter()
-    }
-    
-    
-    @IBAction func buttonShop(_ sender: Any) {
-        timer.invalidate()
-        startStopButton.setTitle("Start", for: .normal)
-        milliseconds = 0
-        seconds = 0
-        circleProgress.pause()
-        isTimerRunning = false
-        prova = !prova
-
-    }
-    
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let shopController = segue.destination as? ShopController {
-            shopController.numberAcorn = acornNumber
-            shopController.greenNumber = greenNumber
-            shopController.iceNumber = iceNumber
-            print("Acorn: \(shopController.numberAcorn)")
-        }
-    }
-    
+    ///IBOutlet
+    @IBOutlet weak var circleProgress: CircleProgress!
     @IBOutlet weak var labelAcorn: UILabel!
     @IBOutlet weak var buttonBest: UIButton!
     @IBOutlet weak var buttonScore: UIButton!
     @IBOutlet weak var labelTimer: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var imageWood: UIImageView!
-    @IBAction func startStopButtonTapped(_ sender: Any) {
-        buttonTapped()
-    }
-    
-    @IBOutlet weak var labelIceNumber: UILabel!
-    @IBOutlet weak var labelGreenNumber: UILabel!
-    
     @IBOutlet weak var buttonViewIce: UIButton!
     @IBOutlet weak var buttonViewGreen: UIButton!
+    @IBOutlet weak var buttonShop: UIButton!
     
-    func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
-        containerViewController?.overlayEffectImageView.isHidden = isHidden
-    }
+    
     
     @IBAction func buttonIceTapped(_ sender: Any) {
         powerStatus = .freeze
@@ -225,49 +127,118 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         greenNumber -= 1
         print(greenNumber)
     }
-
+    @IBAction func startStopButtonTapped(_ sender: Any) {
+        buttonTapped()
+    }
+    @IBAction func buttonBestTapped(_ sender: Any) {
+        buttonGameCenter()
+    }
+    @IBAction func buttonScoreTapped(_ sender: Any) {
+        buttonGameCenter()
+    }
+    @IBAction func buttonShop(_ sender: Any) {
+        if isTimerRunning {
+            timerStops()
+            checkBestScore()
+            checkerCirlceProgress = !checkerCirlceProgress
+        }
+    }
+    
+    
+    ///Override
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let shopController = segue.destination as? ShopController {
+            shopController.acornNumber = acornNumber
+            shopController.greenNumber = greenNumber
+            shopController.iceNumber = iceNumber
+            print("Acorn: \(shopController.acornNumber)")
+        }
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        setupUserDefaultSetLabel()
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupConfetti()
+        shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
+        authenticateLocalPlayer()
+        setupUserDefaultSetLabel()
+        showHideButtons()
+    }
+    
+    func showHideButtons() {
+        buttonViewIce.isHidden = !isTimerRunning
+        buttonViewGreen.isHidden = !isTimerRunning
+        buttonShop.isHidden = isTimerRunning
+    }
+    
+    func shouldShowOverlayEffect(image: UIImage, isHidden: Bool) {
+        containerViewController?.overlayEffectImageView.isHidden = isHidden
+    }
+    
     func setUpTimer() {
         self.rotate()
         circleProgress.pause()
         buttonViewIce.isUserInteractionEnabled = false
     }
     
-    func buttonTapped() {
-        if prova == true {
+    func timerStops() {
+        ////Timer stops
+        isTimerRunning = false
+        timeIntervalIce.invalidate()
+        isTimerRunningIce = false
+        buttonViewGreen.isUserInteractionEnabled = false
+        self.stopAnimationForView(self.imageWood)
+        self.durationRotate = 0.9
+        timer.invalidate()
+        setUpTimer()
+        startStopButton.setTitle("Start", for: .normal)
+        self.stopAnimationForView(self.imageWood)
+        if seconds >= 1 && suffix == 0 {
+            score += 1
+            acornNumber += 1
+            userDefault.set(acornNumber, forKey: "acorn")
+            acornNumber = userDefault.integer(forKey: "acorn")
+            userDefault.set(best, forKey: "best")
+            best = userDefault.integer(forKey: "best")
+            circleProgress.fullColorWin()
+        }else{
+            count = 0
+            if !greenActiveted {
+                if score > best {
+                    best = score
+                    userDefault.set(best, forKey: "best")
+                    best = userDefault.integer(forKey: "best")
+                    confettiView.startConfetti()
+                    print("Score: \(score)")
+                    print("BEst: \(best)")
+                }
+                
+                score = 0
+                circleProgress.resetColor()
+            }
+            milliseconds = 0
+        }
+    }
+    
+    func checkCirlceProgress() {
+        if checkerCirlceProgress == true {
             circleProgress.start()
-            prova = false
+            checkerCirlceProgress = false
         } else {
             circleProgress.pause()
-            prova = true
+            checkerCirlceProgress = true
         }
-        
+    }
+    
+    func buttonTapped() {
+        checkCirlceProgress()
         if isTimerRunning {
-            ////Timer stops
-            isTimerRunning = false
-            timeIntervalIce.invalidate()
-            isTimerRunningIce = false
-            buttonViewGreen.isUserInteractionEnabled = false
-            self.stopAnimationForView(self.imageWood)
-            self.durationRotate = 0.9
-            timer.invalidate()
-            setUpTimer()
-            startStopButton.setTitle("Start", for: .normal)
-            self.stopAnimationForView(self.imageWood)
-            if seconds >= 1 && suffix == 0 {
-                score += 1
-                userDefault.set(best, forKey: "best")
-                circleProgress.fullColorWin()
-            }else{
-                if !greenActiveted {
-                    score = 0
-                    circleProgress.resetColor()
-                }
-                milliseconds = 0
-            }
-            count = 0
+            timerStops()
         }else{
             //Timer runs
             checkBestScore()
+            confettiView.stopConfetti()
             timer.invalidate()
             if score <= 1 && greenActiveted {
                 circleProgress.greenPowerUp()
@@ -275,8 +246,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 circleProgress.resetColor()
                 greenActiveted = false
             }
-        
-            
             count = 0
             isTimerRunningIce = false
             isTimerRunning = true
@@ -286,6 +255,19 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             rotate()
             buttonViewIce.isUserInteractionEnabled = true
             buttonViewGreen.isUserInteractionEnabled = true
+            
+            if greenNumber == 0 {
+                buttonViewGreen.isUserInteractionEnabled = false
+                print(greenNumber)
+            }else{
+                buttonViewGreen.isUserInteractionEnabled = true
+            }
+            
+            if iceNumber == 0 {
+                buttonViewIce.isUserInteractionEnabled = false
+            }else{
+                buttonViewIce.isUserInteractionEnabled = true
+            }
             timer = Timer(timeInterval: 0.01, repeats: true, block: { (_) in
                 self.incrementMiliseconds()
                 
@@ -298,7 +280,8 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             RunLoop.main.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
         }
     }
-
+    
+    
     func display(miliseconds: Int) {
         seconds = miliseconds / 100
         suffix = miliseconds - (seconds * 100)
@@ -344,10 +327,44 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     
+    func setupUserDefaultSetLabel() {
+        best = userDefault.integer(forKey: "best")
+        buttonBest.setTitle("Best: \(best)", for: .normal)
+        
+        print("\(boolCheckUserDefault) Eccolo")
+        
+        if boolCheckUserDefault {
+            greenNumber = userDefault.integer(forKey: "green")
+            buttonViewGreen.setTitle(String(greenNumber), for: .normal)
+            iceNumber = userDefault.integer(forKey: "ice")
+            buttonViewIce.setTitle(String(iceNumber), for: .normal)
+            print("Lol \(iceNumber)")
+            acornNumber = userDefault.integer(forKey: "acorn")
+            labelAcorn.text = "\(acornNumber)"
+            
+        }else{
+            if iceNumber == 0 {
+                userDefault.set(5, forKey: "ice")
+                iceNumber = userDefault.integer(forKey: "ice")
+                buttonViewIce.setTitle(String(iceNumber), for: .normal)
+            }
+            if greenNumber == 0 {
+                userDefault.set(5, forKey: "green")
+                greenNumber = userDefault.integer(forKey: "green")
+            }
+            if acornNumber == 0 {
+                userDefault.set(20, forKey: "acorn")
+                acornNumber = userDefault.integer(forKey: "acorn")
+                labelAcorn.text = "\(acornNumber)"
+            }
+            userDefault.set(true, forKey: "bool")
+            boolCheckUserDefault = userDefault.bool(forKey: "bool")
+        }
+    }
+    
     ////Game Center SetUp
     func authenticateLocalPlayer() {
         let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
-        
         localPlayer.authenticateHandler = {(ViewController, error) -> Void in
             if((ViewController) != nil) {
                 // 1. Show login if player is not logged in
@@ -355,13 +372,11 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             } else if (localPlayer.isAuthenticated) {
                 // 2. Player is already authenticated & logged in, load game center
                 self.gcEnabled = true
-                
                 // Get the default leaderboard ID
                 localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifer, error) in
                     if error != nil { print(error)
                     } else { self.gcDefaultLeaderBoard = leaderboardIdentifer! }
                 })
-                
             } else {
                 // 3. Game center is not enabled on the users device
                 self.gcEnabled = false
@@ -395,3 +410,4 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
 }
+

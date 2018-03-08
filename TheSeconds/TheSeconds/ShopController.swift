@@ -24,7 +24,7 @@ class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var numberAcorn = 0
+    var acornNumber = 0
     var iceNumber = 0
     var greenNumber = 0
     
@@ -34,10 +34,10 @@ class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
         super.viewDidLoad()
         setupTableView()
         observePowerUps()
-        labelAcorn.text = "\(numberAcorn)"
+        labelAcorn.text = "\(acornNumber)"
         labelGreen.text = "\(greenNumber)"
         labelIce.text = "\(iceNumber)"
-        print(numberAcorn)
+        print(acornNumber)
         print(iceNumber)
         print(greenNumber)
     }
@@ -158,8 +158,8 @@ extension ShopController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Hello")
         
-        numberAcorn -= 5
-        UserDefaults.standard.set(numberAcorn, forKey: "acorn")
+        acornNumber -= 5
+        UserDefaults.standard.set(acornNumber, forKey: "acorn")
 
         
         if indexPath.row == 0 {
@@ -170,7 +170,7 @@ extension ShopController: UICollectionViewDataSource {
             UserDefaults.standard.set(iceNumber, forKey: "ice")
         }
         
-        labelAcorn.text = "\(numberAcorn)"
+        labelAcorn.text = "\(acornNumber)"
         labelGreen.text = "\(greenNumber)"
         labelIce.text = "\(iceNumber)"
     }
