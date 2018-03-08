@@ -7,8 +7,23 @@
 //
 
 import UIKit
+import SwiftySound
 
 extension UIView {
+    
+    func bounce() {
+        self.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 1.0,
+                       delay: 0,
+                       usingSpringWithDamping: 0.2,
+                       initialSpringVelocity: 6.0,
+                       options: .allowUserInteraction,
+                       animations: { [weak self] in
+                        self?.transform = .identity
+            },
+                       completion: nil)
+    }
+    
     func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)

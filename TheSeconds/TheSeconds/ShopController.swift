@@ -8,18 +8,18 @@
 
 import UIKit
 import Kingfisher
-
+import SwiftySound
 
 class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
 
     var powerUps = [PowerUp]()
 
     @IBAction func backButtonTapped(_ sender: Any) {
-        
+        buttonPressed?.play()
     }
     
     
-    
+    let buttonPressed = Sound(url: Bundle.main.url(forResource: "ButtonPressed", withExtension: "mp3")!)
     let cellIdentifier = "cellIdentifier"
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -84,23 +84,14 @@ extension ShopController {
 
 extension ShopController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch UIDevice.current.userInterfaceIdiom {
-        case .phone:
-            print("iPhone")
-            return CGSize(width: view.frame.width, height: 200)
-        case .pad:
-            print("ipad")
-            return CGSize(width: (view.frame.width)/2, height: (view.frame.height)*0.24)
-        case .unspecified:
-            print("I don't know")
-            break
-        default:
-            print("I don't know")
-            // Uh, oh! What could it be?
+        if view.frame.width == 320 {
+            return CGSize(width: 320, height: 192)
+            
         }
-        return CGSize(width: 0, height: 0)
+        return CGSize(width: 365, height: 237)
     }
-}
+    }
+
 
 extension ShopController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -160,23 +151,23 @@ extension ShopController: UICollectionViewDataSource {
         let powerUp = powerUps[indexPath.row]
         let cost = powerUp.cost
         UserDefaults.standard.set(acornNumber, forKey: "acorn")
-
         
         if acornNumber >= cost! {
             acornNumber -= cost!
+            labelAcorn.bounce()
+            buttonPressed?.play()
             if indexPath.row == 0 {
+                labelGreen.bounce()
                 greenNumber += 1
                 UserDefaults.standard.set(greenNumber, forKey: "green")
             }else{
+                labelIce.bounce()
                 iceNumber += 1
                 UserDefaults.standard.set(iceNumber, forKey: "ice")
             }
         }else{
             labelAcorn.shake()
         }
-        
-        
-
         
         labelAcorn.text = "\(acornNumber)"
         labelGreen.text = "\(greenNumber)"

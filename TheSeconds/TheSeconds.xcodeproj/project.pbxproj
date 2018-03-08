@@ -10,8 +10,11 @@
 		6CD854A7F662A8814F2B8606 /* Pods_TheSeconds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */; };
 		C835CBA82051B01C006125C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C835CBA72051B01B006125C0 /* Main.storyboard */; };
 		C835CBAD2051B0BF006125C0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C835CBAC2051B0BF006125C0 /* UIViewExtensions.swift */; };
-		C835CBAF2051B0CE006125C0 /* ButtonPressed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C835CBAE2051B0CE006125C0 /* ButtonPressed.mp3 */; };
 		C835CBB12051B2A4006125C0 /* ShopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C835CBB02051B2A4006125C0 /* ShopTableViewCell.xib */; };
+		C835CBB32051B5C8006125C0 /* StarCommander1.wav in Resources */ = {isa = PBXBuildFile; fileRef = C835CBB22051B5C8006125C0 /* StarCommander1.wav */; };
+		C835CBB92051B897006125C0 /* ButtonPressed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C835CBB82051B896006125C0 /* ButtonPressed.mp3 */; };
+		C835CBC22051CE1C006125C0 /* IceSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C835CBC12051CE1B006125C0 /* IceSound.mp3 */; };
+		C835CBC42051D399006125C0 /* SuccessSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C835CBC32051D399006125C0 /* SuccessSound.mp3 */; };
 		C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F61EF28C48001DD5A2 /* AppDelegate.swift */; };
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
@@ -33,8 +36,11 @@
 		7AD09C6BB208ADA059E2A7ED /* Pods_TheSeconds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheSeconds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C835CBA72051B01B006125C0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C835CBAC2051B0BF006125C0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		C835CBAE2051B0CE006125C0 /* ButtonPressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ButtonPressed.mp3; sourceTree = "<group>"; };
 		C835CBB02051B2A4006125C0 /* ShopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopTableViewCell.xib; sourceTree = "<group>"; };
+		C835CBB22051B5C8006125C0 /* StarCommander1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = StarCommander1.wav; sourceTree = "<group>"; };
+		C835CBB82051B896006125C0 /* ButtonPressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ButtonPressed.mp3; sourceTree = "<group>"; };
+		C835CBC12051CE1B006125C0 /* IceSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IceSound.mp3; sourceTree = "<group>"; };
+		C835CBC32051D399006125C0 /* SuccessSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SuccessSound.mp3; sourceTree = "<group>"; };
 		C88058F31EF28C48001DD5A2 /* TheSeconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSeconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88058F61EF28C48001DD5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88058F81EF28C48001DD5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +84,10 @@
 		C835CBAA2051B09B006125C0 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				C835CBC12051CE1B006125C0 /* IceSound.mp3 */,
+				C835CBC32051D399006125C0 /* SuccessSound.mp3 */,
+				C835CBB82051B896006125C0 /* ButtonPressed.mp3 */,
+				C835CBB22051B5C8006125C0 /* StarCommander1.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -85,7 +95,6 @@
 		C835CBAB2051B0AD006125C0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C835CBAE2051B0CE006125C0 /* ButtonPressed.mp3 */,
 				C835CBAC2051B0BF006125C0 /* UIViewExtensions.swift */,
 			);
 			name = Extensions;
@@ -255,12 +264,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C835CBC22051CE1C006125C0 /* IceSound.mp3 in Resources */,
+				C835CBB32051B5C8006125C0 /* StarCommander1.wav in Resources */,
+				C835CBC42051D399006125C0 /* SuccessSound.mp3 in Resources */,
 				C88DA3102020D5BE00E3FBDD /* Trattatello.ttf in Resources */,
 				C835CBB12051B2A4006125C0 /* ShopTableViewCell.xib in Resources */,
 				EB1D44B41F1E379A00BE8772 /* LaunchScreen.storyboard in Resources */,
 				C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */,
 				C835CBA82051B01C006125C0 /* Main.storyboard in Resources */,
-				C835CBAF2051B0CE006125C0 /* ButtonPressed.mp3 in Resources */,
+				C835CBB92051B897006125C0 /* ButtonPressed.mp3 in Resources */,
 				EBD9B9911F4C38B30073A6DE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,18 +321,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TheSeconds/Pods-TheSeconds-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SAConfettiView/SAConfettiView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAConfettiView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
