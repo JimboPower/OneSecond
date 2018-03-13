@@ -302,10 +302,6 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             buttonViewIce.isUserInteractionEnabled = true
             buttonViewGreen.isUserInteractionEnabled = true
             
-            ///Da cambiare
-            greenNumber = 100
-            ///////////////
-            
             if greenNumber == 0 {
                 buttonViewGreen.isUserInteractionEnabled = false
                 print(greenNumber)
