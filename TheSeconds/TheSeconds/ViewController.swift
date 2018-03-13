@@ -23,6 +23,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             switch powerStatus {
             case .freeze:
                 shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
+                
             case .fire:
                 shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
             default:
@@ -41,6 +42,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 labelAcorn.bounce()
                 buttonScore.bounce()
                 labelTimer.bounce()
+                imageAcorn.bounce()
                 confettiView.startConfetti()
             default:
                 break
@@ -122,7 +124,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet weak var buttonViewIce: UIButton!
     @IBOutlet weak var buttonViewGreen: UIButton!
     @IBOutlet weak var buttonShop: UIButton!
-    
+    @IBOutlet weak var imageAcorn: UIImageView!
     
     @IBAction func buttonGoToGameCenter(_ sender: Any) {
         buttonGameCenter()
@@ -159,11 +161,10 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func buttonBestTapped(_ sender: Any) {
-        buttonGameCenter()
     }
     @IBAction func buttonScoreTapped(_ sender: Any) {
-        buttonGameCenter()
     }
+    
     @IBAction func buttonShop(_ sender: Any) {
         buttonPressed?.play()
         if isTimerRunning {
@@ -224,6 +225,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     func timerStops() {
         ////Timer stops
         isTimerRunning = false
+        iceSound?.stop()
         timeIntervalIce.invalidate()
         isTimerRunningIce = false
         buttonViewGreen.isUserInteractionEnabled = false
@@ -235,7 +237,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         self.stopAnimationForView(self.imageWood)
         if seconds >= 1 && suffix == 0 {
             score += 1
-            acornNumber += 1
+            acornNumber += score
             userDefault.set(acornNumber, forKey: "acorn")
             acornNumber = userDefault.integer(forKey: "acorn")
             userDefault.set(best, forKey: "best")

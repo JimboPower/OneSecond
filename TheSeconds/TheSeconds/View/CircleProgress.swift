@@ -19,6 +19,8 @@ class CircleProgress: UIView {
         setupShapeLayer()
     }
     
+
+    
     func start() {
         basicAnimation.toValue = 1.00
         basicAnimation.isAdditive = true

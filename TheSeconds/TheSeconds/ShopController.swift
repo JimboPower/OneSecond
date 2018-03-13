@@ -18,7 +18,7 @@ class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
         buttonPressed?.play()
     }
     
-    
+    //let soundIncorrect = Sound(url: Bundle.main.url(forResource: "incorrect", withExtension: "mp3")!)
     let buttonPressed = Sound(url: Bundle.main.url(forResource: "ButtonPressed", withExtension: "mp3")!)
     let cellIdentifier = "cellIdentifier"
     
@@ -167,6 +167,7 @@ extension ShopController: UICollectionViewDataSource {
             }
         }else{
             labelAcorn.shake()
+            Sound.play(file: "incorrect.mp3")
         }
         
         labelAcorn.text = "\(acornNumber)"

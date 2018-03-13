@@ -15,6 +15,7 @@
 		C835CBB92051B897006125C0 /* ButtonPressed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C835CBB82051B896006125C0 /* ButtonPressed.mp3 */; };
 		C835CBC22051CE1C006125C0 /* IceSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C835CBC12051CE1B006125C0 /* IceSound.mp3 */; };
 		C835CBC42051D399006125C0 /* SuccessSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C835CBC32051D399006125C0 /* SuccessSound.mp3 */; };
+		C84613A020531BA8000B3E88 /* incorrect.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C846139F20531BA8000B3E88 /* incorrect.mp3 */; };
 		C88058F71EF28C48001DD5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F61EF28C48001DD5A2 /* AppDelegate.swift */; };
 		C88058F91EF28C48001DD5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88058F81EF28C48001DD5A2 /* ViewController.swift */; };
 		C88058FE1EF28C49001DD5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88058FD1EF28C49001DD5A2 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		C835CBB82051B896006125C0 /* ButtonPressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ButtonPressed.mp3; sourceTree = "<group>"; };
 		C835CBC12051CE1B006125C0 /* IceSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = IceSound.mp3; sourceTree = "<group>"; };
 		C835CBC32051D399006125C0 /* SuccessSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SuccessSound.mp3; sourceTree = "<group>"; };
+		C846139F20531BA8000B3E88 /* incorrect.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = incorrect.mp3; sourceTree = "<group>"; };
 		C88058F31EF28C48001DD5A2 /* TheSeconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSeconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88058F61EF28C48001DD5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88058F81EF28C48001DD5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				C835CBC32051D399006125C0 /* SuccessSound.mp3 */,
 				C835CBB82051B896006125C0 /* ButtonPressed.mp3 */,
 				C835CBB22051B5C8006125C0 /* StarCommander1.wav */,
+				C846139F20531BA8000B3E88 /* incorrect.mp3 */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84613A020531BA8000B3E88 /* incorrect.mp3 in Resources */,
 				C835CBC22051CE1C006125C0 /* IceSound.mp3 in Resources */,
 				C835CBB32051B5C8006125C0 /* StarCommander1.wav in Resources */,
 				C835CBC42051D399006125C0 /* SuccessSound.mp3 in Resources */,
