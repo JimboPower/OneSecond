@@ -11,24 +11,25 @@ import Kingfisher
 import SwiftySound
 
 class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
-
-    var powerUps = [PowerUp]()
-
-    @IBAction func backButtonTapped(_ sender: Any) {
-        buttonPressed?.play()
-    }
     
-    //let soundIncorrect = Sound(url: Bundle.main.url(forResource: "incorrect", withExtension: "mp3")!)
     let buttonPressed = Sound(url: Bundle.main.url(forResource: "ButtonPressed", withExtension: "mp3")!)
     let cellIdentifier = "cellIdentifier"
-    
-    @IBOutlet weak var collectionView: UICollectionView!
     
     var acornNumber = 0
     var iceNumber = 0
     var greenNumber = 0
+    var powerUps = [PowerUp]()
     
-    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var labelAcorn: UILabel!
+    @IBOutlet weak var imageAcorn: UIImageView!
+    @IBOutlet weak var imageIce: UIImageView!
+    @IBOutlet weak var imageGreen: UIImageView!
+    @IBOutlet weak var labelIce: UILabel!
+    @IBOutlet weak var labelGreen: UILabel!
+    @IBAction func backButtonTapped(_ sender: Any) {
+        buttonPressed?.play()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +44,7 @@ class ShopController: UIViewController, UICollectionViewDelegateFlowLayout {
     }
     
     
-    @IBOutlet weak var labelAcorn: UILabel!
-    
-    @IBOutlet weak var labelIce: UILabel!
-    @IBOutlet weak var labelGreen: UILabel!
+
     internal func observePowerUps() {
         APIService.observePowerUps {
             (powerUp) in
@@ -140,7 +138,6 @@ extension ShopController: UICollectionViewDataSource {
           ///  cell.saleRibbonImageView.isHidden = true
        // }
         
-        
         return cell
     }
     
@@ -155,18 +152,22 @@ extension ShopController: UICollectionViewDataSource {
         if acornNumber >= cost! {
             acornNumber -= cost!
             labelAcorn.bounce()
+
             buttonPressed?.play()
             if indexPath.row == 0 {
                 labelGreen.bounce()
+                imageGreen.bounce()
                 greenNumber += 1
                 UserDefaults.standard.set(greenNumber, forKey: "green")
             }else{
+                imageIce.bounce()
                 labelIce.bounce()
                 iceNumber += 1
                 UserDefaults.standard.set(iceNumber, forKey: "ice")
             }
         }else{
             labelAcorn.shake()
+            imageAcorn.shake()
             Sound.play(file: "incorrect.mp3")
         }
         
@@ -176,7 +177,6 @@ extension ShopController: UICollectionViewDataSource {
     }
     
     func buttonAction(sender: UIButton) {
-        print("Ciao")
     }
     
 }

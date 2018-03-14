@@ -221,7 +221,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-6U-qGE">
-                                <rect key="frame" x="182" y="59.5" width="12" height="43.5"/>
+                                <rect key="frame" x="182.5" y="60" width="12" height="43.5"/>
                                 <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -360,17 +360,17 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-91-jKh">
-                                <rect key="frame" x="181.5" y="192.5" width="12.5" height="45.5"/>
+                                <rect key="frame" x="181" y="192.5" width="12.5" height="45.5"/>
                                 <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="35"/>
+                                    <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="30"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4d-HC-pdJ">
-                                <rect key="frame" x="47.5" y="182" width="12.5" height="45.5"/>
+                                <rect key="frame" x="48" y="182" width="12.5" height="45.5"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -379,7 +379,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRe-d5-iel">
-                                <rect key="frame" x="315.5" y="182" width="12.5" height="45.5"/>
+                                <rect key="frame" x="316" y="182" width="12.5" height="45.5"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="25"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -418,7 +418,9 @@
                         <constraints>
                             <constraint firstItem="TRe-d5-iel" firstAttribute="centerY" secondItem="zmW-62-BqQ" secondAttribute="centerY" id="0Lv-e0-ybz"/>
                             <constraint firstItem="z4d-HC-pdJ" firstAttribute="centerX" secondItem="x3q-mh-7Tx" secondAttribute="centerX" id="2eB-l4-4fv"/>
-                            <constraint firstItem="wY7-91-jKh" firstAttribute="centerY" secondItem="3YE-Vc-qfX" secondAttribute="centerY" constant="10" id="5hD-PZ-6Kb"/>
+                            <constraint firstItem="wY7-91-jKh" firstAttribute="centerY" secondItem="3YE-Vc-qfX" secondAttribute="centerY" constant="10" id="5hD-PZ-6Kb">
+                                <variation key="heightClass=regular-widthClass=regular" constant="15"/>
+                            </constraint>
                             <constraint firstItem="QdC-1l-BL6" firstAttribute="leading" secondItem="jRA-Zn-df1" secondAttribute="leadingMargin" id="BvD-Ll-fda"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="centerY" secondItem="jRA-Zn-df1" secondAttribute="centerY" id="C19-Fm-JMz"/>
                             <constraint firstItem="syF-Rl-XEx" firstAttribute="top" secondItem="d2p-ch-uMb" secondAttribute="bottom" constant="10" id="Dqf-Bn-6Cx"/>
@@ -432,7 +434,7 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                             </constraint>
                             <constraint firstItem="bvh-Mw-EYT" firstAttribute="top" secondItem="j0Y-Eb-nsl" secondAttribute="bottom" constant="80" id="PDw-Om-xsN">
-                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="QdC-1l-BL6" secondAttribute="trailing" id="Slj-ks-dYZ"/>
                             <constraint firstItem="GjQ-mF-6IX" firstAttribute="centerX" secondItem="jRA-Zn-df1" secondAttribute="centerX" id="TKy-1B-wf2"/>
@@ -457,6 +459,9 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="bvh-Mw-EYT" id="rnf-wl-c78"/>
+                        <outlet property="imageAcorn" destination="3YE-Vc-qfX" id="KIx-8j-610"/>
+                        <outlet property="imageGreen" destination="x3q-mh-7Tx" id="vYG-TF-wsC"/>
+                        <outlet property="imageIce" destination="zmW-62-BqQ" id="Lgm-Gn-b2v"/>
                         <outlet property="labelAcorn" destination="wY7-91-jKh" id="Qpj-gK-Thq"/>
                         <outlet property="labelGreen" destination="z4d-HC-pdJ" id="5Iz-Hq-QwL"/>
                         <outlet property="labelIce" destination="TRe-d5-iel" id="Fwq-Ob-zoH"/>
