@@ -23,9 +23,10 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             switch powerStatus {
             case .freeze:
                 shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
-                
+                break
             case .fire:
                 shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: false)
+                break
             default:
                 break
             }
@@ -37,6 +38,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             switch ifWin {
             case .none:
                 confettiView.stopConfetti()
+                break
             case .victory:
                 successSound?.play()
                 labelAcorn.bounce()
@@ -44,6 +46,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
                 labelTimer.bounce()
                 imageAcorn.bounce()
                 confettiView.startConfetti()
+                break
             default:
                 break
             }
@@ -66,7 +69,15 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
             showHideButtons()
         }
     }
-    
+    var sound = UserDefaults.standard.bool(forKey: "sound") {
+        didSet{
+            if sound {
+                buttonSound.setImage(#imageLiteral(resourceName: "BottoneMusicaOn"), for: .normal)
+            }else {
+                buttonSound.setImage(#imageLiteral(resourceName: "BottoneMusicaOff"), for: .normal)
+            }
+        }
+    }
     var timer = Timer()
     var boolCheckUserDefault = UserDefaults.standard.bool(forKey: "bool")
     var timeIntervalIce = Timer()
@@ -88,7 +99,7 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     let leaderboardID = "com.score.OneSecond"
     let iceSound = Sound(url: Bundle.main.url(forResource: "IceSound", withExtension: "mp3")!)
     let successSound = Sound(url: Bundle.main.url(forResource: "SuccessSound", withExtension: "mp3")!)
-    let soundTrack = Sound(url: Bundle.main.url(forResource: "StarCommander1", withExtension: "wav")!)
+    let soundTrack = Sound(url: Bundle.main.url(forResource: "StarCommander1", withExtension: "mp3")!)
     let buttonPressed = Sound(url: Bundle.main.url(forResource: "ButtonPressed", withExtension: "mp3")!)
     var greenActiveted = false
     var acornNumber = UserDefaults.standard.integer(forKey: "acorn") {
@@ -125,9 +136,16 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet weak var buttonViewGreen: UIButton!
     @IBOutlet weak var buttonShop: UIButton!
     @IBOutlet weak var imageAcorn: UIImageView!
+    @IBOutlet weak var buttonSound: UIButton!
     
     @IBAction func buttonGoToGameCenter(_ sender: Any) {
+        authenticateLocalPlayer()
         buttonGameCenter()
+    }
+    
+    @IBAction func buttonSound(_ sender: Any) {
+        userDefault.set(!sound, forKey: "sound")
+        sound = userDefault.bool(forKey: "sound")
     }
     
     @IBAction func buttonIceTapped(_ sender: Any) {
@@ -191,11 +209,9 @@ class ViewController: UIViewController, GKGameCenterControllerDelegate {
         super.viewDidLoad()
         setupConfetti()
         shouldShowOverlayEffect(image: #imageLiteral(resourceName: "ScreenIced"), isHidden: true)
-        authenticateLocalPlayer()
         setupUserDefaultSetLabel()
         showHideButtons()
         setSoundtrack()
-        
     }
     
     func setSoundtrack() {

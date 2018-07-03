@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WOD-O9-uAV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WOD-O9-uAV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -81,7 +81,7 @@
                                 <rect key="frame" x="37.5" y="175" width="300" height="317"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZU-hW-p0O">
-                                <rect key="frame" x="115.5" y="256.5" width="145.5" height="154.5"/>
+                                <rect key="frame" x="105.5" y="284" width="165.5" height="99.5"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="85"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -221,7 +221,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwc-6U-qGE">
-                                <rect key="frame" x="182.5" y="60" width="12" height="43.5"/>
+                                <rect key="frame" x="181" y="67" width="13.5" height="28"/>
                                 <edgeInsets key="layoutMargins" top="10" left="14" bottom="16" right="9"/>
                                 <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -230,6 +230,17 @@
                                     <fontDescription key="fontDescription" name="Trattatello" family="Trattatello" pointSize="50"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcT-PS-HMk">
+                                <rect key="frame" x="25" y="108.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="fCg-sc-nAU"/>
+                                    <constraint firstAttribute="height" constant="50" id="tLF-mx-MIx"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="BottoneMusicaOn"/>
+                                <connections>
+                                    <action selector="buttonSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AGQ-7o-bix"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g72-Om-WUf">
                                 <rect key="frame" x="300" y="108.5" width="50" height="50"/>
                                 <constraints>
@@ -262,8 +273,10 @@
                             <constraint firstItem="GxD-bD-HM4" firstAttribute="centerY" secondItem="Ij8-Y5-vQI" secondAttribute="centerY" id="RY0-aT-ACU"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VTb-8B-TeJ"/>
                             <constraint firstItem="w78-un-wf7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xqi-qT-QVd"/>
+                            <constraint firstItem="HcT-PS-HMk" firstAttribute="bottom" secondItem="2v4-ub-Y3b" secondAttribute="bottom" constant="60" id="ez5-62-P0B"/>
                             <constraint firstItem="GxD-bD-HM4" firstAttribute="centerX" secondItem="Ij8-Y5-vQI" secondAttribute="centerX" id="gEl-eq-Dl7"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHi-L2-2yg"/>
+                            <constraint firstItem="HcT-PS-HMk" firstAttribute="leading" secondItem="2v4-ub-Y3b" secondAttribute="leading" id="klr-j2-duA"/>
                             <constraint firstItem="Ij8-Y5-vQI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kyW-Uv-f2O"/>
                             <constraint firstItem="TYd-2A-X53" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="oyb-RU-zAG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TYd-2A-X53" secondAttribute="bottom" constant="10" id="pFX-af-txy"/>
@@ -292,6 +305,7 @@
                         <outlet property="buttonBest" destination="YDI-Nt-WRN" id="eTV-Jk-SWx"/>
                         <outlet property="buttonScore" destination="2v4-ub-Y3b" id="3ZZ-FL-Lks"/>
                         <outlet property="buttonShop" destination="Odl-mU-f4w" id="izJ-Md-r6v"/>
+                        <outlet property="buttonSound" destination="HcT-PS-HMk" id="tRE-Ig-cx2"/>
                         <outlet property="buttonViewGreen" destination="gOm-Gw-vId" id="1Mt-GY-TyW"/>
                         <outlet property="buttonViewIce" destination="A3G-lH-1Ch" id="ig3-Bc-EAS"/>
                         <outlet property="circleProgress" destination="GxD-bD-HM4" id="a0O-dh-Wap"/>
@@ -474,6 +488,7 @@
     </scenes>
     <resources>
         <image name="861930_snow_512x512" width="64" height="64"/>
+        <image name="BottoneMusicaOn" width="429" height="420"/>
         <image name="IceButtonPowerUp" width="280" height="286"/>
         <image name="ImageLeafBest" width="196" height="94"/>
         <image name="ImageLeafScore" width="196" height="94"/>
